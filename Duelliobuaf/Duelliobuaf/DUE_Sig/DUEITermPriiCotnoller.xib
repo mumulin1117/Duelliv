@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DUEITermPriiCotnoller" customModule="Duelliobuaf" customModuleProvider="target">
             <connections>
+                <outlet property="haveredf" destination="HHb-XO-2fM" id="vqr-Jv-0Cx"/>
+                <outlet property="infoinrDesc" destination="liN-jg-Gqz" id="JuX-g2-sdj"/>
+                <outlet property="segmentControllDUE" destination="8ja-Z0-0bb" id="oWX-9B-ZBa"/>
                 <outlet property="view" destination="WAP-r2-3fo" id="N5Z-az-Msr"/>
             </connections>
         </placeholder>
@@ -33,9 +36,12 @@
                     <state key="normal" title="I Have read">
                         <color key="titleColor" red="0.91372549020000005" green="0.094117647060000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="readniewoe:" destination="-1" eventType="touchUpInside" id="3YY-5x-pM2"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liN-jg-Gqz">
-                    <rect key="frame" x="14" y="144" width="365" height="562"/>
+                    <rect key="frame" x="14" y="171" width="365" height="535"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <string key="text">Duelliv Terms of Service
 Effective Date: [2025-03-20]
@@ -98,7 +104,7 @@ Let me know if you need further adjustments! 🩰✨</string>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                 </textView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8ja-Z0-0bb">
-                    <rect key="frame" x="14" y="72" width="365" height="46"/>
+                    <rect key="frame" x="14" y="99" width="365" height="46"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="Sl0-tv-0XN"/>
                     </constraints>
@@ -108,6 +114,9 @@ Let me know if you need further adjustments! 🩰✨</string>
                     </segments>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="selectedSegmentTintColor" red="0.91372549020000005" green="0.094117647060000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="changeValuerDue:" destination="-1" eventType="valueChanged" id="bum-Yd-qdT"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="oH8-1t-Ncp"/>
@@ -116,7 +125,7 @@ Let me know if you need further adjustments! 🩰✨</string>
                 <constraint firstItem="liN-jg-Gqz" firstAttribute="leading" secondItem="8ja-Z0-0bb" secondAttribute="leading" id="0Q1-pk-lxN"/>
                 <constraint firstItem="liN-jg-Gqz" firstAttribute="trailing" secondItem="8ja-Z0-0bb" secondAttribute="trailing" id="CbO-Kk-fBW"/>
                 <constraint firstItem="HHb-XO-2fM" firstAttribute="leading" secondItem="liN-jg-Gqz" secondAttribute="leading" id="EqV-Ev-eZ1"/>
-                <constraint firstItem="8ja-Z0-0bb" firstAttribute="top" secondItem="oH8-1t-Ncp" secondAttribute="top" constant="13" id="Nsa-sn-KK3"/>
+                <constraint firstItem="8ja-Z0-0bb" firstAttribute="top" secondItem="oH8-1t-Ncp" secondAttribute="top" constant="40" id="Nsa-sn-KK3"/>
                 <constraint firstItem="yOp-1g-wcd" firstAttribute="top" secondItem="WAP-r2-3fo" secondAttribute="top" id="Ocb-j2-agf"/>
                 <constraint firstItem="oH8-1t-Ncp" firstAttribute="bottom" secondItem="HHb-XO-2fM" secondAttribute="bottom" constant="34" id="Tgd-X2-opX"/>
                 <constraint firstItem="oH8-1t-Ncp" firstAttribute="trailing" secondItem="8ja-Z0-0bb" secondAttribute="trailing" constant="14" id="ZpR-PO-SBz"/>

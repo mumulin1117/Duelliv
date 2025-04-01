@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DUECCommutityCotnolle" customModule="Duelliobuaf" customModuleProvider="target">
             <connections>
+                <outlet property="mainDUEDtartgerVire" destination="hg7-hb-S7s" id="xKH-YJ-Th7"/>
                 <outlet property="view" destination="J2a-Bn-9Dh" id="p3L-8f-3vI"/>
             </connections>
         </placeholder>
@@ -27,9 +28,9 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wnm-Nb-TMk">
                     <rect key="frame" x="17" y="112" width="359" height="36"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOW-vZ-IHu">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="249" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOW-vZ-IHu">
                             <rect key="frame" x="0.0" y="0.0" width="111" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Trending" image="stareyTrending" backgroundImage="unikB_Bakju">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,10 +38,13 @@
                             <state key="selected" backgroundImage="selB_Bakju">
                                 <color key="titleColor" red="0.91372549020000005" green="0.094117647060000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="adjustDatacataru:" destination="-1" eventType="touchUpInside" id="VsI-XB-h5p"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gP2-BZ-Bet">
+                        <button opaque="NO" tag="20" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gP2-BZ-Bet">
                             <rect key="frame" x="123" y="0.0" width="112" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Discover" image="disocover" backgroundImage="unikB_Bakju">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,10 +52,13 @@
                             <state key="selected" backgroundImage="selB_Bakju">
                                 <color key="titleColor" red="0.91372549020000005" green="0.094117647060000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="adjustDatacataru:" destination="-1" eventType="touchUpInside" id="7UJ-vZ-cNM"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPv-MS-D4w">
+                        <button opaque="NO" tag="30" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPv-MS-D4w">
                             <rect key="frame" x="247" y="0.0" width="112" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Following" image="DsftFollowing" backgroundImage="unikB_Bakju">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,6 +66,9 @@
                             <state key="selected" backgroundImage="selB_Bakju">
                                 <color key="titleColor" red="0.91372549020000005" green="0.094117647060000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="adjustDatacataru:" destination="-1" eventType="touchUpInside" id="avh-xl-BAY"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

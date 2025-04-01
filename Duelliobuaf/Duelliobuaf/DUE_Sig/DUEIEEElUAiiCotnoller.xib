@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DUEIEEElUAiiCotnoller" customModule="Duelliobuaf" customModuleProvider="target">
             <connections>
+                <outlet property="infoinrDesc" destination="mWK-MM-fT6" id="1GY-Jm-Yjb"/>
                 <outlet property="view" destination="yeZ-W8-4Nn" id="cnt-jN-CNU"/>
             </connections>
         </placeholder>
@@ -40,9 +41,12 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Cancel" backgroundImage="elua_bg_line">
+                    <state key="normal" title="Disagree" backgroundImage="elua_bg_line">
                         <color key="titleColor" red="0.91372549020000005" green="0.094117647060000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="duiEhcancel:" destination="-1" eventType="touchUpInside" id="kG1-E9-nc5"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWK-MM-fT6">
                     <rect key="frame" x="14" y="116.66666666666669" width="365" height="603.33333333333326"/>
@@ -124,6 +128,9 @@ Let me know if you need further refinements! 🕺🌍</string>
                     <state key="normal" title="I agree" backgroundImage="DunaEluai">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="duiAgreenncel:" destination="-1" eventType="touchUpInside" id="Qg5-ZM-68B"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="odN-BC-8Ym"/>

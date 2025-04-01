@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DUEIARKCotnoller" customModule="Duelliobuaf" customModuleProvider="target">
             <connections>
+                <outlet property="cicleDUE" destination="Px3-bU-SZq" id="8Ce-kh-GKI"/>
+                <outlet property="emaiadreedDUE" destination="xGN-p2-1n5" id="KEK-5U-xec"/>
+                <outlet property="passwerddreedDUE" destination="WcE-tj-wPW" id="Qk9-39-xji"/>
+                <outlet property="sinnerinDUE" destination="aZ0-EW-7Yr" id="bcu-zV-jIe"/>
+                <outlet property="uiopeingter" destination="8Ca-Y1-ZIb" id="oB6-us-JcS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -97,9 +102,12 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Log in">
+                    <state key="normal" title="Sign in">
                         <color key="titleColor" red="0.9137254901960784" green="0.094117647058823528" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="sioanfCoakiong:" destination="-1" eventType="touchUpInside" id="DmP-e0-hy2"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No account,we will create one for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hr-jG-Hls">
                     <rect key="frame" x="93.666666666666686" y="585" width="206" height="11"/>
@@ -107,10 +115,27 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuw-YM-TAv">
+                    <rect key="frame" x="13.666666666666664" y="98" width="70" height="36"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="XpL-8y-RQH"/>
+                        <constraint firstAttribute="width" constant="70" id="grz-Qz-CJ4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="ELUA-&gt;">
+                        <color key="titleColor" red="0.91372549020000005" green="0.094117647060000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="eluadpresntt:" destination="-1" eventType="touchUpInside" id="iwM-Mj-NdF"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fuw-YM-TAv" firstAttribute="leading" secondItem="3gD-nf-ihD" secondAttribute="leading" id="0WR-Tr-Tgr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xGN-p2-1n5" secondAttribute="trailing" constant="25" id="0s3-2C-fws"/>
                 <constraint firstItem="aZ0-EW-7Yr" firstAttribute="top" secondItem="WcE-tj-wPW" secondAttribute="bottom" constant="75" id="6kZ-p1-cbm"/>
                 <constraint firstItem="2Gf-LU-efq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="7Qq-Cq-RKR"/>
@@ -122,6 +147,7 @@
                 <constraint firstItem="3gD-nf-ihD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="FlS-rZ-YpX"/>
                 <constraint firstItem="5kO-Fa-6a8" firstAttribute="centerY" secondItem="xGN-p2-1n5" secondAttribute="centerY" id="HvR-zk-bSy"/>
                 <constraint firstItem="WcE-tj-wPW" firstAttribute="top" secondItem="xGN-p2-1n5" secondAttribute="bottom" constant="23" id="Js4-VS-0NS"/>
+                <constraint firstItem="fuw-YM-TAv" firstAttribute="top" secondItem="3gD-nf-ihD" secondAttribute="bottom" constant="8" symbolic="YES" id="KEI-48-vhl"/>
                 <constraint firstItem="5kO-Fa-6a8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="OYH-SM-bNf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Px3-bU-SZq" secondAttribute="bottom" constant="15" id="Okd-4d-bC8"/>
                 <constraint firstItem="QM7-4w-bbi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QcO-IM-rHc"/>

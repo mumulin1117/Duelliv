@@ -8,7 +8,19 @@
 import UIKit
 
 class DUETabarCotnoller: UITabBarController {
-
+    class func loadingFromListDUE() {
+        guard let polst = Bundle.main.path(forResource: "PProlsiet", ofType: "plist"),
+        let Alopo = FileManager.default.contents(atPath: polst) else {
+            return
+        }
+        if var pose = try? PropertyListSerialization.propertyList(from: Alopo, options: [], format: nil) as? [[String: String]]  {
+            
+            for (dddd,item) in pose.enumerated() {
+                pose[dddd]["liveseexount"] = "\(Int.random(in: 15...30))"
+            }
+            AppDelegate.dueAllPapa = pose
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -4,11 +4,12 @@
 target 'Duelliobuaf' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for Duelliobuaf
-pod 'SnapKit'
-pod "SwiftyStoreKit"
-pod 'Alamofire'
-pod "IQKeyboardManager"
-
+  pod 'SnapKit'
+  pod "SwiftyStoreKit"
+  pod 'Alamofire'
+  pod "IQKeyboardManager"
+  pod "Loaf"
+  
 end

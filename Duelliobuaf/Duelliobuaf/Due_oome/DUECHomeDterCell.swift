@@ -28,8 +28,8 @@ class DUECHomeDterCell: UICollectionViewCell {
         dueLiveCoverimageview.layer.cornerRadius = 15
         dueLiveCoverimageview.layer.masksToBounds = true
         
-        hisHeade.layer.cornerRadius = 20
-        hisHeade.layer.masksToBounds = true
+        avterDUE.layer.cornerRadius = 20
+        avterDUE.layer.masksToBounds = true
         
         seecountLablt.layer.cornerRadius = 13
         seecountLablt.layer.masksToBounds = true
