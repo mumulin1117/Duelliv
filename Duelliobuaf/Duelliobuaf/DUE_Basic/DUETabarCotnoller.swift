@@ -17,6 +17,8 @@ class DUETabarCotnoller: UITabBarController {
             
             for (dddd,item) in pose.enumerated() {
                 pose[dddd]["liveseexount"] = "\(Int.random(in: 15...30))"
+                pose[dddd]["fasount"] = "\(Int.random(in: 3...12))"
+                pose[dddd]["followseexount"] = "\(Int.random(in: 3...12))"
             }
             AppDelegate.dueAllPapa = pose
         }
@@ -60,7 +62,7 @@ class DUETabarCotnoller: UITabBarController {
 class DUEConCotnoller: UINavigationController {
    
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if !viewController.isMember(of:DUELoavegniContrwo.self) && children.count >= 2{
+        if !viewController.isMember(of:DUELoavegniContrwo.self) && children.count > 0{
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: false)
@@ -78,4 +80,60 @@ class DUELoavegniContrwo: UIViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isHidden = false
     }
+}
+
+
+
+class DUELaterPageContirl: UIViewController {
+    
+     lazy var shitMorengDUE: UIButton = {
+        let mains = UIButton.init()
+        mains.setImage(UIImage.init(named: "shitmore"), for: .normal)
+        mains.addTarget(self, action: #selector(seintongngeInset(shj:)), for: .touchUpInside)
+        return mains
+    }()
+    
+     lazy var shitBackDUE: UIButton = {
+        let mains = UIButton.init()
+        mains.setImage(UIImage.init(named: "shitBfack"), for: .normal)
+        mains.addTarget(self, action: #selector(backngeInset(shj:)), for: .touchUpInside)
+        return mains
+    }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       
+        let winfdoe = ((UIApplication.shared.delegate) as? AppDelegate)?.window?.safeAreaInsets.top ?? 0
+        view.addSubview(shitMorengDUE)
+        view.addSubview(shitBackDUE)
+        shitBackDUE.snp.makeConstraints { make in
+            make.width.height.equalTo(25)
+            make.leading.equalToSuperview().inset(12)
+            make.top.equalToSuperview().offset(winfdoe + 10)
+        }
+        
+        shitMorengDUE.snp.makeConstraints { make in
+            make.width.height.equalTo(25)
+            make.trailing.equalToSuperview().inset(12)
+            make.top.equalToSuperview().offset(winfdoe + 10)
+        }
+    }
+    
+    //更多
+    @objc func seintongngeInset(shj:UIButton)  {
+        
+        
+    }
+    
+    //back
+    @objc func backngeInset(shj:UIButton)  {
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
 }

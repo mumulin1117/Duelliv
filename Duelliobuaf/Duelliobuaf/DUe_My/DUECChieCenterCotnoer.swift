@@ -1,23 +1,58 @@
 //
-//  DUECCMyyCotnoller.swift
+//  DUECChieCenterCotnoer.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/3/31.
+//  Created by mumu on 2025/4/1.
 //
-import SnapKit
+
 import UIKit
 
-class DUECCMyyCotnoller: DUELoavegniContrwo {
-    private lazy var editButongDUE: UIButton = {
-        let mains = UIButton.init()
-        mains.setImage(UIImage.init(named: "Duieseup"), for: .normal)
-        mains.addTarget(self, action: #selector(seintongngeInset(shj:)), for: .touchUpInside)
-        return mains
-    }()
+
+//his center
+class DUECChieCenterCotnoer: DUELaterPageContirl {
+    
+    private lazy var followengDUE: UIButton = {
+       let mains = UIButton.init()
+       mains.setBackgroundImage(UIImage.init(named: "notFoflofollow"), for: .normal)
+        mains.setBackgroundImage(UIImage.init(named: "DUERfollowed"), for: .selected)
+       mains.addTarget(self, action: #selector(followertngforDue), for: .touchUpInside)
+       return mains
+   }()
+    
+    private lazy var chatingwengDUE: UIButton = {
+       let mains = UIButton.init()
+       mains.setBackgroundImage(UIImage.init(named: "jaungkinChat"), for: .normal)
+       mains.addTarget(self, action: #selector(ChaingforDue), for: .touchUpInside)
+       return mains
+   }()
+    
+   //chat
+   @objc func ChaingforDue() {
+        
+    }
+    
+    
+    //foloowe
+    @objc func followertngforDue() {
+         
+     }
+    
     private let postlabel = UILabel.init()
-    var fansCountlAbl:UILabel?
-    var followingCount:UILabel?
-    var wallentCount:UILabel?
+    private var fansCountlAbl:UILabel?
+    private var followingCount:UILabel?
+    private var wallentCount:UILabel?
+    
+    
+    var dfoloower:Dictionary<String,String>
+    init( dfoloower: Dictionary<String, String>) {
+     
+        self.dfoloower = dfoloower
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+     required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -72,20 +107,13 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
             make.leading.trailing.bottom.equalToSuperview()
             make.bottom.equalToSuperview()
             make.width.equalTo(UIScreen.main.bounds.width)
-            make.height.equalTo(700)
+            make.height.equalTo(780)
         }
         
         
         insertStatckView()
         
         shamePostingBotto()
-        
-        view.addSubview(editButongDUE)
-        editButongDUE.snp.makeConstraints { make in
-            make.trailing.equalToSuperview().inset(16)
-            make.width.height.equalTo(30)
-            make.top.equalTo( (((UIApplication.shared.delegate) as? AppDelegate)?.window?.safeAreaInsets.top ?? 0) + 10)
-        }
     }
     
     
@@ -112,10 +140,10 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
             make.top.equalTo(duerSNameLabhi.snp.bottom).offset(10)
         }
         
-        for (i,item) in ["Fans","Followings","Wallet"].enumerated() {
+        for (i,item) in ["Fans","Followings","Post"].enumerated() {
             let huan = UIButton.init()
-            huan.tag = i + 800
-            huan.addTarget(self, action: #selector(mineditingeInset(shj: )), for: .touchUpInside)
+            
+           
             stack.addArrangedSubview(huan)
             
             
@@ -159,8 +187,20 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
             }
         }
        
-        
-        
+        self.duerSCrollview.addSubview(followengDUE)
+        self.duerSCrollview.addSubview(chatingwengDUE)
+        followengDUE.snp.makeConstraints { make in
+            make.width.equalTo(143)
+            make.height.equalTo(42)
+            make.trailing.equalToSuperview().offset(-10)
+            make.top.equalTo(stack.snp.bottom).offset(20)
+        }
+        chatingwengDUE.snp.makeConstraints { make in
+            make.width.equalTo(143)
+            make.height.equalTo(42)
+            make.leading.equalToSuperview().offset(10)
+            make.top.equalTo(stack.snp.bottom).offset(20)
+        }
         
         postlabel.textColor = UIColor.white
         
@@ -169,24 +209,29 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
         duerSCrollview.addSubview(postlabel)
         postlabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(24)
-            make.top.equalTo(stack.snp.bottom).offset(30)
+            make.top.equalTo(chatingwengDUE.snp.bottom).offset(32)
         }
     }
 
     private func updateUserinfoFoeing()  {
-        let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
+       
+        MainaviheadDUE.image =  UIImage(named: dfoloower["Due_avmter"] ?? "")
+        duerSNameLabhi.text  =  dfoloower["Due_Nopme"]
         
-        MainaviheadDUE.image =  AppDelegate.HuiwchaerQuil
-        duerSNameLabhi.text  =  use?["Due_Nopme"]
-        wallentCount?.text = use?["DueCoin"]
-        fansCountlAbl?.text = "\(AppDelegate.fenCIPapa.count)"
-        followingCount?.text = "\(AppDelegate.follorrPAPA.count)"
+        if dfoloower["Due_ComuPic"] != nil {
+            wallentCount?.text = "1"
+        }else{
+            wallentCount?.text = "0"
+        }
+        
+        fansCountlAbl?.text = dfoloower["fasount"]
+        followingCount?.text = dfoloower["followseexount"]
     }
     
     
     private func shamePostingBotto()  {
-        let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
-        if use?["Due_oID"] == "shamer@gmail.com" {
+        
+        if dfoloower["Due_ComuPic"] != nil {
             
             let img = UIImageView(image: UIImage.init(named: "Riva_0"))
             img.contentMode = .scaleToFill
@@ -220,7 +265,7 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
             let contetnlak = UILabel.init()
             contetnlak.textColor = UIColor.white
             
-            contetnlak.text = "You haven't posted any updates yet"
+            contetnlak.text = "There haven't posted any updates yet"
             contetnlak.font = UIFont.systemFont(ofSize: 14, weight: .regular)
             contetnlak.numberOfLines = 2
             duerSCrollview.addSubview(contetnlak)
@@ -241,24 +286,7 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
         
     }
     
-   @objc func mineditingeInset(shj:UIButton)  {
-       if shj.tag - 80 == 0 {
-           
-       }
-       
-       if shj.tag - 80 == 1 {
-           
-       }
-       
-       
-       if shj.tag - 80 == 2 {
-           
-       }
-    }
+
     
-    
-    @objc func seintongngeInset(shj:UIButton)  {
-        
-        self.navigationController?.pushViewController(DUECSetCenterCotnoer.init(), animated: true)
-    }
+   
 }
