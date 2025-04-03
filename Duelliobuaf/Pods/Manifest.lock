@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (5.10.2)
   - IQKeyboardManager (6.5.19)
+  - Kingfisher (8.3.1)
+  - LLCycleScrollView (1.6.0):
+    - Kingfisher
   - Loaf (0.7.0)
   - SnapKit (5.7.1)
   - SwiftyStoreKit (0.16.1)
@@ -8,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - IQKeyboardManager
+  - LLCycleScrollView
   - Loaf
   - SnapKit
   - SwiftyStoreKit
@@ -16,6 +20,8 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManager
+    - Kingfisher
+    - LLCycleScrollView
     - Loaf
     - SnapKit
     - SwiftyStoreKit
@@ -23,10 +29,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  Kingfisher: 3204d23de16b5ea53541c44ca5a8efb55741dec3
+  LLCycleScrollView: a08f666671f9fd1a205df9defebc3c217d59abc8
   Loaf: d69937cd00649f3fa260beb8b7aef0a1feb861ef
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: a0a7b041e18febcc6e6d387c793a180933f2f0b7
+PODFILE CHECKSUM: 05cd01a78589b2d3769cd405a504ec69e9c7da92
 
 COCOAPODS: 1.16.2

@@ -72,6 +72,9 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let Adfe = dueHomeData[indexPath.row]
+        let deaiurf = DUEIPkdanDydetailCotnoller.init(duerDic: Adfe)
+        self.navigationController?.pushViewController(deaiurf, animated: true)
         
     }
 
