@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftyStoreKit
+import Loaf
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var dueAllPapa = Array<Dictionary<String,String>>()
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var fenCIPapa = Array<Dictionary<String,String>>()
     static var follorrPAPA = Array<Dictionary<String,String>>()
     
+    static var alldislaofijg:Array<livediaologall> = Array<livediaologall>()//对话
     static var HuiwchaerQuil:UIImage = UIImage(named: "Normalyujmrtx")!
     
     var window: UIWindow?
@@ -104,6 +106,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.HuiwchaerQuil = UIImage(named: "Due_feiber_10")!
         AppDelegate.fenCIPapa = Array(AppDelegate.dueAllPapa.prefix(1))
         AppDelegate.follorrPAPA = Array(AppDelegate.dueAllPapa.prefix(1))
+          AppDelegate.dueAllPapa.forEach({ user in
+              AppDelegate.alldislaofijg.append(livediaologall(userdiocm: user, lisat: Array()))
+        })
     }
 }
 

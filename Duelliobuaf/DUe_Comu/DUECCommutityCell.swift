@@ -20,7 +20,7 @@ class DUECCommutityCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        avterDUE.isUserInteractionEnabled = true
         self.backgroundColor = UIColor(red: 0.18, green: 0.15, blue: 0.17, alpha: 1)
         self.layer.cornerRadius = 24
         self.layer.masksToBounds = true

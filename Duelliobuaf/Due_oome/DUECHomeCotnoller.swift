@@ -71,7 +71,7 @@ class DUECHomeCotnoller: DUELoavegniContrwo,UICollectionViewDelegate,UICollectio
         let dure = collectionView.dequeueReusableCell(withReuseIdentifier: "DUECHomeDterCell", for: indexPath) as! DUECHomeDterCell
         dure.dueLiveCoverimageview.image = UIImage(named: dueHomeData[indexPath.row]["Due_Cover"] ?? "")
         
-        let Doai = dueHomeData[indexPath.row]["liveseexount"] ?? ""
+        let Doai = dueHomeData[indexPath.row]["Due_seecount"] ?? ""
         
         dure.seecountLablt.setTitle(" " + Doai, for: .normal)
         
@@ -95,7 +95,16 @@ class DUECHomeCotnoller: DUELoavegniContrwo,UICollectionViewDelegate,UICollectio
     @IBAction func setAiDUE(_ sender: UIButton) {
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let Doai = dueHomeData[indexPath.row]
+        if let dic =  AppDelegate.alldislaofijg.filter({ logol in
+            return logol.userdiocm == Doai
+        }).first{
+           
+           self.navigationController?.pushViewController(DUEIPkLivinailCotnoller.init(datagalll: dic), animated: true)
+       }
+        
+    }
     
     @IBAction func adjustDatacataru(_ sender: UIButton) {
         let buif = view.viewWithTag(10) as? UIButton

@@ -57,7 +57,8 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
         }
         
         
-        
+        due.avterDUE.tag = indexPath.row
+        due.avterDUE.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(inserbuttone(tapsender:))))
     
         
         due.avterDUE.image = UIImage(named: dueHomeData[indexPath.row]["Due_avmter"] ?? "")
@@ -78,6 +79,14 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
         
     }
 
+    
+    @objc func inserbuttone(tapsender: UITapGestureRecognizer) {
+       let tap = tapsender.view?.tag ?? 0
+       let dex = dueHomeData[tap]
+        let alertvf = DUECChieCenterCotnoer.init(dfoloower: dex)
+        
+        self.navigationController?.pushViewController(alertvf, animated: true)
+    }
     
     @IBAction func adjustDatacataru(_ sender: UIButton) {
         let buif = view.viewWithTag(10) as? UIButton

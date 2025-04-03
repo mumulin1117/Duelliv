@@ -13,6 +13,8 @@
 		<string>Wild Dance </string>
 		<key>Due_Cover</key>
 		<string>Due_Cliver_0</string>
+		<key>Due_seecount</key>
+		<string>10</string>
 	</dict>
 	<dict>
 		<key>Due_avmter</key>
@@ -25,6 +27,8 @@
 		<string>Love Dance</string>
 		<key>Due_Cover</key>
 		<string>Due_Cliver_1</string>
+		<key>Due_seecount</key>
+		<string>5</string>
 	</dict>
 	<dict>
 		<key>Due_avmter</key>
@@ -37,6 +41,8 @@
 		<string>Ballet Bliss</string>
 		<key>Due_Cover</key>
 		<string>Due_Cliver_2</string>
+		<key>Due_seecount</key>
+		<string>6</string>
 	</dict>
 	<dict>
 		<key>Due_avmter</key>
@@ -49,6 +55,8 @@
 		<string>Step Up</string>
 		<key>Due_Cover</key>
 		<string>Due_Cliver_3</string>
+		<key>Due_seecount</key>
+		<string>8</string>
 	</dict>
 	<dict>
 		<key>Due_avmter</key>
@@ -61,6 +69,8 @@
 		<string>Rhythm Room</string>
 		<key>Due_Cover</key>
 		<string>Due_Cliver_4</string>
+		<key>Due_seecount</key>
+		<string>7</string>
 	</dict>
 	<dict>
 		<key>Due_avmter</key>

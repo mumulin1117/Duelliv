@@ -130,10 +130,11 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
         view.addSubview(duerSCrollview)
         duerSCrollview.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset((wingh?.top ?? 0) + 26 + 40                                                                                                                                                                                                                                                                                      )
+            make.top.equalToSuperview().offset((wingh?.top ?? 0) + 26 + 40 )
         }
         
-        
+        avterDUE.isUserInteractionEnabled = true
+        avterDUE.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(inserbuttone(tapsender:))))
         toping.backgroundColor = UIColor(red: 0.18, green: 0.15, blue: 0.17, alpha: 1)
         toping.layer.cornerRadius = 24
         toping.layer.masksToBounds = true
@@ -162,7 +163,7 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
         }
         
         maingscroolview.snp.makeConstraints { make in
-            make.left.right.equalTo(12)
+            make.left.right.equalToSuperview().inset(12)
             make.top.equalTo(duerSNameLabhi.snp.bottom).offset(20)
             make.height.equalTo(425)
         }
@@ -191,6 +192,15 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
             make.centerY.equalTo(nevershuldInput)
         }
         maingscroolview.imagePaths = duerDic["Due_ComuPic"]?.components(separatedBy: "^") ?? [""]
+    }
+    
+    
+    @objc func inserbuttone(tapsender: UITapGestureRecognizer) {
+     
+
+        let alertvf = DUECChieCenterCotnoer.init(dfoloower: duerDic)
+        
+        self.navigationController?.pushViewController(alertvf, animated: true)
     }
     
     
@@ -288,14 +298,14 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
                     "127 fails → 8-direction isolations! Motion heatmap MVP. 🎯"
         ]
         
-        let aaount = Int(duerDic["Due_oID"] ?? "0")
+        let aaount = Int(duerDic["Due_oID"] ?? "0") ?? 0
         
         
         
         
         
         if let radomeHe = AppDelegate.dueAllPapa.filter({ fou in
-            return Int(fou["Due_oID"] ?? "0") == aaount
+            return fou["Due_oID"] == "\(aaount + 1)"
         }).first{
             avtercomentDUE.image = UIImage(named: radomeHe["Due_avmter"] ?? "")
             namccdlabel.text = radomeHe["Due_Nopme"]

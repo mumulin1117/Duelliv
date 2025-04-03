@@ -10,14 +10,93 @@ protocol DUEIPGiftpeilCotnollerdelegae {
     func presnterintulp(steirnh:String,adgt:Int)
 }
 class DUEIPGiftpeilCotnoller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    private lazy var needspeendLabfen: UILabel = {
+    private var allCountPresent:Int = 1
+    //礼物总价
+    private lazy var needdmoneytLablLabfen: UILabel = {
         let sfe = UILabel.init()
-        sfe.text = "0"
+        sfe.text = "199"
         sfe.textColor =  UIColor.white
-        sfe.textAlignment = .left
+        sfe.textAlignment = .center
         sfe.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return sfe
     }()
+    //需要的数量
+    private lazy var presentcountsndLabfen: UILabel = {
+        let sfe = UILabel.init()
+        sfe.text = "1"
+        sfe.textColor =  UIColor.white
+        sfe.textAlignment = .center
+        sfe.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        return sfe
+    }()
+    
+    //add
+    lazy var dueburreongincrea: UIButton = {
+        let sjiako = UIButton.init()
+        sjiako.addTarget(self, action: #selector(incrradttt(vxcn:)), for: .touchUpInside)
+        return sjiako
+    }()
+    //减
+    lazy var dueburreongDecrea: UIButton = {
+        let sjiako = UIButton.init()
+        sjiako.addTarget(self, action: #selector(incrradttt(vxcn:)), for: .touchUpInside)
+        return sjiako
+    }()
+    
+    //given post
+    lazy var surepostgDecrea: UIButton = {
+        let sjiako = UIButton.init()
+        sjiako.addTarget(self, action: #selector(sureposdtpresent), for: .touchUpInside)
+        return sjiako
+    }()
+    
+    //MARK: - 送礼
+    @objc func sureposdtpresent() {
+        let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
+    
+        var balkfi =  Int(use?["DueCoin"] ?? "0") ?? 0
+        
+        if balkfi < allCountPresent*199 {
+            self.navigationController?.pushViewController(DUEIPLoaPauinChailive.init(), animated: true)
+            return
+        }
+        balkfi -= allCountPresent*199
+        
+        self.deflay?.presnterintulp(steirnh: self.alllPresentFuul[sendCidf], adgt: allCountPresent)
+        
+        self.dismiss(animated: true)
+        
+    }
+    //dissmi
+    lazy var dismissburreongDecrea: UIButton = {
+        let sjiako = UIButton.init()
+        sjiako.setImage(UIImage.init(named: "zhengjiclose"), for: .normal)
+        sjiako.addTarget(self, action: #selector(aijdpoaiu), for: .touchUpInside)
+        return sjiako
+    }()
+    
+    @objc func aijdpoaiu()  {
+        self.dismiss(animated: true)
+    }
+    
+   @objc func incrradttt(vxcn:UIButton){
+       if vxcn == dueburreongincrea {
+           allCountPresent += 1
+       }
+       
+       if vxcn == dueburreongDecrea {
+           if allCountPresent < 1 {
+               return
+           }
+           
+           allCountPresent -= 1
+           
+      
+       }
+       needdmoneytLablLabfen.text = "\(allCountPresent*199)"
+       
+       presentcountsndLabfen.text = "\(allCountPresent)"
+    }
     
     
     private var sendCidf:Int = 0
@@ -56,7 +135,7 @@ class DUEIPGiftpeilCotnoller: UIViewController, UICollectionViewDelegate, UIColl
     
 
 
-    private  var deflay:DUEIPGiftpeilCotnollerdelegae?
+      var deflay:DUEIPGiftpeilCotnollerdelegae?
     
     private  var dafenibu:UICollectionView?
     
@@ -70,9 +149,9 @@ class DUEIPGiftpeilCotnoller: UIViewController, UICollectionViewDelegate, UIColl
         
         IOsh.scrollDirection = .vertical
        
-        
+        dafenibu = UICollectionView(frame: .zero, collectionViewLayout: IOsh)
         dafenibu?.collectionViewLayout = IOsh
-        
+        dafenibu?.backgroundColor = .clear
         dafenibu?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         dafenibu?.delegate = self
         dafenibu?.dataSource = self
@@ -101,14 +180,19 @@ class DUEIPGiftpeilCotnoller: UIViewController, UICollectionViewDelegate, UIColl
         view.addSubview(oksjiop)
         oksjiop.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(352)
+            make.height.equalTo(382 + 240)
         }
-        
+        oksjiop.addSubview(self.dismissburreongDecrea)
+        dismissburreongDecrea.snp.makeConstraints { make in
+            make.width.height.equalTo(30)
+            make.trailing.equalToSuperview().inset(12)
+            make.top.equalToSuperview().offset(6)
+        }
         oksjiop.addSubview(dafenibu!)
         dafenibu?.snp.makeConstraints({ make in
-            make.left.right.equalToSuperview()
-            make.top.equalToSuperview().offset(16)
-            make.height.equalTo(210)
+            make.left.right.equalToSuperview().inset(12)
+            make.top.equalToSuperview().offset(16 + 30)
+            make.height.equalTo(210 + 240)
         })
         
         let diomentftbgray = UIImageView(image: UIImage.init(named: "diopalold"))
@@ -119,17 +203,64 @@ class DUEIPGiftpeilCotnoller: UIViewController, UICollectionViewDelegate, UIColl
             make.left.equalToSuperview().offset(12)
             make.top.equalTo(dafenibu!.snp.bottom).offset(53)
         }
-        oksjiop.addSubview(needspeendLabfen)
-        needspeendLabfen.snp.makeConstraints { make in
-            make.left.equalTo(diomentftbgray.snp.right).offset(4)
+       
+        
+        
+        let jid = UIImageView(image: UIImage.init(named: "btn_Give PRESENT"))
+        jid.contentMode = .scaleToFill
+        jid.isUserInteractionEnabled = true
+        view.addSubview(jid)
+        jid.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(12)
+            make.width.equalTo(205)
+            make.height.equalTo(36)
             make.centerY.equalTo(diomentftbgray)
+        }
+       
+        
+        
+        jid.addSubview(self.dueburreongincrea)
+        jid.addSubview(self.dueburreongDecrea)
+        
+        //减少
+        dueburreongDecrea.snp.makeConstraints { make in
+            make.width.equalTo(30)
+            make.height.equalTo(36)
+            make.leading.equalToSuperview()
+            make.centerY.equalTo(jid)
+        }
+        jid.addSubview(presentcountsndLabfen)
+        presentcountsndLabfen.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(30)
+            
+            make.width.equalTo(30)
+            make.height.top.bottom.equalToSuperview()
+        }
+        //增加
+        dueburreongincrea.snp.makeConstraints { make in
+            
+            make.height.equalTo(36)
+            make.width.equalTo(30)
+            make.leading.equalToSuperview().offset(60)
+            make.centerY.equalTo(jid)
+        }
+        
+        jid.addSubview(surepostgDecrea)
+        surepostgDecrea.snp.makeConstraints { make in
+            make.top.bottom.trailing.equalToSuperview()
+            make.width.equalTo(110)
+        
         }
         
         
-        let jid = UIView.init()
+        oksjiop.addSubview(needdmoneytLablLabfen)
+        needdmoneytLablLabfen.snp.makeConstraints { make in
+            make.centerY.equalTo(diomentftbgray)
+            make.leading.equalTo(diomentftbgray.snp.trailing).offset(5)
+        }
         
         
-        
+      
     }
 
    
@@ -157,7 +288,7 @@ class DUEBadPresentCell: UICollectionViewCell {
         super.init(frame: frame)
         corebgray.contentMode = .scaleToFill
         coreGiftbgray.contentMode = .scaleAspectFit
-        
+        self.backgroundColor = .clear
         contentView.addSubview(corebgray)
         contentView.addSubview(coreGiftbgray)
         contentView.addSubview(speendLabfen)
@@ -179,7 +310,7 @@ class DUEBadPresentCell: UICollectionViewCell {
         
         diomentftbgray.snp.makeConstraints { make in
             make.width.height.equalTo(12)
-            make.leading.equalTo(speendLabfen.snp.right).offset(4)
+            make.leading.equalTo(speendLabfen.snp.trailing).offset(4)
             make.centerY.equalTo(speendLabfen)
         }
     }

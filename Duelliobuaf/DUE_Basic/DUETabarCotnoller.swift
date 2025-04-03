@@ -16,7 +16,7 @@ class DUETabarCotnoller: UITabBarController {
         if var pose = try? PropertyListSerialization.propertyList(from: Alopo, options: [], format: nil) as? [[String: String]]  {
             
             for (dddd,item) in pose.enumerated() {
-                pose[dddd]["liveseexount"] = "\(Int.random(in: 15...30))"
+                
                 pose[dddd]["fasount"] = "\(Int.random(in: 3...12))"
                 pose[dddd]["followseexount"] = "\(Int.random(in: 3...12))"
             }

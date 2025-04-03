@@ -175,10 +175,10 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
 
     private func updateUserinfoFoeing()  {
         let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
-        
+        wallentCount?.text = use?["DueCoin"]
         MainaviheadDUE.image =  AppDelegate.HuiwchaerQuil
         duerSNameLabhi.text  =  use?["Due_Nopme"]
-        wallentCount?.text = use?["DueCoin"]
+        
         fansCountlAbl?.text = "\(AppDelegate.fenCIPapa.count)"
         followingCount?.text = "\(AppDelegate.follorrPAPA.count)"
     }

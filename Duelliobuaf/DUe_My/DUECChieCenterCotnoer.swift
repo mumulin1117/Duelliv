@@ -79,8 +79,9 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.09, green: 0.01, blue: 0.07, alpha: 1)
-    
-        view.addSubview(self.MainaviheadDUE)
+        shitMorengDUE.isHidden = false
+        shitBackDUE.isHidden = false
+        view.insertSubview(MainaviheadDUE, at: 0)
         //cover
         let covermaijko = UIImageView.init(image: UIImage.init(named: "oijur_jbtm"))
         covermaijko.contentMode = .scaleToFill
@@ -192,13 +193,13 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
         followengDUE.snp.makeConstraints { make in
             make.width.equalTo(143)
             make.height.equalTo(42)
-            make.trailing.equalToSuperview().offset(-10)
+            make.trailing.equalTo(self.view.snp.centerX).offset(-10)
             make.top.equalTo(stack.snp.bottom).offset(20)
         }
         chatingwengDUE.snp.makeConstraints { make in
             make.width.equalTo(143)
             make.height.equalTo(42)
-            make.leading.equalToSuperview().offset(10)
+            make.leading.equalTo(self.view.snp.centerX).offset(10)
             make.top.equalTo(stack.snp.bottom).offset(20)
         }
         
@@ -233,7 +234,11 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
         
         if dfoloower["Due_ComuPic"] != nil {
             
-            let img = UIImageView(image: UIImage.init(named: "Riva_0"))
+            
+            let img = UIImageView()
+            if let aos = dfoloower["Due_ComuPic"]?.components(separatedBy: "^").first {
+                img.image = UIImage(named: aos)
+            }
             img.contentMode = .scaleToFill
             img.layer.cornerRadius = 15
             img.layer.masksToBounds = true
@@ -248,7 +253,7 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
             let contetnlak = UILabel.init()
             contetnlak.textColor = UIColor.white
             
-            contetnlak.text = "Can't stop dancing. It's addictive."
+            contetnlak.text = dfoloower["Due_ComuTItle"]
             contetnlak.font = UIFont.systemFont(ofSize: 14, weight: .regular)
             contetnlak.numberOfLines = 2
             duerSCrollview.addSubview(contetnlak)
