@@ -2,7 +2,7 @@
 //  DUEIPkdanDydetailCotnoller.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/2.
+//  Created by Duelliobuaf on 2025/4/2.
 //
 
 import UIKit
@@ -34,8 +34,14 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
             textField.resignFirstResponder()
             return true
         }
-        duerDic["livecommene"] = result
-        self.CreateStagePresence()
+        
+        self.defautedinft.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+            Loaf("Comment successful!",state: .success, sender: self).show()
+            self.duerDic["livecommene"] = result
+            self.CreateStagePresence()
+            
+        }))
         textField.text = nil
         textField.resignFirstResponder()
         return true
@@ -77,15 +83,24 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
     }()
     
     @objc func Apoinkido()  {
-        nerHalikeing.isSelected = !nerHalikeing.isSelected
+       
+        self.defautedinft.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+           
+            self.defautedinft.stopAnimating()
+            
+            self.nerHalikeing.isSelected = !self.nerHalikeing.isSelected
+            self.duerDic["isSelectedlove"] = self.nerHalikeing.isSelected ? "love" : "dislove"
+        }))
         
-        duerDic["isSelectedlove"] = nerHalikeing.isSelected ? "love" : "dislove"
+       
         
     }
     private var duerDic:Dictionary<String,String>
     init(duerDic: Dictionary<String, String>) {
         self.duerDic = duerDic
         super.init(nibName: nil, bundle: nil)
+        self.recordidDUE = duerDic["Due_oID"]
     }
     
     required init?(coder: NSCoder) {
@@ -192,6 +207,13 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
             make.centerY.equalTo(nevershuldInput)
         }
         maingscroolview.imagePaths = duerDic["Due_ComuPic"]?.components(separatedBy: "^") ?? [""]
+        
+        
+        self.view.addSubview(defautedinft)
+        defautedinft.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
+        }
     }
     
     
@@ -236,6 +258,12 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
             make.left.right.equalToSuperview()
             make.top.equalTo(toping.snp.bottom).offset(32)
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
+    }
+
+
+    @objc func refreshinggindication()  {
+        self.navigationController?.popViewController(animated: true)
     }
     
     

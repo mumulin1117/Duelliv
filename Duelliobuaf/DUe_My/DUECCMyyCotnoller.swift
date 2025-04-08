@@ -2,7 +2,7 @@
 //  DUECCMyyCotnoller.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/3/31.
+//  Created by Duelliobuaf on 2025/3/31.
 //
 import SnapKit
 import UIKit
@@ -179,7 +179,7 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
         MainaviheadDUE.image =  AppDelegate.HuiwchaerQuil
         duerSNameLabhi.text  =  use?["Due_Nopme"]
         
-        fansCountlAbl?.text = "\(AppDelegate.fenCIPapa.count)"
+        fansCountlAbl?.text = "0"
         followingCount?.text = "\(AppDelegate.follorrPAPA.count)"
     }
     
@@ -237,22 +237,24 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
     
     //动态详情
     @objc func ApllldkFoingner()  {
-        
+        if let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>{
+            self.navigationController?.pushViewController(DUEIPkdanDydetailCotnoller.init(duerDic:use), animated: true)
+        }
         
     }
     
    @objc func mineditingeInset(shj:UIButton)  {
-       if shj.tag - 80 == 0 {
-           
+       if shj.tag - 800 == 0 {
+           self.navigationController?.pushViewController(DUEITEnterInContoll.init(relaoty: 0), animated: true)
        }
        
-       if shj.tag - 80 == 1 {
-           
+       if shj.tag - 800 == 1 {
+           self.navigationController?.pushViewController(DUEITEnterInContoll.init(relaoty: 1), animated: true)
        }
        
        
-       if shj.tag - 80 == 2 {
-           
+       if shj.tag - 800 == 2 {
+           self.navigationController?.pushViewController(DUEIPLoaPauinChailive.init(), animated: true)
        }
     }
     

@@ -2,7 +2,7 @@
 //  DUECHomeCotnoller.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/3/31.
+//  Created by Duelliobuaf on 2025/3/31.
 //
 
 import UIKit
@@ -90,18 +90,20 @@ class DUECHomeCotnoller: DUELoavegniContrwo,UICollectionViewDelegate,UICollectio
     
 
     @IBAction func setLiveDUE(_ sender: UIButton) {
+        self.navigationController?.pushViewController(DUECCSetingLiver.init(), animated: true)
     }
     
     @IBAction func setAiDUE(_ sender: UIButton) {
+        self.navigationController?.pushViewController(DUEIVAiChunCotnoler.init(), animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let Doai = dueHomeData[indexPath.row]
         if let dic =  AppDelegate.alldislaofijg.filter({ logol in
-            return logol.userdiocm == Doai
+            return logol.userdiocm["Due_oID"] == Doai["Due_oID"]
         }).first{
            
-           self.navigationController?.pushViewController(DUEIPkLivinailCotnoller.init(datagalll: dic), animated: true)
+            self.navigationController?.pushViewController(DUEIPkLivinailCotnoller.init(datagalll: dic, coveriahkkk: nil), animated: true)
        }
         
     }
@@ -169,9 +171,18 @@ class DUECHomeCotnoller: DUELoavegniContrwo,UICollectionViewDelegate,UICollectio
         }
         
         loadingindication()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        refreshinggindication()
+    }
+    @objc func refreshinggindication()  {
+        self.mainDUEDtartgerVire.reloadData()
+    }
    
 
 }

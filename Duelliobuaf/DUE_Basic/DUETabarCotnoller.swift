@@ -2,7 +2,7 @@
 //  DUETabarCotnoller.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/3/31.
+//  Created by Duelliobuaf on 2025/3/31.
 //
 
 import UIKit
@@ -86,9 +86,20 @@ class DUELoavegniContrwo: UIViewController {
 
 class DUELaterPageContirl: UIViewController {
     
+      lazy var defautedinft: UIActivityIndicatorView = {
+        let indicate = UIActivityIndicatorView.init(style: .large)
+        indicate.color = UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 1)
+        indicate.hidesWhenStopped = true
+        
+        return indicate
+    }()
+    
+    
+    var recordidDUE:String?
+    
      lazy var shitMorengDUE: UIButton = {
         let mains = UIButton.init()
-        mains.setImage(UIImage.init(named: "shitmore"), for: .normal)
+        mains.setImage(UIImage.init(named: "DUEcomplain"), for: .normal)
         mains.addTarget(self, action: #selector(seintongngeInset(shj:)), for: .touchUpInside)
         return mains
     }()
@@ -107,7 +118,7 @@ class DUELaterPageContirl: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        view.backgroundColor = UIColor(red: 0.09, green: 0.01, blue: 0.07, alpha: 1)
         let winfdoe = ((UIApplication.shared.delegate) as? AppDelegate)?.window?.safeAreaInsets.top ?? 0
         view.addSubview(shitMorengDUE)
         view.addSubview(shitBackDUE)
@@ -126,7 +137,10 @@ class DUELaterPageContirl: UIViewController {
     
     //更多
     @objc func seintongngeInset(shj:UIButton)  {
-        
+        if let idsd = recordidDUE {
+            DUEIARKCotnoller.showAlert(on: self, contentId: idsd)
+            
+        }
         
     }
     

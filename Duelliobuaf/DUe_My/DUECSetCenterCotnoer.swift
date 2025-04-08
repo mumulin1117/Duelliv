@@ -2,13 +2,71 @@
 //  DUECSetCenterCotnoer.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/1.
+//  Created by Duelliobuaf on 2025/4/1.
 //
 import Loaf
 import UIKit
 import AVFoundation
-class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICollectionViewDataSource ,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UICollectionViewDelegateFlowLayout{
+class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICollectionViewDataSource ,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UICollectionViewDelegateFlowLayout,UITextFieldDelegate, DUECSetEditInfoCellDelegate{
+    func suregouba() {
+        
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+           
+            self.OAXxbDUiDance()
+        case .notDetermined:
+           
+            AVCaptureDevice.requestAccess(for: .video) { ifHasgranted in
+                
+                DispatchQueue.main.async {
+                    if ifHasgranted {
+                        self.OAXxbDUiDance()
+                    }else{
+                        Loaf("No Camera Permission!", sender: self).show()
+                        
+                       
+                    }
+                }
+               
+            }
+            
+        case .denied,.restricted:
+            Loaf("No Camera Permission!", sender: self).show()
+            
+           
+        
+         default:
+            Loaf("No Camera Permission!", sender: self).show()
+            
+           
+        }
+        
+        
+        
+     }
     
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text?.isEmpty == false, (textField.text?.count ?? 0) > 0{
+            Loaf("Change successful!", state: .success, sender: self).show()
+            
+           
+            
+        }else{
+            Loaf("name is empty!", state: .info, sender: self).show()
+        }
+        
+        
+        var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
+        use?["Due_Nopme"] = textField.text
+        if let id = use?["Due_oID"] {
+            UserDefaults.standard.set(use, forKey: id)
+        }
+        UserDefaults.standard.set(use, forKey: "dueUserNowing")
+        
+        return true
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if section == 0 {
             return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
@@ -45,7 +103,7 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
             
             let KDg = collectionView.dequeueReusableCell(withReuseIdentifier: "DUEBotttomtNrtCell", for: indexPath) as! DUEBotttomtNrtCell
             let zdfdf = ["Log out", "Delete Account" ]
-            KDg.DuerCuoaojmView.setTitle(zdfdf[indexPath.row], for: .normal)
+            KDg.DuerCuoaojmView.text = zdfdf[indexPath.row]
             return KDg
         }
       
@@ -57,20 +115,27 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader{
             let protalHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "DUECSetEditInfoCell", for: indexPath) as! DUECSetEditInfoCell
-            protalHeader.headerViewDUe.setBackgroundImage(AppDelegate.HuiwchaerQuil, for: .normal)
-            protalHeader.headerViewDUe.addTarget(self, action: #selector(shkenOulaui), for: .touchUpOutside)
+            
             
             let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
             
             protalHeader.inputingName.text = use?["Due_Nopme"]
-
-//            editheaderViewDUE = protalHeader
+            protalHeader.inputingName.delegate = self
+            protalHeader.headerViewDUe.isUserInteractionEnabled = true
+            protalHeader.headerViewDUe.setBackgroundImage(AppDelegate.HuiwchaerQuil, for: .normal)
+            protalHeader.delelg = self
+                
+               
             return protalHeader
         }
         return UICollectionReusableView()
     }
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        self.editheaderViewDUE?.headerViewDUe.addTarget(self, action: #selector(shkenOulaui), for: .touchUpOutside)
+        
+    }
     private func OAXxbDUiDance()  {
         let NJshd = UIImagePickerController()
         NJshd.sourceType = .camera
@@ -80,43 +145,98 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
         self.present(NJshd, animated: true, completion: nil)
     }
     
-    //更新头像
-   @objc func shkenOulaui()  {
-       
-       switch AVCaptureDevice.authorizationStatus(for: .video) {
-       case .authorized:
-          
-           self.OAXxbDUiDance()
-       case .notDetermined:
-          
-           AVCaptureDevice.requestAccess(for: .video) { ifHasgranted in
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 0 {//["Privacy", "User Agreement" ,"About us" ,"Clear cache"]
+            if indexPath.row == 0 || indexPath.row == 1{
+                let pop = DUEITermPriiCotnoller.init()
+                pop.modalPresentationStyle = .fullScreen
                
-               DispatchQueue.main.async {
-                   if ifHasgranted {
-                       self.OAXxbDUiDance()
-                   }else{
-                       Loaf("No Camera Permission!", sender: self).show()
-                       
-                      
-                   }
-               }
+                self.present(pop, animated: true)
+                
+            }
+            
+            if indexPath.row == 2{
+                
+                guard let link = URL.init(string: "https://app.kdjlvs.link") else {
+                    return
+                }
+                UIApplication.shared.open(link)
+                
+            }
+            
+            if indexPath.row == 3{
+                
+                
               
-           }
+                let load =  Loaf("Clear.......", state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
+                
+                load.show(.custom(2)){_ in
+                    Loaf("Clear successful!", sender: self).show()
+                }
+                
+            }
            
-       case .denied,.restricted:
-           Loaf("No Camera Permission!", sender: self).show()
-           
-          
-       
-        default:
-           Loaf("No Camera Permission!", sender: self).show()
-           
-          
-       }
-       
-       
-       
+        }
+        
+        if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                UserDefaults.standard.set(nil, forKey: "dueUserNowing")
+                
+                AppDelegate.createappdemoingPOSM()
+                
+                
+                AppDelegate.HuiwchaerQuil = UIImage(named: "Normalyujmrtx")!
+                
+                AppDelegate.follorrPAPA.removeAll()
+                AppDelegate.allMeasgfijg.removeAll()
+                AppDelegate.alldislaofijg.removeAll()
+            }
+            
+            if indexPath.row == 1 {
+                let alert = UIAlertController(
+                        title: "Delete account",
+                        message: "This will immediately: \n• Erase all profile data \n• Remove active subscriptions \n• Delete chat history",
+                        preferredStyle: .alert
+                    )
+                alert.addAction(UIAlertAction(title: "cancel", style: .default))
+                alert.addAction(UIAlertAction(title: "sure", style: .default, handler: { UIAlertAction in
+                    self.defautedinft.startAnimating()
+                    let load =  Loaf("Deleting.......", state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
+                    
+                    load.show(.custom(2)){_ in
+                        self.defautedinft.stopAnimating()
+                        AppDelegate.createappdemoingPOSM()
+                        Loaf("delete successful!", sender: self).show()
+                    }
+                    
+                  
+                    if let nowingers = UserDefaults.standard.object(forKey: "dueUserNowing") as? [String:String] {
+                        
+                        if let id = nowingers["Due_oID"] {
+                            UserDefaults.standard.set(nil, forKey: id)
+                        }
+                        
+                    }
+                   
+                    UserDefaults.standard.set(nil, forKey: "dueUserNowing")
+                    
+                    
+                    
+                    
+                    AppDelegate.HuiwchaerQuil = UIImage(named: "Normalyujmrtx")!
+                    
+                    AppDelegate.follorrPAPA.removeAll()
+                    AppDelegate.allMeasgfijg.removeAll()
+                    AppDelegate.alldislaofijg.removeAll()
+                }))
+                
+                self.present(alert, animated: true)
+                
+            }
+        }
     }
+    
+ 
     
     var dafenibu:UICollectionView?
     
@@ -165,13 +285,19 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
             make.bottom.equalToSuperview()
             make.top.equalTo(DuerCuoaojmView.snp.bottom).offset(26)
         })
+        
+        self.view.addSubview(defautedinft)
+        defautedinft.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
+        }
     }
     
    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         
-        let image : UIImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+        let image : UIImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
     
         DispatchQueue.main.async {
             AppDelegate.HuiwchaerQuil = image
@@ -188,7 +314,12 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
     
 }
 
+
+protocol DUECSetEditInfoCellDelegate {
+    func suregouba()
+}
 class DUECSetEditInfoCell:UICollectionReusableView {
+    var delelg:DUECSetEditInfoCellDelegate?
     
     lazy var headerViewDUe: UIButton = {
         let Odkfes = UIButton.init()
@@ -204,6 +335,7 @@ class DUECSetEditInfoCell:UICollectionReusableView {
         self.layer.masksToBounds = true
         self.backgroundColor = UIColor(red: 0.18, green: 0.15, blue: 0.17, alpha: 1)
         self.addSubview(headerViewDUe)
+        headerViewDUe.isUserInteractionEnabled = true
         headerViewDUe.snp.makeConstraints { make in
             make.width.height.equalTo(100)
             make.centerX.equalToSuperview()
@@ -215,8 +347,14 @@ class DUECSetEditInfoCell:UICollectionReusableView {
             make.height.equalTo(58)
             make.top.equalTo(headerViewDUe.snp.bottom).offset(20)
         }
+        headerViewDUe.addTarget(self, action: #selector(dfojgdrgrg), for: .touchUpInside)
     }
     
+   @objc func dfojgdrgrg()  {
+       if self.delelg != nil {
+           self.delelg?.suregouba()
+       }
+    }
     lazy var inputingName: UITextField = {
         let Tesntit = UITextField.init()
         Tesntit.textAlignment = .center
@@ -279,14 +417,15 @@ class DUECSetNrtCell: UICollectionViewCell {
 
 class DUEBotttomtNrtCell: UICollectionViewCell {
     
-    lazy var DuerCuoaojmView: UIButton = {
-        let DuerCuoaojmView = UIButton.init()
-        DuerCuoaojmView.setTitleColor(.white, for: .normal)
-        DuerCuoaojmView.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+    lazy var DuerCuoaojmView: UILabel = {
+        let DuerCuoaojmView = UILabel.init()
+        DuerCuoaojmView.textColor = .white//(.white, for: .normal)
+        DuerCuoaojmView.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         DuerCuoaojmView.layer.borderColor = UIColor.white.cgColor
         DuerCuoaojmView.layer.borderWidth = 1
         DuerCuoaojmView.layer.cornerRadius = 24
         DuerCuoaojmView.layer.masksToBounds = true
+        DuerCuoaojmView.textAlignment = .center
         return DuerCuoaojmView
     }()
     override init(frame: CGRect) {

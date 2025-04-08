@@ -2,7 +2,7 @@
 //  DUEIPLoaPauinChailive.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/3.
+//  Created by Duelliobuaf on 2025/4/3.
 //
 
 import UIKit
@@ -15,14 +15,17 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
     
     let allOpi = [("mdckcujrtuykonjc","$0.99",400),
                   ("uxohcrvsxuthyglu","$1.99",800),
+                  ("duellivpaonlinuh","$2.99",1250),
+                  ("dfvsdsvsbukuilai","$3.99",1750),
                   ("wwbezydljhehcfhh","$4.99",2450),
+                  ("dfvsdsvsbahuhole","$6.99",3050),
                   ("flqqevjspukbwnws","$9.99",4900),
                   ("dhuhvfrygkxnrqgx","$19.99",9800),
-                  ("eynohwtnojwdmdrr","$49.99",49000),
+                  ("eynohwtnojwdmdrr","$49.99",24500),
                   ("tqhzzqrpzbcypazg","$99.99",49000),
-                  ("dfvsdsvs","$0.99",400),
-                  ("dfvsdsvs","$0.99",400),
-                  ("dfvsdsvs","$0.99",400)
+                  
+                
+                  
     ]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -77,27 +80,29 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
        Loaf("Paying", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
       
        
-//       SwiftyStoreKit.purchaseProduct(svfdfdf.0, atomically: true) { psResult in
-//           self.view.isUserInteractionEnabled = true
-//           Loaf.dismiss(sender: self)
-//           
-//           if case .success(let psPurch) = psResult {
-//              
-//               let psdownloads = psPurch.transaction.downloads
-//               if !psdownloads.isEmpty {
-//                   SwiftyStoreKit.start(psdownloads)
-//               }
-//               
-//               if psPurch.needsFinishTransaction {
-//                   SwiftyStoreKit.finishTransaction(psPurch.transaction)
-//               }
-       var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
+       SwiftyStoreKit.purchaseProduct(svfdfdf.0, atomically: true) { psResult in
+           self.view.isUserInteractionEnabled = true
+           Loaf.dismiss(sender: self)
+           
+           if case .success(let psPurch) = psResult {
+              
+               let psdownloads = psPurch.transaction.downloads
+               if !psdownloads.isEmpty {
+                   SwiftyStoreKit.start(psdownloads)
+               }
+               
+               if psPurch.needsFinishTransaction {
+                   SwiftyStoreKit.finishTransaction(psPurch.transaction)
+               }
+      
+               var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
            
               
                var coainfhkO = Int( use?["DueCoin"] ?? "0") ?? 0
                
                coainfhkO = coainfhkO + svfdfdf.2
-       use?["DueCoin"] = "\(coainfhkO)"
+       
+               use?["DueCoin"] = "\(coainfhkO)"
                self.senoutneLabel.text = "\(coainfhkO)"
                
                Loaf("Pay successful!", state: .success, sender: self).show()
@@ -105,19 +110,20 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
                UserDefaults.standard.set(use, forKey: "dueUserNowing")
                
                UserDefaults.standard.set(use, forKey: use?["Due_oID"] ?? "")
-       UserDefaults.standard.synchronize()
+      
+               UserDefaults.standard.synchronize()
        
        
-//           }else if case .error(let error) = psResult {
-//              
-//               if error.code == .paymentCancelled {
-//                 
-//                   return
-//               }
-//               Loaf(error.localizedDescription, state:.error, sender: self).show()
-//             
-//           }
-//       }
+           }else if case .error(let error) = psResult {
+              
+               if error.code == .paymentCancelled {
+                 
+                   return
+               }
+               Loaf(error.localizedDescription, state:.error, sender: self).show()
+             
+           }
+       }
        
    
    }

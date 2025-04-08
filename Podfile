@@ -12,7 +12,8 @@ target 'Duelliobuaf' do
   pod "IQKeyboardManager"
   pod "Loaf"
   pod 'LLCycleScrollView'
-  
+  pod 'TagListView'
+  pod 'Alamofire'
  
 end
 post_install do |installer|

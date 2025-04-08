@@ -2,7 +2,7 @@
 //  DUEIPkLivinailCotnoller.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/2.
+//  Created by Duelliobuaf on 2025/4/2.
 //
 
 import UIKit
@@ -10,13 +10,19 @@ import Loaf
 
 struct livediaologall {
     var userdiocm:Dictionary<String,String>
-    var lisat:Array<(isgifting:Bool,saconten:String?,giftSti:String?,gisfjtcount:Int?)>
+    var lisat:Array<(isgifting:Bool,saconten:String?,giftSti:String?,gisfjtcount:Int?,ismesay:Bool?)>
+}
+
+
+struct DIOLogdiaologall {
+    var userdiocm:Dictionary<String,String>
+    var lisat:Array<String>
 }
 
 class DUEIPkLivinailCotnoller: DUELaterPageContirl, UITableViewDataSource, UITableViewDelegate, DUEIPGiftpeilCotnollerdelegae {
    //发送礼物
     func presnterintulp(steirnh: String, adgt: Int) {
-        let fgiftcontetn:(isgifting:Bool,saconten:String?,giftSti:String?,gisfjtcount:Int?) = (true,nil,steirnh,adgt)
+        let fgiftcontetn:(isgifting:Bool,saconten:String?,giftSti:String?,gisfjtcount:Int?,ismesay:Bool?) = (true,nil,steirnh,adgt,true)
         
         self.datagalll.lisat.append(fgiftcontetn)
         
@@ -31,11 +37,14 @@ class DUEIPkLivinailCotnoller: DUELaterPageContirl, UITableViewDataSource, UITab
             
         }
     }
-    
+    var coveriah:UIImage?
     private var datagalll:livediaologall
-    init(datagalll: livediaologall) {
+    init(datagalll: livediaologall,coveriahkkk:UIImage?) {
         self.datagalll = datagalll
+        self.coveriah = coveriahkkk
         super.init(nibName: nil, bundle: nil)
+        
+        self.recordidDUE = datagalll.userdiocm["Due_oID"]
     }
     
     required init?(coder: NSCoder) {
@@ -64,17 +73,43 @@ class DUEIPkLivinailCotnoller: DUELaterPageContirl, UITableViewDataSource, UITab
             let due = tableView.dequeueReusableCell(withIdentifier: "DUEIPChailiveCell", for: indexPath) as! DUEIPChailiveCell
             due.senoutneLabel.text = ren.saconten
             due.selectionStyle = .none
+            
+            if ren.ismesay == false{
+                due.userImage.image = UIImage(named: datagalll.userdiocm["Due_avmter"] ?? "")
+                due.meshaineLabel.text =  (datagalll.userdiocm["Due_Nopme"] ?? "") + "(Homeowner)"
+            }
             return due
         }
+        
+       
         
     }
     //举报
     @IBAction func morequihIngh(_ sender: Any) {
-        
-        
+        if let idsd = recordidDUE {
+            DUEIARKCotnoller.showAlert(on: self, contentId: idsd)
+            
+        }
     }
     
     @IBAction func adquiteroorm(_ sender: Any) {
+        if coveriah != nil {
+            
+            let persmifnalert = UIAlertController(
+                title: "Destroy the chat room",
+                message: "After the creator leaves, the chat room will be reclaimed by the system",
+                preferredStyle: .alert
+            )
+            
+            
+            persmifnalert.addAction(UIAlertAction(title: "sure", style: .default) { _ in
+                self.navigationController?.popToRootViewController(animated: true)
+            })
+            persmifnalert.addAction(UIAlertAction(title: "cancel", style: .cancel))
+            present(persmifnalert, animated: true)
+            
+            return
+       }
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -97,9 +132,12 @@ class DUEIPkLivinailCotnoller: DUELaterPageContirl, UITableViewDataSource, UITab
     @IBOutlet weak var saycontenrt: UITextField!
     
     
+    @IBOutlet weak var toinsenrt: UIButton!
     @IBOutlet weak var INusayingView: UITableView!
     
     @IBAction func inserbuttone(_ sender: UIButton) {
+        
+        
         let alertvf = DUECChieCenterCotnoer.init(dfoloower: datagalll.userdiocm)
         
         self.navigationController?.pushViewController(alertvf, animated: true)
@@ -133,11 +171,37 @@ class DUEIPkLivinailCotnoller: DUELaterPageContirl, UITableViewDataSource, UITab
             make.bottom.equalTo(saycontenrt.snp.top).offset(-5)
             make.top.equalTo(dueiDisssDUE.snp.bottom).offset(30)
         }
+        if coveriah != nil {
+            vningVieww.image = coveriah
+            
+            seecountlabki.setTitle("0", for: .normal)
+            self.toinsenrt.isHidden = true
+            self.quedFeiospio.isHidden = true
+        }else{
+            vningVieww.image = UIImage(named: datagalll.userdiocm["Due_Cover"] ?? "")
+        }
         
-        vningVieww.image = UIImage(named: datagalll.userdiocm["Due_Cover"] ?? "")
     
         uianhdi.image = UIImage(named: datagalll.userdiocm["Due_avmter"] ?? "")
         
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
+        
+        self.view.addSubview(defautedinft)
+        defautedinft.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
+        }
+        
+        self.defautedinft.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+            self.defautedinft.stopAnimating()
+            self.INusayingView.isHidden = false
+        }))
+    }
+
+
+    @objc func refreshinggindication()  {
+        self.navigationController?.popViewController(animated: true)
     }
 
   
@@ -185,7 +249,7 @@ extension DUEIPkLivinailCotnoller:UITextFieldDelegate {
         
        
         
-        let fgiftcontetn:(isgifting:Bool,saconten:String?,giftSti:String?,gisfjtcount:Int?) = (false,result,nil,nil)
+        let fgiftcontetn:(isgifting:Bool,saconten:String?,giftSti:String?,gisfjtcount:Int?,ismesay:Bool?) = (false,result,nil,nil,true)
         
         self.datagalll.lisat.append(fgiftcontetn)
         textField.text = nil
@@ -197,9 +261,26 @@ extension DUEIPkLivinailCotnoller:UITextFieldDelegate {
     
     
     @objc func Apoinkido()  {
-        givenHeadert.isSelected = !givenHeadert.isSelected
         
-        datagalll.userdiocm["isLiveAllLike"] = givenHeadert.isSelected ? "love" : "dislove"
+        self.defautedinft.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+           
+            self.INusayingView.isHidden = false
+            
+            self.givenHeadert.isSelected = !self.givenHeadert.isSelected
+            
+            self.datagalll.userdiocm["isLiveAllLike"] = self.givenHeadert.isSelected ? "love" : "dislove"
+            
+            for (hus,insj) in AppDelegate.dueAllPapa.enumerated() {
+                if insj["Due_oID"] == insj["Due_oID"] {
+                    AppDelegate.dueAllPapa[hus] = self.datagalll.userdiocm
+                }
+            }
+        }))
+        
+        
+        
+        
         
     }
     

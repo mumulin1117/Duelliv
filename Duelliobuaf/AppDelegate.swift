@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/3/31.
+//  Created by Duelliobuaf on 2025/3/31.
 //
 
 import UIKit
@@ -12,10 +12,12 @@ import Loaf
 class AppDelegate: UIResponder, UIApplicationDelegate {
     static var dueAllPapa = Array<Dictionary<String,String>>()
     
-    static var fenCIPapa = Array<Dictionary<String,String>>()
-    static var follorrPAPA = Array<Dictionary<String,String>>()
+   
+    static var follorrPAPA = Set<Dictionary<String,String>>()
     
     static var alldislaofijg:Array<livediaologall> = Array<livediaologall>()//对话
+    
+    static var allMeasgfijg:Array<DIOLogdiaologall> = Array<DIOLogdiaologall>()
     static var HuiwchaerQuil:UIImage = UIImage(named: "Normalyujmrtx")!
     
     var window: UIWindow?
@@ -87,7 +89,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let nowingers = UserDefaults.standard.object(forKey: "dueUserNowing") as? [String:String] {
          ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = DUETabarCotnoller()
-        
+            
+            
+            AppDelegate.dueAllPapa.forEach({ user in
+                AppDelegate.alldislaofijg.append(livediaologall(userdiocm: user, lisat: [(false,["Welcome in! Grapevine step across! ➡️⬅️","Dance mood activated! Isolation head rolls! 🌀","Energy check! Plié pulse with me! 🩰","New challenger! Body wave challenge! 🌟","Let's vibe! Footwork freestyle NOW! 🔥","Welcome to the dance floor! Let's body roll! 💃","Hey dance fam! Start with a step-touch combo! 👣","New crew member! Shimmy those shoulders! ✨","Let's groove together! Arm wave on 3-2-1! 🌊"].randomElement(),nil,gisfjtcount:nil,ismesay:false)]))
+                AppDelegate.allMeasgfijg.append(DIOLogdiaologall(userdiocm: user, lisat: []))
+          })
+            
          if nowingers["Due_oID"] == "shamer@gmail.com" {
             
              Afeifobdhuiad()
@@ -104,11 +112,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private class func Afeifobdhuiad()  {
         AppDelegate.HuiwchaerQuil = UIImage(named: "Due_feiber_10")!
-        AppDelegate.fenCIPapa = Array(AppDelegate.dueAllPapa.prefix(1))
-        AppDelegate.follorrPAPA = Array(AppDelegate.dueAllPapa.prefix(1))
-          AppDelegate.dueAllPapa.forEach({ user in
-              AppDelegate.alldislaofijg.append(livediaologall(userdiocm: user, lisat: Array()))
-        })
+        if let first = AppDelegate.dueAllPapa.first  {
+          AppDelegate.follorrPAPA.insert(first)
+        }
+        
+        let diokols = ["hello what are you doing?","hello","Your dance movements are really difficult"]
+        
+        
     }
 }
 

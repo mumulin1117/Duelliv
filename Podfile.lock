@@ -7,6 +7,7 @@ PODS:
   - Loaf (0.7.0)
   - SnapKit (5.7.1)
   - SwiftyStoreKit (0.16.1)
+  - TagListView (1.4.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - Loaf
   - SnapKit
   - SwiftyStoreKit
+  - TagListView
 
 SPEC REPOS:
   trunk:
@@ -25,6 +27,7 @@ SPEC REPOS:
     - Loaf
     - SnapKit
     - SwiftyStoreKit
+    - TagListView
 
 SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
@@ -34,7 +37,8 @@ SPEC CHECKSUMS:
   Loaf: d69937cd00649f3fa260beb8b7aef0a1feb861ef
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: 05cd01a78589b2d3769cd405a504ec69e9c7da92
+PODFILE CHECKSUM: 0d14d4c73411952af42b5f8c5331155d3afd5604
 
 COCOAPODS: 1.16.2

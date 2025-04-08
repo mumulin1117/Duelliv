@@ -2,7 +2,7 @@
 //  DUEIPGiftCell.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/2.
+//  Created by Duelliobuaf on 2025/4/2.
 //
 
 import UIKit

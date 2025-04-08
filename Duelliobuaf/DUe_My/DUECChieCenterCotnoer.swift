@@ -2,7 +2,7 @@
 //  DUECChieCenterCotnoer.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/1.
+//  Created by Duelliobuaf on 2025/4/1.
 //
 
 import UIKit
@@ -27,7 +27,13 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
    }()
     
    //chat
-   @objc func ChaingforDue() {
+    @objc func ChaingforDue() {
+        if  let inbau = AppDelegate.allMeasgfijg.filter({ DIOLogdiaologall in
+            DIOLogdiaologall.userdiocm["Due_oID"] == dfoloower["Due_oID"]
+        }).first {
+          self.navigationController?.pushViewController(DUEITChatipoContoll.init(appdelegateFei: inbau), animated: true)
+      }
+       
         
     }
     
@@ -35,7 +41,14 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
     //foloowe
     @objc func followertngforDue() {
          
-     }
+        followengDUE.isSelected = !followengDUE.isSelected
+        if followengDUE.isSelected {
+            AppDelegate.follorrPAPA.insert(dfoloower)
+            return
+        }
+        AppDelegate.follorrPAPA.remove(dfoloower)
+        
+    }
     
     private let postlabel = UILabel.init()
     private var fansCountlAbl:UILabel?
@@ -48,6 +61,7 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
      
         self.dfoloower = dfoloower
         super.init(nibName: nil, bundle: nil)
+        self.recordidDUE = dfoloower["Due_oID"]
     }
     
      required init?(coder: NSCoder) {
@@ -57,7 +71,9 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUserinfoFoeing()
-
+        if AppDelegate.follorrPAPA.contains(dfoloower){
+            followengDUE.isSelected = true
+        }
     }
     
     private let duerSCrollview = UIScrollView.init()
@@ -115,6 +131,11 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
         insertStatckView()
         
         shamePostingBotto()
+        self.view.addSubview(defautedinft)
+        defautedinft.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
+        }
     }
     
     
@@ -282,13 +303,19 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
         }
         
         
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
+    }
+
+
+    @objc func refreshinggindication()  {
+        self.navigationController?.popViewController(animated: true)
     }
     
     
     //动态详情
     @objc func ApllldkFoingner()  {
         
-        
+        self.navigationController?.pushViewController(DUEIPkdanDydetailCotnoller.init(duerDic: self.dfoloower), animated: true)
     }
     
 

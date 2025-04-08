@@ -2,7 +2,7 @@
 //  DUECCommutityCotnolle.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/3/31.
+//  Created by Duelliobuaf on 2025/3/31.
 //
 
 import UIKit
@@ -114,6 +114,9 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
         loadingindication()
     }
     
+    
+    @IBOutlet weak var mesageKFoig: UIImageView!
+    
     private func loadingindication()  {
         self.defautedinft.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
@@ -136,7 +139,7 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
         layout.minimumInteritemSpacing = 12
         layout.scrollDirection = .vertical
         
-        
+        mesageKFoig.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(Jfoforing)))
         mainDUEDtartgerVire.collectionViewLayout = layout
         
         mainDUEDtartgerVire.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
@@ -155,9 +158,23 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
         }
         
         loadingindication()
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
+    }
+
+
+    @objc func refreshinggindication()  {
+        self.mainDUEDtartgerVire.reloadData()
+    }
+    
+   @objc func Jfoforing()  {
+       self.navigationController?.pushViewController(DUEIVListforYnCotnoler.init(), animated: true)
     }
 
     
-   
+    @IBAction func aDinasubij(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(DUEIVPOstDYnCotnoler.init(), animated: true)
+    }
+    
 
 }

@@ -2,7 +2,7 @@
 //  DUEIPChailiveCell.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/2.
+//  Created by Duelliobuaf on 2025/4/2.
 //
 
 import UIKit
@@ -10,11 +10,11 @@ import UIKit
 class DUEIPChailiveCell: UITableViewCell {
    
     
-    private let userImage = UIImageView(image:AppDelegate.HuiwchaerQuil)
+     let userImage = UIImageView(image:AppDelegate.HuiwchaerQuil)
     
                                                               
    
-    private lazy var meshaineLabel: UILabel = {
+     lazy var meshaineLabel: UILabel = {
         let laj = UILabel.init()
         laj.text = "Me"
         laj.font = UIFont.systemFont(ofSize: 12, weight: .regular)
