@@ -16,7 +16,7 @@ class DUEIPChailiveCell: UITableViewCell {
    
      lazy var meshaineLabel: UILabel = {
         let laj = UILabel.init()
-        laj.text = "Me"
+        laj.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mte") 
         laj.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         laj.textColor =  UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
         return laj

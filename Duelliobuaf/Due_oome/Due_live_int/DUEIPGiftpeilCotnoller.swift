@@ -85,7 +85,7 @@ class DUEIPGiftpeilCotnoller: UIViewController, UICollectionViewDelegate, UIColl
        }
        
        if vxcn == dueburreongDecrea {
-           if allCountPresent < 1 {
+           if allCountPresent <= 1 {
                return
            }
            

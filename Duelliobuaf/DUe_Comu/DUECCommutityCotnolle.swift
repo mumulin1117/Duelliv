@@ -8,6 +8,8 @@
 import UIKit
 
 class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    
     private  lazy var defautedinft: UIActivityIndicatorView = {
         let indicate = UIActivityIndicatorView.init(style: .large)
         indicate.color = UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 1)

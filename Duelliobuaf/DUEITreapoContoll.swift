@@ -2,7 +2,7 @@
 //  DUEITreapoContoll.swift
 //  Duelliobuaf
 //
-//  Created by mumu on 2025/4/8.
+//  Created by Duelliobuaf on 2025/4/8.
 //
 
 import UIKit
@@ -25,12 +25,7 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
         
         texfview.backgroundColor = UIColor(red: 0.22, green: 0.18, blue: 0.21, alpha: 1)
         texfview.textColor = .white
-        texfview.layer.cornerRadius = 20
-        texfview.layer.masksToBounds = true
         
-        texfview.text = "Supplementary description"
-        texfview.font = UIFont(name: "HarmonyOS Sans Medium", size: 15)
-        texfview.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 10, right: 15)
         texfview.delegate = self
         self.view.addSubview(texfview)
         texfview.snp.makeConstraints { make in
@@ -41,11 +36,19 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
         
         
         let layud = UIButton.init()
-        layud.setTitle("Subit", for: .normal)
+        layud.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Sjuybkmjiet"), for: .normal)
         layud.setTitleColor(.white, for: .normal)
+        texfview.layer.cornerRadius = 20
+        texfview.layer.masksToBounds = true
+        
+        
+        texfview.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 10, right: 15)
         layud.setBackgroundImage(UIImage.init(named: "img_btn_bg"), for: .normal)
+        
         layud.addTarget(self, action: #selector(savegetingj), for: .touchUpInside)
         view.addSubview(layud)
+        texfview.text = "Supplementary description"
+        texfview.font = UIFont(name: "HarmonyOS Sans Medium", size: 15)
         layud.snp.makeConstraints { make in
             make.width.equalTo(287)
             make.height.equalTo(48)
@@ -63,14 +66,14 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
     
     @objc func savegetingj()  {
         if daceTagoB.selectedTags().count == 0 {
-            Loaf("Please select one reason for submiting!",state: .info, sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pqlmefafsvey useecloevcbtz woxnuep srceyadsfoxnw gfhoorf dsxuabzmhictzijnega!"),state: .info, sender: self).show()
             return
         }
-        let load =  Loaf("Submiting.......", state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
+        let load =  Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Sauvblmoiktiiuntgd.g.a.c.x.a.h."), state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
         defautedinft.startAnimating()
         load.show(.custom(2)){_ in
             self.defautedinft.stopAnimating()
-            Loaf("We will process your report as soon as possible. Thank you for your supervision!",state: .success, sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Wyem qwbidljle zpsrgoeceedsasa ryhovulrm lrteqpbobrntt racsi wsiorounk sansu rpgoasgsiifbzlzei.h yTfhhaynzky myvouuh yffoerl qydolucrm esquppzemrsvrivssiqofns!"),state: .success, sender: self).show()
             
             self.navigationController?.popViewController(animated: true)
         }
@@ -88,7 +91,7 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
         }
         
         let Toio = UILabel.init()
-        Toio.text = "Report Type"
+        Toio.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Rgehpeonrkto mTlyypre")
         Toio.textColor = .white
         Toio.textAlignment = .left
         Toio.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -107,12 +110,7 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
         daceTagoB.tagBackgroundColor =  UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 0.1600)
         daceTagoB.clipsToBounds = true
         daceTagoB.selectedTextColor = .white
-        daceTagoB.textColor = UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 1)
-        daceTagoB.tag = 200
-        daceTagoB.delegate = self
-        daceTagoB.cornerRadius = 18
-        daceTagoB.paddingX =  12
-        daceTagoB.paddingY = 12
+        weaveCulturalRhythms()
         daceTagoB.marginX = 12
         daceTagoB.marginY = 12
         daceTagoB.addTags(["Love Story","Dream Chaser","Fantasy World","Nature's Beauty","Friendship Forever"])
@@ -137,5 +135,14 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
     func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
         tagView.isSelected = !tagView.isSelected
         
+    }
+    
+    func weaveCulturalRhythms(){
+        daceTagoB.textColor = UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 1)
+        daceTagoB.tag = 200
+        daceTagoB.delegate = self
+        daceTagoB.cornerRadius = 18
+        daceTagoB.paddingX =  12
+        daceTagoB.paddingY = 12
     }
 }

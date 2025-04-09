@@ -42,7 +42,10 @@ class DUECHomeCotnoller: DUELoavegniContrwo,UICollectionViewDelegate,UICollectio
             }
                 return POpsif
         }
-        return Array(POpsif.prefix(1))
+        if   POpsif.count >= 1 {
+            return Array(POpsif.suffix(1))
+        }
+            return POpsif
     }
     
     func collectionView(_ collectionView: UICollectionView, heightForItemAt indexPath: IndexPath) -> CGFloat {
@@ -145,24 +148,30 @@ class DUECHomeCotnoller: DUELoavegniContrwo,UICollectionViewDelegate,UICollectio
     
     @IBOutlet weak var mainDUEDtartgerVire: UICollectionView!
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let layout = WaterfallLayout.init()
-        layout.delegate = self
-
-        mainDUEDtartgerVire.collectionViewLayout = layout
-        
-        mainDUEDtartgerVire.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+    private func transmuteGiftToBoost(){
         mainDUEDtartgerVire.delegate = self
         mainDUEDtartgerVire.dataSource = self
         mainDUEDtartgerVire.register(UINib(nibName: "DUECHomeDterCell", bundle: nil), forCellWithReuseIdentifier: "DUECHomeDterCell")
         
         mainDUEDtartgerVire.register(CelShineStarCell.self, forCellWithReuseIdentifier: "CelShineStarCell")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let layout = DUERSWaterfowlLayout.init()
+        layout.deleDUEgate = self
+
+        mainDUEDtartgerVire.collectionViewLayout = layout
         
+        mainDUEDtartgerVire.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+        
+        transmuteGiftToBoost()
         mainDUEDtartgerVire.showsVerticalScrollIndicator = false
         
+        weaveCulturalRhythms()
+    }
+    
+    private func weaveCulturalRhythms(){
         self.mainDUEDtartgerVire.isHidden = true
         self.view.addSubview(self.defautedinft)
         defautedinft.snp.makeConstraints { make in

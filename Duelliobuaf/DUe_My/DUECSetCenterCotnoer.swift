@@ -22,7 +22,7 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
                     if ifHasgranted {
                         self.OAXxbDUiDance()
                     }else{
-                        Loaf("No Camera Permission!", sender: self).show()
+                        Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ntoz bClazmsecrmax xPaecrpmtimsisciaosnv!"), sender: self).show()
                         
                        
                     }
@@ -31,12 +31,12 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
             }
             
         case .denied,.restricted:
-            Loaf("No Camera Permission!", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ntoz bClazmsecrmax xPaecrpmtimsisciaosnv!"), sender: self).show()
             
            
         
          default:
-            Loaf("No Camera Permission!", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ntoz bClazmsecrmax xPaecrpmtimsisciaosnv!"), sender: self).show()
             
            
         }
@@ -49,12 +49,12 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text?.isEmpty == false, (textField.text?.count ?? 0) > 0{
-            Loaf("Change successful!", state: .success, sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Chhwasnrgaeb vsoujczcaepsgszfbuglv!"), state: .success, sender: self).show()
             
            
             
         }else{
-            Loaf("name is empty!", state: .info, sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "neaemmex zimst neqmopxtlyf!"), state: .info, sender: self).show()
         }
         
         
@@ -94,7 +94,7 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let zdfdf = ["Privacy", "User Agreement" ,"About us" ,"Clear cache"]
+            let zdfdf = [DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pmrhipvrajcvy"), DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Utseehri qApgurkelenmbeangt") ,DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Aebfoqujtn ques") ,DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cglhefahrr cccaacwhie")]
             
             let KDg = collectionView.dequeueReusableCell(withReuseIdentifier: "DUECSetNrtCell", for: indexPath) as! DUECSetNrtCell
             KDg.DuerCuoaojmView.text = zdfdf[indexPath.row]
@@ -102,7 +102,7 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
         }else{
             
             let KDg = collectionView.dequeueReusableCell(withReuseIdentifier: "DUEBotttomtNrtCell", for: indexPath) as! DUEBotttomtNrtCell
-            let zdfdf = ["Log out", "Delete Account" ]
+            let zdfdf = [DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Lsobgv ooyuwt"), DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Dfellsextteb oAvcachokujnbt") ]
             KDg.DuerCuoaojmView.text = zdfdf[indexPath.row]
             return KDg
         }
@@ -157,7 +157,7 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
             
             if indexPath.row == 2{
                 
-                guard let link = URL.init(string: "https://app.kdjlvs.link") else {
+                guard let link = URL.init(string: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hntitkpzsc:c/n/qawpmpq.mkbdhjcllvjsy.jlvimndk")) else {
                     return
                 }
                 UIApplication.shared.open(link)
@@ -168,10 +168,10 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
                 
                 
               
-                let load =  Loaf("Clear.......", state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
+                let load =  Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cglzepadrw.u.z.n.p.o.x."), state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
                 
                 load.show(.custom(2)){_ in
-                    Loaf("Clear successful!", sender: self).show()
+                    Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cyleebafrf dswurcjcxejsssjfgudln!"), sender: self).show()
                 }
                 
             }
@@ -185,28 +185,25 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
                 AppDelegate.createappdemoingPOSM()
                 
                 
-                AppDelegate.HuiwchaerQuil = UIImage(named: "Normalyujmrtx")!
-                
-                AppDelegate.follorrPAPA.removeAll()
-                AppDelegate.allMeasgfijg.removeAll()
-                AppDelegate.alldislaofijg.removeAll()
+                igniteDuelEnergy()
             }
             
             if indexPath.row == 1 {
-                let alert = UIAlertController(
-                        title: "Delete account",
+                let alertDUE = UIAlertController(
+                        title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Dkeclueetheq faecncyohuynzt"),
                         message: "This will immediately: \n• Erase all profile data \n• Remove active subscriptions \n• Delete chat history",
                         preferredStyle: .alert
                     )
-                alert.addAction(UIAlertAction(title: "cancel", style: .default))
-                alert.addAction(UIAlertAction(title: "sure", style: .default, handler: { UIAlertAction in
+                alertDUE.addAction(UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "clamnqcqesl"), style: .default))
+                
+                alertDUE.addAction(UIAlertAction(title:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "squdrhe") , style: .default, handler: { UIAlertAction in
                     self.defautedinft.startAnimating()
-                    let load =  Loaf("Deleting.......", state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
+                    let load =  Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Dseklbeotjiontgd.n.j.e.z.y.s."), state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
                     
                     load.show(.custom(2)){_ in
                         self.defautedinft.stopAnimating()
                         AppDelegate.createappdemoingPOSM()
-                        Loaf("delete successful!", sender: self).show()
+                        Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dteblceptgeo asauycpcgezsqsifdudlj!"), sender: self).show()
                     }
                     
                   
@@ -221,22 +218,20 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
                     UserDefaults.standard.set(nil, forKey: "dueUserNowing")
                     
                     
+                    self.igniteDuelEnergy()
                     
-                    
-                    AppDelegate.HuiwchaerQuil = UIImage(named: "Normalyujmrtx")!
-                    
-                    AppDelegate.follorrPAPA.removeAll()
-                    AppDelegate.allMeasgfijg.removeAll()
-                    AppDelegate.alldislaofijg.removeAll()
+                   
                 }))
                 
-                self.present(alert, animated: true)
+                self.present(alertDUE, animated: true)
                 
             }
         }
     }
     
  
+    
+   
     
     var dafenibu:UICollectionView?
     
@@ -270,7 +265,7 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
         let DuerCuoaojmView = UILabel.init()
         DuerCuoaojmView.textColor = UIColor.white
         DuerCuoaojmView.textAlignment = .center
-        DuerCuoaojmView.text = "Setting"
+        DuerCuoaojmView.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Szettytbienig")
         DuerCuoaojmView.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         view.addSubview(DuerCuoaojmView)
         DuerCuoaojmView.snp.makeConstraints { make in
@@ -293,7 +288,15 @@ class DUECSetCenterCotnoer: DUELaterPageContirl, UICollectionViewDelegate, UICol
         }
     }
     
-   
+    private func igniteDuelEnergy() {
+        AppDelegate.HuiwchaerQuil = UIImage(named: "Normalyujmrtx")!
+        
+        AppDelegate.follorrPAPA.removeAll()
+        
+        AppDelegate.allMeasgfijg.removeAll()
+        
+        AppDelegate.alldislaofijg.removeAll()
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         
@@ -362,7 +365,7 @@ class DUECSetEditInfoCell:UICollectionReusableView {
         Tesntit.backgroundColor = .black
         Tesntit.layer.cornerRadius = 29
         Tesntit.layer.masksToBounds = true
-        Tesntit.placeholder = "Please enter name"
+        Tesntit.placeholder = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pblietatsdew xeknytferru knkadmie")
         let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
         
         Tesntit.text = use?["Due_Nopme"]

@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import SwiftyStoreKit
+import IQKeyboardManager
 class DUEITermPriiCotnoller: UIViewController {
 
     @IBOutlet weak var segmentControllDUE: UISegmentedControl!
@@ -19,19 +20,29 @@ class DUEITermPriiCotnoller: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        igniteDuelEnergy()
+        generateBattleRoutine()
+    }
+    
+    private func igniteDuelEnergy(){
         
         haveredf.layer.cornerRadius = 24
         
         
         haveredf.layer.masksToBounds = true
+    }
+    
+    private func generateBattleRoutine()  {
         infoinrDesc.layer.cornerRadius  = 20
         infoinrDesc.layer.masksToBounds = true
         
         infoinrDesc.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
-    @IBAction func changeValuerDue(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            infoinrDesc.text = """
+    
+    
+    
+    func remixChallengeParameters() {
+        infoinrDesc.text = """
 
 Duelliv Terms of Service
 Effective Date: [2025-03-20]
@@ -91,6 +102,10 @@ Consult legal counsel to ensure alignment with app store guidelines and regional
 Let me know if you need further adjustments! 🩰✨
 
 """
+    }
+    @IBAction func changeValuerDue(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            remixChallengeParameters()
         }else{
             
             infoinrDesc.text = """
@@ -157,6 +172,24 @@ We will notify users of material changes via email or in-app alerts. Continued u
 
     @IBAction func readniewoe(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+    static func amplifyStagePresence(){
+        
+        IQKeyboardManager.shared().isEnabled = true
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+            for purchase in purchases {
+                switch purchase.transaction.transactionState {
+                case .purchased, .restored:
+                    if purchase.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
+                case .failed, .purchasing, .deferred:break
+                @unknown default:break
+                }
+            }
+        }
+        
     }
     
 }

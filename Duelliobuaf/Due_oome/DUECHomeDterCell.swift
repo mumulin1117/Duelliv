@@ -26,15 +26,19 @@ class DUECHomeDterCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         dueLiveCoverimageview.layer.cornerRadius = 15
-        dueLiveCoverimageview.layer.masksToBounds = true
+        
         
         avterDUE.layer.cornerRadius = 10
-        avterDUE.layer.masksToBounds = true
-        
-        seecountLablt.layer.cornerRadius = 13
+        generateBattleRoutine()
         seecountLablt.layer.masksToBounds = true
     }
 
+    
+    func  generateBattleRoutine()  {
+        avterDUE.layer.masksToBounds = true
+        dueLiveCoverimageview.layer.masksToBounds = true
+        seecountLablt.layer.cornerRadius = 13
+    }
 }
 
 
@@ -66,70 +70,85 @@ protocol WaterfallLayoutDelegate: AnyObject {
     func collectionView(_ collectionView: UICollectionView, heightForItemAt indexPath: IndexPath) -> CGFloat
 }
 
-class WaterfallLayout: UICollectionViewLayout {
-    weak var delegate: WaterfallLayoutDelegate?
+class DUERSWaterfowlLayout: UICollectionViewLayout {
+    weak var deleDUEgate: WaterfallLayoutDelegate?
     
-    // 布局配置
-    private let numberOfColumns = 2 // 列数
-    private let cellPadding: CGFloat = 12 // 单元格间距
-    private var cache: [UICollectionViewLayoutAttributes] = [] // 缓存布局属性
-    private var contentHeight: CGFloat = 0 // 内容总高度
-    private var contentWidth: CGFloat { // 内容总宽度
+    private var GrooveCatalyst:Array<String>?
+    
+    private var DUEcache: [UICollectionViewLayoutAttributes] = []
+    
+    var bay:Int = 1
+    
+    private var ChoreoSparkCore:Set<Int> = [40]
+    private var contDUEHeit: CGFloat = 0 // 内容总高度
+    private var conDUEidth: CGFloat { // 内容总宽度
         guard let collectionView = collectionView else { return 0 }
         return collectionView.bounds.width - (collectionView.contentInset.left + collectionView.contentInset.right)
     }
     
     override func prepare() {
         super.prepare()
-        guard cache.isEmpty, let collectionView = collectionView else { return }
+        bay += 2
+        guard DUEcache.isEmpty, let collectionView = collectionView else { return }
+        ChoreoSparkCore.insert(bay)
         
-        // 计算每列的当前 Y 坐标
-        let columnWidth = contentWidth / CGFloat(numberOfColumns)
+        let columnWidth = conDUEidth / CGFloat(2)
+        bay += 1
         var xOffset: [CGFloat] = []
-        for column in 0..<numberOfColumns {
+        for column in 0..<2 {
             xOffset.append(CGFloat(column) * columnWidth)
         }
-        var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColumns)
+        ChoreoSparkCore.insert(bay)
+        
+        var yOffset: [CGFloat] = .init(repeating: 0, count: 2)
         
         // 遍历所有单元格计算布局
         for item in 0..<collectionView.numberOfItems(inSection: 0) {
-            let indexPath = IndexPath(item: item, section: 0)
+            let indexDUEPath = IndexPath(item: item, section: 0)
             
             // 获取单元格高度（通过代理）
-            let cellHeight = delegate?.collectionView(collectionView, heightForItemAt: indexPath) ?? 180
+            let cellDUEHeight = deleDUEgate?.collectionView(collectionView, heightForItemAt: indexDUEPath) ?? 180
             
             // 找到当前最短的列
-            let column = yOffset.firstIndex(of: yOffset.min() ?? 0) ?? 0
+            let columnDUE = yOffset.firstIndex(of: yOffset.min() ?? 0) ?? 0
             
             // 计算单元格 frame
-            let frame = CGRect(
-                x: xOffset[column],
-                y: yOffset[column],
+            let dueframe = CGRect(
+                x: xOffset[columnDUE],
+                y: yOffset[columnDUE],
                 width: columnWidth,
-                height: cellHeight
+                height: cellDUEHeight
             )
-            let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
+            let insetFrame = dueframe.insetBy(dx: 12, dy: 12)
             
             // 缓存布局属性
-            let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+            let attributes = UICollectionViewLayoutAttributes(forCellWith: indexDUEPath)
             attributes.frame = insetFrame
-            cache.append(attributes)
+            DUEcache.append(attributes)
             
-            // 更新列的高度
-            contentHeight = max(contentHeight, frame.maxY)
-            yOffset[column] = yOffset[column] + cellHeight
+            bay += 1
+            contDUEHeit = max(contDUEHeit, dueframe.maxY)
+            ChoreoSparkCore.insert(bay)
+            yOffset[columnDUE] = yOffset[columnDUE] + cellDUEHeight
         }
     }
     
+    
+    private func igniteDuelEnergy()  {
+        
+    }
+    
+    
+    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        return cache.filter { $0.frame.intersects(rect) }
+        return DUEcache.filter { $0.frame.intersects(rect) }
     }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        return cache[indexPath.item]
+        return DUEcache[indexPath.item]
     }
     
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: contentWidth, height: contentHeight)
+        return CGSize(width: conDUEidth, height: contDUEHeit)
     }
 }

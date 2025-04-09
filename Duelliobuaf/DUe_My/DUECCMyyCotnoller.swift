@@ -26,21 +26,9 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
     }
     
     private let duerSCrollview = UIScrollView.init()
-    private  lazy var duerSNameLabhi: UILabel = {
-        let label = UILabel.init()
-        label.textColor = .white
-        label.textAlignment = .left
-        
-        label.font = UIFont.systemFont(ofSize: 48, weight: .bold)
-        return label
-    }()
+   
     
-    private  lazy var MainaviheadDUE: UIImageView = {
-        let maijko = UIImageView.init(image: UIImage.init(named: ""))
-        maijko.contentMode = .scaleAspectFill
-        maijko.frame = CGRect(origin: CGPoint.init(x: 0, y: 0), size: CGSize(width: UIScreen.main.bounds.width, height: 446))
-        return maijko
-    }()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.09, green: 0.01, blue: 0.07, alpha: 1)
@@ -88,7 +76,14 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
         }
     }
     
-    
+    private  lazy var duerSNameLabhi: UILabel = {
+        let label = UILabel.init()
+        label.textColor = .white
+        label.textAlignment = .left
+        
+        label.font = UIFont.systemFont(ofSize: 48, weight: .bold)
+        return label
+    }()
     private func insertStatckView()  {
         duerSCrollview.addSubview(self.duerSNameLabhi)
         duerSNameLabhi.snp.makeConstraints { make in
@@ -112,7 +107,7 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
             make.top.equalTo(duerSNameLabhi.snp.bottom).offset(10)
         }
         
-        for (i,item) in ["Fans","Followings","Wallet"].enumerated() {
+        for (i,item) in [DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Fkaynrs"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Fjoclzltoawfiznggws"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Wkailhljezt")].enumerated() {
             let huan = UIButton.init()
             huan.tag = i + 800
             huan.addTarget(self, action: #selector(mineditingeInset(shj: )), for: .touchUpInside)
@@ -164,7 +159,7 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
         
         postlabel.textColor = UIColor.white
         
-        postlabel.text = "Posts"
+        postlabel.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Phovshtqs")
         postlabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         duerSCrollview.addSubview(postlabel)
         postlabel.snp.makeConstraints { make in
@@ -183,7 +178,12 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
         followingCount?.text = "\(AppDelegate.follorrPAPA.count)"
     }
     
-    
+    private  lazy var MainaviheadDUE: UIImageView = {
+        let maijko = UIImageView.init(image: UIImage.init(named: ""))
+        maijko.contentMode = .scaleAspectFill
+        maijko.frame = CGRect(origin: CGPoint.init(x: 0, y: 0), size: CGSize(width: UIScreen.main.bounds.width, height: 446))
+        return maijko
+    }()
     private func shamePostingBotto()  {
         let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
         if use?["Due_oID"] == "shamer@gmail.com" {
@@ -220,7 +220,7 @@ class DUECCMyyCotnoller: DUELoavegniContrwo {
             let contetnlak = UILabel.init()
             contetnlak.textColor = UIColor.white
             
-            contetnlak.text = "You haven't posted any updates yet"
+            contetnlak.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Yuoeur jhvasvgennl'qtf kplocsrtgegdp naznnyb auvphdfastrewsq oyaezt") 
             contetnlak.font = UIFont.systemFont(ofSize: 14, weight: .regular)
             contetnlak.numberOfLines = 2
             duerSCrollview.addSubview(contetnlak)

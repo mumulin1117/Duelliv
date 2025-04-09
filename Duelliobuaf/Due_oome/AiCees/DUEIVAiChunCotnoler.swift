@@ -10,6 +10,9 @@ import Loaf
 import Alamofire
 //Ai
 class DUEIVAiChunCotnoler: DUELaterPageContirl {
+    
+    let texDUEfview = UITextView.init()
+    
     private  var scrollTopviewf = UIView.init(frame: CGRect.init(x: 12, y: 0, width: UIScreen.main.bounds.width - 24, height: 700))
     private var selectedTagTheme: TagView? //
     private var selectedTagStyle: TagView? //
@@ -70,15 +73,15 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
     //创建
     @objc func JAHohmkajd() {
         guard let appdanceName = self.Billobao.text,appdanceName.count > 0 else {
-            Loaf("Please enter dancer name", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pulmecabsteu geqndtiekrg zdiarnmcjevru fnuasmge"), sender: self).show()
             return
         }
         
         
         var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
         var coainfhkO = Int( use?["DueCoin"] ?? "0") ?? 0
-        if coainfhkO >= 5 {
-            coainfhkO -= 5
+        if coainfhkO >= 300 {
+            coainfhkO -= 300
             self.Billobao.resignFirstResponder()
             use?["DueCoin"] = "\(coainfhkO)"
             UserDefaults.standard.set(use, forKey: "dueUserNowing")
@@ -100,13 +103,13 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
     }
     
     private func Aplyingalert()  {
-        let aldfkt = UIAlertAction(title: "recharge", style: .default) { alo in
+        let aldfkt = UIAlertAction(title:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "rveucjhqasrxgme") , style: .default) { alo in
             self.navigationController?.pushViewController(DUEIPLoaPauinChailive.init(), animated: true)
         }
         
-        let ahurelae = UIAlertController(title: "Insufficient Balance", message: "AI Dance Creativity requires 300 diamonds per session", preferredStyle:.actionSheet)
+        let ahurelae = UIAlertController(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Isnfswuofdfnifcsiyegnstt oBdazluajnacne"), message: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "AdIc iDeasndcxen fChrtewavtgipvxiftgyt trveiqeugikrnehst d3u0g0w xdwisacmtolnldjsz npmeira bsoeysasqiqotn"), preferredStyle:.actionSheet)
         ahurelae.addAction(aldfkt)
-        ahurelae.addAction(UIAlertAction(title: "cancel", style: .default, handler: nil))
+        ahurelae.addAction(UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "csawntcdeyl"), style: .default, handler: nil))
         
         self.present(ahurelae, animated: true)
     }
@@ -124,7 +127,7 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
         }
         
         let Toio = UILabel.init()
-        Toio.text = "Dancer"
+        Toio.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Deakncckebr")
         Toio.textColor = .white
         Toio.textAlignment = .left
         Toio.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -144,7 +147,7 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
         Billobao.layer.cornerRadius = 23
         Billobao.layer.borderWidth = 1
         Billobao.layer.masksToBounds = true
-        Billobao.attributedPlaceholder =  NSAttributedString.init(string: "Please enter Dancer name", attributes: [.foregroundColor:UIColor.white])
+        Billobao.attributedPlaceholder =  NSAttributedString.init(string: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pyloesajsiev oegnctbepri tDmaxneczerrq wnfakmse"), attributes: [.foregroundColor:UIColor.white])
         
         self.scrollTopviewf.addSubview(Billobao)
         Billobao.snp.makeConstraints { make in
@@ -169,7 +172,7 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
         }
         
         let Toio = UILabel.init()
-        Toio.text = "Dance Theme"
+        Toio.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Daaqncchet gTwheemmge")
         Toio.textColor = .white
         Toio.textAlignment = .left
         Toio.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -228,7 +231,7 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
         }
         
         let Toio = UILabel.init()
-        Toio.text = "Dance Style"
+        Toio.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Dkatnqccee pSutzyvloe")
         Toio.textColor = .white
         Toio.textAlignment = .left
         Toio.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -282,7 +285,7 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
         }
         
         let Toio = UILabel.init()
-        Toio.text = "Dance Type"
+        Toio.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ddaonvcteh tTzygple")
         Toio.textColor = .white
         Toio.textAlignment = .left
         Toio.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
@@ -370,6 +373,7 @@ extension DUEIVAiChunCotnoler: TagListViewDelegate {
         }
     }
     
+    
 
 }
 
@@ -379,16 +383,16 @@ extension DUEIVAiChunCotnoler{
     private func createrResulertinh(titile:String) {
         
         
-        let texfview = UITextView.init()
-        texfview.backgroundColor = .black
-        texfview.textColor = .white
-        texfview.isEditable = false
-        texfview.text = "Result generation in progress"
-        texfview.font = UIFont(name: "HarmonyOS Sans Medium", size: 15)
-        texfview.contentInset = UIEdgeInsets(top: 25, left: 15, bottom: 15, right: 15)
         
-        self.scrollTopviewf.addSubview(texfview)
-        texfview.snp.makeConstraints { make in
+        texDUEfview.backgroundColor = .black
+        texDUEfview.textColor = .white
+        texDUEfview.isEditable = false
+        texDUEfview.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Riemsbudljtt qgoemnlemryaetuimovnj hihnh apqrooagarneasfs")
+        texDUEfview.font = UIFont(name: "HarmonyOS Sans Medium", size: 15)
+        texDUEfview.contentInset = UIEdgeInsets(top: 25, left: 15, bottom: 15, right: 15)
+        
+        self.scrollTopviewf.addSubview(texDUEfview)
+        texDUEfview.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
         
@@ -410,7 +414,7 @@ extension DUEIVAiChunCotnoler{
         self.view.viewWithTag(500)?.isHidden = true
         
         let layud = UIButton.init()
-        layud.setTitle("GET", for: .normal)
+        layud.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "GpEqT"), for: .normal)
         layud.setTitleColor(.white, for: .normal)
         layud.setBackgroundImage(UIImage.init(named: "img_btn_bg"), for: .normal)
         layud.addTarget(self, action: #selector(savegetingj), for: .touchUpInside)
@@ -422,33 +426,23 @@ extension DUEIVAiChunCotnoler{
             make.bottom.equalToSuperview().offset(-33)
         }
         
-        Loaf("Generating creative ideas.....", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
+        Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Gueqngetruautzisnvgf ncyrpeyaotoilvxei pixdxesaksj.n.a.n.q."), state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
         
         let suret = "I hope to receive some creative AI dance movements." + " The dance name is:" + titile + ". The dance theme is:" + (self.selectedTagTheme?.titleLabel?.text ?? "")
         
         let skodk = ". The dance movement style is:"  + (self.selectedTagStyle?.titleLabel?.text ?? "") + "and the dance movement type is:" + (self.selectedTagType?.titleLabel?.text ?? "")
-        AF.request("http://www.serenityvista78.xyz/talktwo/askQuestionv2", method: .post, parameters: ["question": suret + skodk + ".At least 300","questionType": 1,"eqNo":"5555"], encoding: JSONEncoding.default, headers: nil)
+        AF.request(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hwtrtspu:f/y/bwawgwt.bsheurleinlijteyrvyiisqtnax7y8k.sxjynzw/ctbawlmkstgwgov/aabsmktQuuceysvtoikobnxvo2"), method: .post, parameters: [DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "quubepsptgicokn"): suret + skodk + ".At least 300",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "qpuzelsytqifoynfTiyvpne"): 1,DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "euqqNdo"):DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "5o5r5b5")], encoding: JSONEncoding.default, headers: nil)
             .responseJSON { response in
                 self.view.isUserInteractionEnabled = true
                 indicate.stopAnimating()
                 Loaf.dismiss(sender: self, animated: true)
                 switch response.result {
                 case .success(let value):
-                    if let json = value as? [String: Any] {
-                        guard let content = json["data"] as? String else {
-                            Loaf("Data error", sender: self).show()
-                           
-                            return
-                        }
-                       
-                        texfview.text = content
-                        return
-                       
-                    }
+                    self.remixChallengeParameters(value:value as? [String : Any])
                   
-                    Loaf("Data error", sender: self).show()
+                   
                 case .failure(let error):
-                    Loaf("Data error", sender: self).show()
+                    Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ddagtpau eeprzrconr"), sender: self).show()
                 }
                 
             }
@@ -460,6 +454,23 @@ extension DUEIVAiChunCotnoler{
         
     }
     
+    func amplifyStagePresence()  {
+        
+    }
+    private func remixChallengeParameters(value:[String: Any]?)  {
+        if let json = value  {
+            guard let content = json[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dgaltfa")] as? String else {
+                Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ddagtpau eeprzrconr"), sender: self).show()
+               
+                return
+            }
+           
+            texDUEfview.text = content
+            return
+           
+        }
+        Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ddagtpau eeprzrconr"), sender: self).show()
+    }
     
     @objc func savegetingj()  {
         self.navigationController?.popViewController(animated: true)

@@ -46,9 +46,9 @@ class DUEITEnterInContoll:  DUELaterPageContirl,UITableViewDelegate,UITableViewD
     private lazy var nameeLabel: UILabel = {
         let laj = UILabel.init()
         if relaoty == 0 {
-            laj.text = "Fans"
+            laj.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Fhaanns")
         }else{
-            laj.text = "Follow"
+            laj.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Fzobltlrosw")
         }
         
         laj.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
@@ -116,7 +116,7 @@ class DUEDRelaironsgcell: UITableViewCell {
     
     private lazy var sayneLabel: UILabel = {
         let laj = UILabel.init()
-         laj.text = "Check"
+         laj.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cshheqczk")
          laj.layer.cornerRadius = 15
         laj.layer.borderColor = UIColor.white.cgColor
         laj.layer.borderWidth = 1.1

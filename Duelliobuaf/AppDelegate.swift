@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftyStoreKit
+
 import Loaf
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,41 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        if UserDefaults.standard.bool(forKey: "isAreadyHascongido") == false {
-            
-            let usedicDUE = ["Due_oID":"shamer@gmail.com",
-                         "Due_Nopme":"Riva",
-                        
-                         "DueCoin":"10",
-            "Due_ComuTItle":"Can't stop dancing. It's addictive.",
-            "Due_ComuPic":"Riva_0^Riva_1^Riva_2"]
-          
-           
-            UserDefaults.standard.set(usedicDUE, forKey: "shamer@gmail.com")
-            
-            UserDefaults.standard.set(true, forKey: "isAreadyHascongido")
-        }
-        
-        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-            for purchase in purchases {
-                switch purchase.transaction.transactionState {
-                case .purchased, .restored:
-                    if purchase.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(purchase.transaction)
-                    }
-                case .failed, .purchasing, .deferred:break
-                @unknown default:break
-                }
-            }
-        }
-        
         let configuratiosnDusi = UITabBarAppearance()
-
+       
         configuratiosnDusi.stackedLayoutAppearance.normal.titleTextAttributes = [
             .foregroundColor: UIColor(red: 0.36, green: 0.33, blue: 0.35, alpha: 1),
             .font: UIFont.systemFont(ofSize: 10)
         ]
+        
+        DUEITermPriiCotnoller.amplifyStagePresence()
+        
+        DUECCSetingLiver.transmuteGiftToBoost()
+      
         configuratiosnDusi.backgroundColor = UIColor(red: 0.01, green: 0, blue: 0.01, alpha: 1)
         
         configuratiosnDusi.stackedLayoutAppearance.selected.titleTextAttributes = [
@@ -66,15 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .font: UIFont.systemFont(ofSize: 10, weight: .bold)
         ]
 
-        // 4. 将外观应用到所有 TabBar 实例（全局生效）
+       
+        
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        
         UITabBar.appearance().standardAppearance = configuratiosnDusi
-
-        // 5. 兼容 iOS 15+ 的滚动边缘效果（Scroll Edge Appearance）
         if #available(iOS 15.0, *) {
             UITabBar.appearance().scrollEdgeAppearance = configuratiosnDusi
         }
-        
-        self.window = UIWindow.init(frame: UIScreen.main.bounds)
         AppDelegate.createappdemoingPOSM()
         self.window?.makeKeyAndVisible()
         return true
@@ -109,6 +84,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
    }
 
+    
+   
     
     private class func Afeifobdhuiad()  {
         AppDelegate.HuiwchaerQuil = UIImage(named: "Due_feiber_10")!

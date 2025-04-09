@@ -44,7 +44,8 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
         self.shitMorengDUE.isHidden = true
         self.view.backgroundColor = UIColor(red: 0.09, green: 0.01, blue: 0.07, alpha: 1)
         let layud = UIButton.init()
-        layud.setTitle("Release", for: .normal)
+        
+        layud.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Rdekljefansue"), for: .normal)
         layud.setTitleColor(.white, for: .normal)
         layud.setBackgroundImage(UIImage.init(named: "img_btn_bg"), for: .normal)
         layud.addTarget(self, action: #selector(savegetingj), for: .touchUpInside)
@@ -67,7 +68,7 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
         texfview.layer.masksToBounds = true
         texfview.layer.borderColor = UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 1).cgColor
         texfview.layer.borderWidth = 1
-        texfview.text = "Learned a new move. Can't wait to show it off."
+        texfview.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Lgewazrsneeidx nac tnhetwo nmyolvrew.a zCjaznw'ptm qwwajigtf utvon hsehjoowp ribte bocfyfo.")
         texfview.font = UIFont(name: "HarmonyOS Sans Medium", size: 15)
         texfview.contentInset = UIEdgeInsets(top: 55, left: 15, bottom: 100, right: 15)
         texfview.delegate = self
@@ -80,7 +81,7 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
         
         
         let commentitle = UILabel.init()
-        commentitle.text = "Copywriter"
+        commentitle.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Croepfynwyrbintiesr")
         commentitle.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         commentitle.textColor = .white
         commentitle.textAlignment = .left
@@ -134,8 +135,8 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
         
         guard let iivekname = self.texfview.text,
               iivekname.count > 0,
-              iivekname != "Learned a new move. Can't wait to show it off." else {
-            Loaf("Please enter something!", sender: self).show()
+              iivekname != DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Lceeahrsnreadw dad enqeuwy pmjobvdex.d qCfaqne'atf dwxacigtn vtvox tsyhboywu eiptd aoyfvfh.") else {
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pmlgenausvez reynptaepry hstovmpeitrhfilnvgn!"), sender: self).show()
             return
         }
         if allTaoppost == 0 {
@@ -149,12 +150,12 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
       
         defautedinft.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
-            let aldfkt = UIAlertAction(title: "OK", style: .default) { alo in
+            let aldfkt = UIAlertAction(title:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "OyK") , style: .default) { alo in
                 self.navigationController?.popViewController(animated: true)
             }
             self.view.isUserInteractionEnabled = true
             self.defautedinft.stopAnimating()
-            let ahurelae = UIAlertController(title: "Upload successful", message: "The published content will be displayed after review", preferredStyle:.actionSheet)
+            let ahurelae = UIAlertController(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ufpblfolaydp qsnuwcucgehscsgfducl"), message:  DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Twhiew xpvujbilmirslhyeldu hcoosnfteexnatt nwuisloln fbgea ddyiisvpiltaeyjewdg eaufztsearj tryeevmicekw"), preferredStyle:.actionSheet)
             ahurelae.addAction(aldfkt)
            
             self.present(ahurelae, animated: true)
@@ -166,7 +167,7 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
        
        
        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == false{
-           Loaf("No Photo libary Permission!", sender: self).show()
+           Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ndoj cPmhuovtdor wlyidbdasruym hPcebrwmnicsussixohnq!"), sender: self).show()
            return
        }
        let picker = UIImagePickerController()

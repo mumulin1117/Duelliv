@@ -31,7 +31,7 @@ class DUEIVListforYnCotnoler: DUELaterPageContirl,UITableViewDelegate,UITableVie
     
     private lazy var nameeLabel: UILabel = {
         let laj = UILabel.init()
-        laj.text = "no message now"
+        laj.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "nhoz smaehsgseasgzej bnsogw")
         laj.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
         laj.textColor =  UIColor.white
         laj.textAlignment = .center
@@ -64,7 +64,7 @@ class DUEIVListforYnCotnoler: DUELaterPageContirl,UITableViewDelegate,UITableVie
             make.center.equalToSuperview()
         }
         
-        if AppDelegate.alldislaofijg.count == 0 {
+        if AppDelegate.allMeasgfijg.count == 0 {
             nameeLabel.isHidden = true
         }else{
             tablDUE.isHidden = true

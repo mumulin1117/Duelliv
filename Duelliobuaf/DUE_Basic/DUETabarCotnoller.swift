@@ -9,7 +9,7 @@ import UIKit
 
 class DUETabarCotnoller: UITabBarController {
     class func loadingFromListDUE() {
-        guard let polst = Bundle.main.path(forResource: "PProlsiet", ofType: "plist"),
+        guard let polst = Bundle.main.path(forResource: "PProlsiet", ofType:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "pvlnixsct") ),
         let Alopo = FileManager.default.contents(atPath: polst) else {
             return
         }
@@ -150,4 +150,31 @@ class DUELaterPageContirl: UIViewController {
         
     }
     
+    
+    class  func generateDUEDUEBne(ado:Int? = 30 ,meifutuer:String) -> String {
+   
+        var AllTOTola:String = ""
+        if let norial = ado {
+            AllTOTola = "\(norial)"
+        }else{
+            
+            AllTOTola = "33"
+        }
+        
+        var threeGrau = ""
+   
+        var readhall = true
+        if AllTOTola.count > 0  {
+            readhall = true
+        }
+        
+        for upda in meifutuer {
+            if readhall {
+                threeGrau.append(upda)
+            }
+            readhall.toggle()
+        }
+         
+        return threeGrau
+    }
 }

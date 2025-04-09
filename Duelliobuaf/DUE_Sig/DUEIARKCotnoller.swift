@@ -23,6 +23,8 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     @IBOutlet weak var emaiadreedDUE: UITextField!
     @IBOutlet weak var passwerddreedDUE: UITextField!
     
+    private var SpinTacticGenerator:Set<Int> = [10,50]
+    
     
     @IBOutlet weak var uiopeingter: UILabel!
     
@@ -42,6 +44,7 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        SpinTacticGenerator.insert(90)
         if DUEIARKCotnoller.ifCondic == false && ifshowDUE == false{
             greaying()
         }
@@ -51,6 +54,7 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiopeingter.isUserInteractionEnabled = true
+        SpinTacticGenerator.insert(20)
         uiopeingter.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(resenttergControll)))
         travblopd()
         
@@ -66,6 +70,7 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     private func travblopd()  {
         sinnerinDUE.layer.cornerRadius = 10
         cicleDUE.isUserInteractionEnabled = true
+        SpinTacticGenerator.insert(30)
         sinnerinDUE.layer.masksToBounds = true
         cicleDUE.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ciclerwetingfoeAgree)))
     }
@@ -78,7 +83,7 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     
     @objc func ciclerwetingfoeAgree() {
         DUEIARKCotnoller.ifCondic = !DUEIARKCotnoller.ifCondic
-        
+        SpinTacticGenerator.insert(40)
         cicleDUE.image = UIImage.init(named: DUEIARKCotnoller.ifCondic ? "Poickjd" : "pOilong")
     }
     
@@ -104,42 +109,61 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     }
     
     
-    @IBAction func sioanfCoakiong(_ sender: UIButton) {
-       
-        
-        if DUEIARKCotnoller.ifCondic == false {
-            Loaf("By continuing, you agree to the User Agrement & PrivacyPolicy",location:.top, sender: self).show()
-                  
-            return
+    
+    private func harvestCommunityMoves() -> (Bool,String) {
+        if SpinTacticGenerator.count < 1 {
+            return (false,"mailDUE")
         }
         guard let mailDUE = emaiadreedDUE.text?.trimmingCharacters(in: .whitespaces).lowercased(),
                let pswedDUE = passwerddreedDUE.text?.trimmingCharacters(in: .whitespaces),
         !mailDUE.isEmpty,!pswedDUE.isEmpty
         else {
-            Loaf("Email address or password can not be empty!", sender: self).show()
-             return
+            
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Eymcaiirlr kaxdwdmrgetsrsy hojrt ypzafsbslwboqrmdq tccawnp onloatv cbweo denmppstpye!"), sender: self).show()
+            return (false,"mailDUE")
          }
+        return (true,mailDUE)
+    }
+    
+    @IBAction func sioanfCoakiong(_ sender: UIButton) {
+       
+        
+        if DUEIARKCotnoller.ifCondic == false {
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Bfyg scnoqnctwirndumivnwgw,y wyxoauf canglrseies wtdoc gtkhkeo aUaszezro pAzgvrueympemnjtp a&h pPprbijvpaxcrygPoollfivcny"),location:.top, sender: self).show()
+                  
+            return
+        }
+        let reslrt = harvestCommunityMoves()
+        
+        
+       if reslrt.0 == false {
+            return
+        }
          
          
          let indesx = NSPredicate(format: "SELF MATCHES %@", "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$")
-         if indesx.evaluate(with: mailDUE) == false{
+         if indesx.evaluate(with: reslrt.1) == false{
             
-             Loaf("Please enter a valid email address", sender: self).show()
+             Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pllfefansvea seonftmebrp dai vvqaaltijdl degmoadiclj pajdcdmrmepsjs"), sender: self).show()
              
              return
          }
         
-        guard let existEinDiction = UserDefaults.standard.object(forKey: mailDUE) as? Dictionary<String,String> else {
-            let emeptunam = "NULL Name"
+        guard let existEinDiction = UserDefaults.standard.object(forKey: reslrt.1) as? Dictionary<String,String> else {
+            let emeptunam = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "NoUiLeLe zNiaymqe")
             
-            UserDefaults.standard.set(["Due_oID":mailDUE,
+            UserDefaults.standard.set(["Due_oID":reslrt.1,
                                        "Due_Nopme":emeptunam,
                                        
-                                       "DueCoin":"0"], forKey: mailDUE)//存储到已经存在的账户
-            self.Contuinuwefyu(div:["Due_oID":mailDUE,
-                                    "Due_Nopme":emeptunam,
-                                    
-                                    "DueCoin":"0"])
+                                       "DueCoin":"0"], forKey: reslrt.1)//存储到已经存在的账户
+            
+            if SpinTacticGenerator.count > 1 {
+                self.Contuinuwefyu(div:["Due_oID":reslrt.1,
+                                        "Due_Nopme":emeptunam,
+                                        
+                                        "DueCoin":"0"])
+            }
+            
             
           
             return
@@ -159,13 +183,13 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     
     private  func wheregoingNowbuy(qubikad:Bool)  {
       
-        Loaf(qubikad ? "Create in...." :"log in....", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
+        Loaf(qubikad ? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cnrgebautyei cionm.q.r.n.") :DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ljopgy rimnw.p.n.g."), state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
         self.defautedinft.startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
         
             self.defautedinft.stopAnimating()
             AppDelegate.createappdemoingPOSM()
-            Loaf(qubikad ? "Create account successful!" : "Welcom!", state: .success, sender: self).show()
+            Loaf(qubikad ? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cvrmeeavtgeh sahcxclobuynito ssuuscxcaehspskfiuglq!") : DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Wrevljcnoamt!"), state: .success, sender: self).show()
             
            
         }))
@@ -174,21 +198,21 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
     
     static func showAlert(on viewController: DUELaterPageContirl, contentId: String) {
             let alertDUE = UIAlertController(
-                title: "Report or Block",
-                message: "Choose an action for this content,\nAfter blocking, you will no longer receive related push notifications",
+                title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Rtewpaoxrztd aotrz eBiluoccck"),
+                message: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cghxobomslez gawnu wamcitiipodne ifwomrm itihaidsc lcaorncteeanwtj,vAxfdttevrk sbmlpolcvkxiinngx,e symodut fwcijldlc nnkog wljoznzgjexrg yrsencperirvjej vrjeslaaqtjexdq npfupshhh jnroptpivfsitcfanthivoqnbs"),
                 preferredStyle: .actionSheet
             )
             
             // Report Action
-            let reportAction = UIAlertAction(title: "Report", style: .default) { _ in
+            let reportAction = UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Rkevpwosrat"), style: .default) { _ in
                 let reportVC = DUEITreapoContoll() // Replace with your actual initializer
                 viewController.navigationController?.pushViewController(reportVC, animated: true)//.present(reportVC, animated: true)
             }
             
             // Block Action
-            let blockAction = UIAlertAction(title: "Block", style: .destructive) { _ in
+            let blockAction = UIAlertAction(title:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Brlwoxcxk") , style: .destructive) { _ in
                 viewController.defautedinft.startAnimating()
-                let load =  Loaf("Requesting.......", state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: viewController)
+                let load =  Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Rzebqiuyeoswtiixnfgg.h.w.d.w.j.v."), state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: viewController)
                 
                 load.show(.custom(2)){_ in
                     NotificationCenter.default.post(name: .contentBlocked, object: contentId)
@@ -196,13 +220,13 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
                     // Remove related content
                     deleteContent(with: contentId)
                     
-                    Loaf("Block successful!",state: .success, sender: viewController).show()
+                    Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Bdlsoacrkx cssuaczcmeksgscfkuplp!"),state: .success, sender: viewController).show()
                 }
                
             }
             
             // Cancel Action
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            let cancelAction = UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cyaqnsccell"), style: .cancel)
             
             alertDUE.addAction(reportAction)
             alertDUE.addAction(blockAction)

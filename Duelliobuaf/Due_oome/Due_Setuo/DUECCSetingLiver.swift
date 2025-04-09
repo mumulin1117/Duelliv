@@ -12,6 +12,17 @@ import Loaf
 class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     private  var liveingTieName:String?
     
+    var ifcameracanuser:Bool = false
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.sessionDUES.stopRunning()
+    }
+  
+    @IBOutlet weak var camemastatusDUE: UIButton!
+    
+    
+    
     var hsingImag:UIImage?
     
     private let previewLayer = AVCaptureVideoPreviewLayer()
@@ -99,17 +110,34 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
        }
     }
     
-    
+    class func transmuteGiftToBoost()  {
+        if UserDefaults.standard.bool(forKey: "isAreadyHascongido") == false {
+            
+            let usedicDUE = ["Due_oID":"shamer@gmail.com",
+                         "Due_Nopme":"Riva",
+                        
+                         "DueCoin":"10",
+            "Due_ComuTItle":"Can't stop dancing. It's addictive.",
+            "Due_ComuPic":"Riva_0^Riva_1^Riva_2"]
+          
+           
+            UserDefaults.standard.set(usedicDUE, forKey: "shamer@gmail.com")
+            
+            UserDefaults.standard.set(true, forKey: "isAreadyHascongido")
+        }
+    }
     private func spawnInteractiveSequence() {
             let cameraStatus = AVCaptureDevice.authorizationStatus(for: .video)
             let audioStatus = AVCaptureDevice.authorizationStatus(for: .audio)
             
             switch (cameraStatus, audioStatus) {
             case (.authorized, .authorized):
+                ifcameracanuser = true
                 setupCaptureSession()
             case (.notDetermined, _), (_, .notDetermined):
                 requestPermissions()
             default:
+            
                 SureSjoaPerDUEionAlert()
             }
         }
@@ -122,6 +150,7 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
             AVCaptureDevice.requestAccess(for: .audio) { audioGranted in
                 DispatchQueue.main.async {
                     if videoGranted && audioGranted {
+                        self?.ifcameracanuser = true
                         self?.setupCaptureSession()
                     } else {
                         self?.SureSjoaPerDUEionAlert()
@@ -144,7 +173,7 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
             guard let videoDevice = AVCaptureDevice.default(.builtInWideAngleCamera,
                                                             for: .video,
                                                             position: .front) else {
-                Loaf("No video device available", sender: self).show()
+                Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Nnoa qviivdgetop gdjekvmijckes warvzasivlzatbdlte"), sender: self).show()
                 return
             }
             
@@ -190,17 +219,17 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
     private func SureSjoaPerDUEionAlert() {
             
         let persmifnalert = UIAlertController(
-            title: "Permission required",
-            message: "Please go to Settings to enable camera and microphone permissions",
+            title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pkezrrmeiwsbspiloinc grfesqkurifrkend"),
+            message: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pjluepazsvea fgzok dtkom ySpeftltgitnwgfsh atooo jeinmafbzlzeu xcvazmoecreag iajnjde xmkircpriolpxhkosnbet xpwearimzidsdsnixodnbs"),
             preferredStyle: .alert
         )
         
         
-        persmifnalert.addAction(UIAlertAction(title: "Go set", style: .default) { _ in
+        persmifnalert.addAction(UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ggos fsjeat"), style: .default) { _ in
             guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
             UIApplication.shared.open(url)
         })
-        persmifnalert.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        persmifnalert.addAction(UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ctacntcreil"), style: .cancel))
         present(persmifnalert, animated: true)
        
     }
@@ -211,7 +240,7 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
     
     @IBAction func syncGlobalGroove(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) == false{
-            Loaf("This device does not have the capability to add photos.", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tlhnimsv qdzepviiycaef hduopeysy ankoptx shbalvkee mtnhnez ccuacpjaabdislwicthyx dtkoi oaxdrdw gplhcoctsossj."), sender: self).show()
             return
         }
         let picker = UIImagePickerController()
@@ -225,26 +254,26 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
     @IBAction func amplifyStagePresence(_ sender: UIButton) {
         // 创建一个弹窗
               
-        let alertController = UIAlertController(title: "Live room name", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Lmibvpei braoloxmz xnqapmre"), message: nil, preferredStyle: .alert)
 
         // 添加文本输入框
         alertController.addTextField { (textField) in
-            textField.placeholder = "Please enter Live room name"
+            textField.placeholder = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pvlwegacszeo xevnttieore uLzimvmes orkohotmb tnoawmpe")
         }
 
         // 添加确认按钮
-        let confirmAction = UIAlertAction(title: "Sure", style: .default) { _ in
+        let confirmAction = UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "sculrae"), style: .default) { _ in
             if let roomName = alertController.textFields?.first?.text, !roomName.isEmpty {
                 self.liveingTieName = roomName // 这里可以将直播间名称保存或传递
                 self.titkelshowing.text = roomName
             } else {
             
-                Loaf("No live room name entered", sender: self).show()
+                Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ndog jlbiaveei xrhogoumz knnafmcej feanztnesryepd"), sender: self).show()
             }
         }
 
         // 添加取消按钮
-        let cancelAction = UIAlertAction(title: "cancel", style: .cancel)
+        let cancelAction = UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ctaonqczeql"), style: .cancel)
 
         // 添加按钮到弹窗
         alertController.addAction(confirmAction)
@@ -260,11 +289,11 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
     @IBAction func pacthiedF(_ sender: UIButton) {
         
         guard let iivekname = self.liveingTieName else {
-            Loaf("No live room name entered", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Nhon flbisvzei arqofoxmj jnqawmcer leendtdegrbevd"), sender: self).show()
             return
         }
         guard let iiveIMG =  self.hsingImag else {
-            Loaf("No live cover add", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Nhoy ellimvtep ecxorvbexry yaydid"), sender: self).show()
             return
         }
        
@@ -280,20 +309,55 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
             make.width.height.equalTo(100)
         }
         indicate.startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
+        let loaf = Loaf("Creating under review...", sender: self)
+        loaf.show(.custom(4)){_ in
+            
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4, execute: DispatchWorkItem(block: {
+            self.view.isUserInteractionEnabled = true
             guard var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String> else{
+                Loaf("create failure!",state: .error, sender: self).show()
                 return
             }
             indicate.stopAnimating()
             use["Due_LiveTItle"] = iivekname
-            use["Due_Nopme"] = "Me"
-           let kfij = livediaologall.init(userdiocm: use, lisat: [])
+            use["Due_Nopme"] = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mze")
+            Loaf("create Successful!",state: .success, sender: self).show()
+            let kfij = livediaologall.init(userdiocm: use, lisat: [])
             self.navigationController?.pushViewController(DUEIPkLivinailCotnoller.init(datagalll: kfij, coveriahkkk: iiveIMG), animated: true)
         }))
         
     }
     
     @IBOutlet weak var titkelshowing: UILabel!
+    
+    
+    //摄像头的开启和关闭
+    @IBAction func openorcloaseCamert(_ sender: UIButton) {
+        if ifcameracanuser == false {
+            self.SureSjoaPerDUEionAlert()
+            return
+        }
+        if sender.isSelected == false {//如果是开着。。。。准备关
+            
+            let sdfsdsd = UIAlertController.init(title: "Turn off the camera", message:"After closing, the live broadcast room screen will only display your cover image", preferredStyle:.alert)
+           
+            sdfsdsd.addAction(UIAlertAction(title: "Sure", style: .default, handler: { alert in
+                //关闭
+                sender.isSelected = true
+               self.sessionDUES.stopRunning()
+            }))
+            sdfsdsd.addAction(UIAlertAction(title: "cancel", style: .default))
+            self.present(sdfsdsd, animated: true)
+        }else{
+            sender.isSelected = false
+            self.sessionDUES.startRunning()
+        }
+        
+    }
+    
+    
     
 }
 

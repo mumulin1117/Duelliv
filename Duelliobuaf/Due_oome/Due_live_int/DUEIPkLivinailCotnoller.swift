@@ -96,16 +96,16 @@ class DUEIPkLivinailCotnoller: DUELaterPageContirl, UITableViewDataSource, UITab
         if coveriah != nil {
             
             let persmifnalert = UIAlertController(
-                title: "Destroy the chat room",
-                message: "After the creator leaves, the chat room will be reclaimed by the system",
+                title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Dnelsxtxrjozyh etuhdep kcyhoactm nrxoqorm"),
+                message:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Agfutnegrs itohpev bcjrueuautaofrh lljegauvwebsx,z ctmhtef ocnhxaxtg rrlojosmv qwzialklq rbdej krceecxlkaqiimsehdf gbmyb mtshael gsxycsotyenm") ,
                 preferredStyle: .alert
             )
             
             
-            persmifnalert.addAction(UIAlertAction(title: "sure", style: .default) { _ in
+            persmifnalert.addAction(UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "sculrae"), style: .default) { _ in
                 self.navigationController?.popToRootViewController(animated: true)
             })
-            persmifnalert.addAction(UIAlertAction(title: "cancel", style: .cancel))
+            persmifnalert.addAction(UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "czagntcuefl"), style: .cancel))
             present(persmifnalert, animated: true)
             
             return
@@ -214,7 +214,7 @@ class DUEIPkLivinailCotnoller: DUELaterPageContirl, UITableViewDataSource, UITab
         saycontenrt.delegate = self
         saycontenrt.leftView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
         saycontenrt.leftViewMode = .always
-        saycontenrt.attributedPlaceholder = NSAttributedString.init(string: "Say something....", attributes: [.foregroundColor:UIColor.white])
+        saycontenrt.attributedPlaceholder = NSAttributedString.init(string:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Skacyt xspojmmehtuhqienlgs.p.o.d.")  , attributes: [.foregroundColor:UIColor.white])
         saycontenrt.returnKeyType = .done
         givenHeadert.addTarget(self, action: #selector(Apoinkido), for: .touchUpInside)
         
@@ -242,7 +242,7 @@ extension DUEIPkLivinailCotnoller:UITextFieldDelegate {
         
         let result = textField.text ?? ""
         if result == "" {
-            Loaf("The message sent cannot be empty!", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tchaeu omneqsoswaigtec isdeunztv xcoarnwnhoztf zbxen qefmhpktcyo!"), sender: self).show()
            
             return true
         }
@@ -264,7 +264,7 @@ extension DUEIPkLivinailCotnoller:UITextFieldDelegate {
         
         self.defautedinft.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-           
+            self.defautedinft.stopAnimating()
             self.INusayingView.isHidden = false
             
             self.givenHeadert.isSelected = !self.givenHeadert.isSelected

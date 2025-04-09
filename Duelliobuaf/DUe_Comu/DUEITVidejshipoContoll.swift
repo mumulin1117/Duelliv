@@ -62,9 +62,9 @@ class DUEITVidejshipoContoll: DUELaterPageContirl {
         lemonerfood()
         
         
-      let load =  Loaf("Connecting.......", state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
+      let load =  Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cmoqnmnaerchtrirnigv.o.q.j.m.g.t."), state: .custom(.init(backgroundColor: .black, icon: nil)),location: .top, sender: self)
         load.show(.custom(6)){_ in
-            Loaf("The user is no longer online, please try again later", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tnhheb aursaerrn tiasd mneov llhopnegcekrq golnolkijnveo,b cpslveeapskeq vtrrzyt tadgaalikne kloabteevr"), sender: self).show()
         }
         view.addSubview(mineImage)
         mineImage.snp.makeConstraints { make in
@@ -92,7 +92,8 @@ class DUEITVidejshipoContoll: DUELaterPageContirl {
             self.navigationController?.popViewController(animated: true)
             return
         }
-        Loaf("Phone link, please connect and try again", sender: self).show()
+        
+        Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pqhhodnqea zlmidnska,m cplloetausbez vchoxnpnteccitm xafnedj ytjruyf haaguazian"), sender: self).show()
         
     }
     private func spawnInteractiveSequence() {
@@ -112,17 +113,17 @@ class DUEITVidejshipoContoll: DUELaterPageContirl {
     private func SureSjoaPerDUEionAlert() {
             
         let persmifnalert = UIAlertController(
-            title: "Permission required",
-            message: "Please go to Settings to enable camera and microphone permissions",
+            title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pcelrgmziususiijopnw srtexqpuwibrveod"),
+            message:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pdlweoawsrev dgaob atloe nSzeetftciqnpgqsl atfoh rexnpahbblqeq rcvaqmrewrzam rawnfdr mmyiycarsoaplhaosnmec tpmedrdmoiwsksnisopnzs") ,
             preferredStyle: .alert
         )
         
         
-        persmifnalert.addAction(UIAlertAction(title: "Go set", style: .default) { _ in
+        persmifnalert.addAction(UIAlertAction(title:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Gpow usyelt"), style: .default) { _ in
             guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
             UIApplication.shared.open(url)
         })
-        persmifnalert.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        persmifnalert.addAction(UIAlertAction(title:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cmaknncmehl") , style: .cancel))
         present(persmifnalert, animated: true)
        
     }

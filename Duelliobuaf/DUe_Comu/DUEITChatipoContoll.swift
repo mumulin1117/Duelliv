@@ -24,7 +24,7 @@ class DUEITChatipoContoll: DUELaterPageContirl, UITableViewDelegate,UITableViewD
         
         let result = textField.text ?? ""
         if result == "" {
-            Loaf("The message sent cannot be empty!", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tchaeu omneqsoswaigtec isdeunztv xcoarnwnhoztf zbxen qefmhpktcyo!"), sender: self).show()
            
             return true
         }

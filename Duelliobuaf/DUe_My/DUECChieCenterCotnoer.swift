@@ -11,14 +11,7 @@ import UIKit
 //his center
 class DUECChieCenterCotnoer: DUELaterPageContirl {
     
-    private lazy var followengDUE: UIButton = {
-       let mains = UIButton.init()
-       mains.setBackgroundImage(UIImage.init(named: "notFoflofollow"), for: .normal)
-        mains.setBackgroundImage(UIImage.init(named: "DUERfollowed"), for: .selected)
-       mains.addTarget(self, action: #selector(followertngforDue), for: .touchUpInside)
-       return mains
-   }()
-    
+   
     private lazy var chatingwengDUE: UIButton = {
        let mains = UIButton.init()
        mains.setBackgroundImage(UIImage.init(named: "jaungkinChat"), for: .normal)
@@ -75,6 +68,13 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
             followengDUE.isSelected = true
         }
     }
+    private lazy var followengDUE: UIButton = {
+       let mains = UIButton.init()
+       mains.setBackgroundImage(UIImage.init(named: "notFoflofollow"), for: .normal)
+        mains.setBackgroundImage(UIImage.init(named: "DUERfollowed"), for: .selected)
+       mains.addTarget(self, action: #selector(followertngforDue), for: .touchUpInside)
+       return mains
+   }()
     
     private let duerSCrollview = UIScrollView.init()
     private  lazy var duerSNameLabhi: UILabel = {
@@ -162,7 +162,7 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
             make.top.equalTo(duerSNameLabhi.snp.bottom).offset(10)
         }
         
-        for (i,item) in ["Fans","Followings","Post"].enumerated() {
+        for (i,item) in [DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Fkaynrs"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Fjoclzltoawfiznggws"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Poonsjt")].enumerated() {
             let huan = UIButton.init()
             
            
@@ -226,7 +226,7 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
         
         postlabel.textColor = UIColor.white
         
-        postlabel.text = "Posts"
+        postlabel.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pvonswtes")
         postlabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         duerSCrollview.addSubview(postlabel)
         postlabel.snp.makeConstraints { make in
@@ -235,6 +235,13 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
     private func updateUserinfoFoeing()  {
        
         MainaviheadDUE.image =  UIImage(named: dfoloower["Due_avmter"] ?? "")
@@ -288,25 +295,27 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
             img.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ApllldkFoingner)))
         }else{
             
-            let contetnlak = UILabel.init()
-            contetnlak.textColor = UIColor.white
-            
-            contetnlak.text = "There haven't posted any updates yet"
-            contetnlak.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-            contetnlak.numberOfLines = 2
-            duerSCrollview.addSubview(contetnlak)
-            contetnlak.snp.makeConstraints { make in
-                make.leading.trailing.equalToSuperview().inset(10)
-                make.top.equalTo(postlabel.snp.bottom).offset(80)
-                
-            }
+            spawnInteractiveSequence()
         }
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
     }
 
-
+    private func spawnInteractiveSequence()  {
+        let contetnlak = UILabel.init()
+        contetnlak.textColor = UIColor.white
+        
+        contetnlak.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tihoezriej khsanvxecnq'atq qpwossutieidn yaznaye gunpidiabtbefsj wyjest") 
+        contetnlak.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        contetnlak.numberOfLines = 2
+        duerSCrollview.addSubview(contetnlak)
+        contetnlak.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.top.equalTo(postlabel.snp.bottom).offset(80)
+            
+        }
+    }
     @objc func refreshinggindication()  {
         self.navigationController?.popViewController(animated: true)
     }

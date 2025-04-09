@@ -24,20 +24,21 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
         
         var result = textField.text ?? ""
         if result == "" {
-            Loaf("The message sent cannot be empty!", sender: self).show()
-           
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tchaeu omneqsoswaigtec isdeunztv xcoarnwnhoztf zbxen qefmhpktcyo!"), sender: self).show()
+            
             return true
         }
         
         if  duerDic["livecommene"] != nil {
-            Loaf("You post labels too frequently!", sender: self).show()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "TYeoaug mpzozsrtg cllaobnemldsl ktgohos gfwrfexqyubeanhtrlpyx!"), sender: self).show()
             textField.resignFirstResponder()
             return true
         }
         
         self.defautedinft.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
-            Loaf("Comment successful!",state: .success, sender: self).show()
+            self.defautedinft.stopAnimating()
+            Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cxogmcmuernrts osxuvcacmedsbsnfmuylh!"),state: .success, sender: self).show()
             self.duerDic["livecommene"] = result
             self.CreateStagePresence()
             
@@ -68,7 +69,8 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
         field.leftViewMode = .always
         field.leftView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 30))
         field.textColor = .white
-        field.attributedPlaceholder = NSAttributedString.init(string: "Say something....", attributes: [.foregroundColor:UIColor.white])
+        field.attributedPlaceholder = NSAttributedString.init(string:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Sqaiyd bspojmpextchsitntgj.y.y.q.")
+ , attributes: [.foregroundColor:UIColor.white])
         field.font = UIFont(name: "HarmonyOS Sans", size: 14)
         return field
     }()
@@ -249,7 +251,7 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
     private func spawnInteractiveSequence()  {
         
         let commentitle = UILabel.init()
-        commentitle.text = "------ Comments ------"
+        commentitle.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "-c-h-y-m-w-d gCbonmlmzebnwtvsb p-c-n-d-f-n-")
         commentitle.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         commentitle.textColor = .white
         commentitle.textAlignment = .center
@@ -342,7 +344,7 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
             let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
             
             avtercomentDUE.image =  AppDelegate.HuiwchaerQuil
-            namccdlabel.text  =  "Me"
+            namccdlabel.text  =  DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mke")
 
             savnuingcdlabel.text = cjai.randomElement()
             
@@ -417,7 +419,7 @@ class DUEIPkdanDydetailCotnoller: DUELaterPageContirl,UITextFieldDelegate {
                 let use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
                 
                 avtercomentDUE.image =  AppDelegate.HuiwchaerQuil
-                namccdlabel.text  =  "Me"
+                namccdlabel.text  =  DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mke")
 
                 savnuingcdlabel.text = mecomme
                 

@@ -24,7 +24,7 @@ class DUEIPGiftCell: UITableViewCell {
     
     private lazy var meshaineLabel: UILabel = {
         let laj = UILabel.init()
-        laj.text = "Me"
+        laj.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mte")
         laj.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         laj.textColor =  UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
         return laj
@@ -32,7 +32,7 @@ class DUEIPGiftCell: UITableViewCell {
     
     private lazy var senoutneLabel: UILabel = {
         let laj = UILabel.init()
-        laj.text = "Send out"
+        laj.text = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Skejnndz yocuct") 
         laj.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         laj.textColor =  UIColor.white
         return laj
