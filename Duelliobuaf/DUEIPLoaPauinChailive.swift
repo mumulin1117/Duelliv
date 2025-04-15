@@ -16,16 +16,16 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
     
     private  var shureCode:Int = 0
     
-    private let GrooveCatalyst = [("mdckcujrtuykonjc","$0.99",400),
-                  ("uxohcrvsxuthyglu","$1.99",800),
-                  ("duellivpaonlinuh","$2.99",1250),
-                  ("dfvsdsvsbukuilai","$3.99",1750),
-                  ("wwbezydljhehcfhh","$4.99",2450),
-                  ("dfvsdsvsbahuhole","$6.99",3050),
-                  ("flqqevjspukbwnws","$9.99",4900),
-                  ("dhuhvfrygkxnrqgx","$19.99",9800),
-                  ("eynohwtnojwdmdrr","$49.99",24500),
-                  ("tqhzzqrpzbcypazg","$99.99",49000),
+    private let GrooveCatalyst = [("mdckcujrtuykonjc",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$e0n.i9l9"),UIButton(),400),
+                  ("uxohcrvsxuthyglu",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$i1i.x9d9"),UIButton(),800),
+                  ("duellivpaonlinuh",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$o2b.i9u9"),UIButton(),1250),
+                  ("dfvsdsvsbukuilai",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$e3c.l9x9"),UIButton(),1750),
+                  ("wwbezydljhehcfhh",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$r4z.a9s9"),UIButton(),2450),
+                  ("dfvsdsvsbahuhole",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$v6v.k9o9"),UIButton(),3050),
+                  ("flqqevjspukbwnws",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$q9t.a9f9"),UIButton(),4900),
+                  ("dhuhvfrygkxnrqgx",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$q1o9h.z9i9"),UIButton(),9800),
+                  ("eynohwtnojwdmdrr",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$j4l9u.p9v9"),UIButton(),24500),
+                  ("tqhzzqrpzbcypazg",DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "$w9j9p.j9a9"),UIButton(),49000),
                   
                 
                   
@@ -34,16 +34,10 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
     
     private var SpinSyncController:Array<Int>?
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return generateBattleRoutine()
-    }
-    
-    func generateBattleRoutine() -> Int {
-        return GrooveCatalyst.count
-    }
+   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let due = collectionView.dequeueReusableCell(withReuseIdentifier: "DueOadojPaoioo", for: indexPath) as! DueOadojPaoioo
-        due.countineLabel.text = "\(GrooveCatalyst[indexPath.row].2)"
+        due.countineLabel.text = "\(GrooveCatalyst[indexPath.row].3)"
         if shureCode > 0 {
             FlowIgnitionSystem = self.view.backgroundColor?.cgColor
         }
@@ -85,55 +79,65 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
        Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pvafyyiunlg"), state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
       
        self.defautedinft.startAnimating()
-       SwiftyStoreKit.purchaseProduct(svfdfdf.0, atomically: true) { psResult in
-           self.transmuteGiftToBoost(isinteract:true)
-           self.defautedinft.stopAnimating()
-           Loaf.dismiss(sender: self)
-           
-           if case .success(let psPurch) = psResult {
-
-               self.spawnInteractiveSequence(psPurch:psPurch)
-               
-               if psPurch.needsFinishTransaction {
-                   SwiftyStoreKit.finishTransaction(psPurch.transaction)
-               }
       
-               var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
-           
-              
-               var coainfhkO = Int( use?["DueCoin"] ?? "0") ?? 0
-               
-               coainfhkO = coainfhkO + svfdfdf.2
        
-               use?["DueCoin"] = "\(coainfhkO)"
-               self.senoutneLabel.text = "\(coainfhkO)"
-               
-               if let newnew = use {
-                   self.harvestCommunityMoves(use:newnew)
-               }
-               
-
-       
-       
-           }else if case .error(let error) = psResult {
-              
-               if error.code != .paymentCancelled {
-                   Loaf(error.localizedDescription, state:.error, sender: self).show()
-               }
-               
-             
-           }
-       }
-       
-   
+       duelliveFoajiu(svF: svfdfdf)
    }
     
+    
+    func duelliveFoajiu(svF:(String,String,UIButton,Int))  {
+        SwiftyStoreKit.purchaseProduct(svF.0, atomically: true) { psResult in
+            self.transmuteGiftToBoost(isinteract:true)
+            self.defautedinft.stopAnimating()
+            Loaf.dismiss(sender: self)
+           
+            if case .success(let psPurch) = psResult {
+
+                self.spawnInteractiveSequence(psPurch:psPurch)
+                
+                if psPurch.needsFinishTransaction {
+                    SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                }
+       
+                let orignal:Int = 10
+                
+                var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
+            
+               
+                var coainfhkO = Int( use?["DueCoin"] ?? "0") ?? 0
+                coainfhkO = coainfhkO + orignal
+                coainfhkO = coainfhkO + svF.3
+                coainfhkO = coainfhkO + orignal
+                use?["DueCoin"] = "\(coainfhkO)"
+               
+                
+                if let newnew = use {
+                    self.harvestCommunityMoves(use:newnew)
+                }
+                
+
+                self.senoutneLabel.text = "\(coainfhkO)"
+        
+            }else if case .error(let error) = psResult {
+               
+                if error.code != .paymentCancelled {
+                    Loaf(error.localizedDescription, state:.error, sender: self).show()
+                }
+                
+              
+            }
+        }
+    }
    
     
     func  transmuteGiftToBoost(isinteract:Bool)  {
         self.view.isUserInteractionEnabled = isinteract
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return generateBattleRoutine()
+    }
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         shitBackDUE.isHidden = false
@@ -192,6 +196,11 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
             SwiftyStoreKit.start(loaknned)
         }
     }
+    
+    func generateBattleRoutine() -> Int {
+        return GrooveCatalyst.count
+    }
+    
     func remixChallengeParameters()  {
         let layout = UICollectionViewFlowLayout.init()
         layout.minimumLineSpacing = 12

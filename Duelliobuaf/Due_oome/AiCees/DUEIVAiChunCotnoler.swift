@@ -86,11 +86,9 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
             use?["DueCoin"] = "\(coainfhkO)"
             UserDefaults.standard.set(use, forKey: "dueUserNowing")
             
-            UserDefaults.standard.set(use, forKey: use?["Due_oID"] ?? "")
-
-            UserDefaults.standard.synchronize()
+            chuiSpring(use:use,appdanceName:appdanceName)
            
-            createrResulertinh(titile: appdanceName)
+            
             return
         }
         
@@ -102,6 +100,15 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
      
     }
     
+    
+    private func chuiSpring(use:Dictionary<String,String>?,appdanceName:String)  {
+        UserDefaults.standard.set(use, forKey: use?["Due_oID"] ?? "")
+
+        UserDefaults.standard.synchronize()
+       
+        createrResulertinh(titile: appdanceName)
+    }
+    
     private func Aplyingalert()  {
         let aldfkt = UIAlertAction(title:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "rveucjhqasrxgme") , style: .default) { alo in
             self.navigationController?.pushViewController(DUEIPLoaPauinChailive.init(), animated: true)
@@ -109,6 +116,7 @@ class DUEIVAiChunCotnoler: DUELaterPageContirl {
         
         let ahurelae = UIAlertController(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Isnfswuofdfnifcsiyegnstt oBdazluajnacne"), message: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "AdIc iDeasndcxen fChrtewavtgipvxiftgyt trveiqeugikrnehst d3u0g0w xdwisacmtolnldjsz npmeira bsoeysasqiqotn"), preferredStyle:.actionSheet)
         ahurelae.addAction(aldfkt)
+        
         ahurelae.addAction(UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "csawntcdeyl"), style: .default, handler: nil))
         
         self.present(ahurelae, animated: true)

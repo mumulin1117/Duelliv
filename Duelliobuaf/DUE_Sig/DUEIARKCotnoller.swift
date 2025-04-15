@@ -155,7 +155,7 @@ class DUEIARKCotnoller: UIViewController, DUEIEEElUAiiCotnollerDelefa {
             UserDefaults.standard.set(["Due_oID":reslrt.1,
                                        "Due_Nopme":emeptunam,
                                        
-                                       "DueCoin":"0"], forKey: reslrt.1)//存储到已经存在的账户
+                                       "DueCoin":"0"], forKey: reslrt.1)
             
             if SpinTacticGenerator.count > 1 {
                 self.Contuinuwefyu(div:["Due_oID":reslrt.1,

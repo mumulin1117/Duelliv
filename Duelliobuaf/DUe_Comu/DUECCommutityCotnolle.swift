@@ -143,24 +143,18 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
         
         mesageKFoig.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(Jfoforing)))
         mainDUEDtartgerVire.collectionViewLayout = layout
-        
+        self.amplifyStagePresence()
         mainDUEDtartgerVire.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
-        mainDUEDtartgerVire.delegate = self
-        mainDUEDtartgerVire.dataSource = self
-        mainDUEDtartgerVire.register(UINib(nibName: "DUECCommutityCell", bundle: nil), forCellWithReuseIdentifier: "DUECCommutityCell")
+      
         
-     
+        projectMotionHologram()
         
         mainDUEDtartgerVire.showsVerticalScrollIndicator = false
         self.mainDUEDtartgerVire.isHidden = true
-        self.view.addSubview(self.defautedinft)
-        defautedinft.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.width.height.equalTo(100)
-        }
+        
         
         loadingindication()
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
+        
     }
 
 
@@ -168,10 +162,28 @@ class DUECCommutityCotnolle: DUELoavegniContrwo, UICollectionViewDelegate,UIColl
         self.mainDUEDtartgerVire.reloadData()
     }
     
+    
+    
+    func projectMotionHologram()  {
+        self.view.addSubview(self.defautedinft)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshinggindication), name: .contentBlocked, object: nil)
+        defautedinft.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.height.equalTo(100)
+        }
+    }
+    
+    
+    
    @objc func Jfoforing()  {
        self.navigationController?.pushViewController(DUEIVListforYnCotnoler.init(), animated: true)
     }
-
+    private func amplifyStagePresence(){
+        mainDUEDtartgerVire.delegate = self
+        mainDUEDtartgerVire.dataSource = self
+        mainDUEDtartgerVire.register(UINib(nibName: "DUECCommutityCell", bundle: nil), forCellWithReuseIdentifier: "DUECCommutityCell")
+        
+    }
     
     @IBAction func aDinasubij(_ sender: Any) {
         

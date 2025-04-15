@@ -15,19 +15,7 @@ class DUEIVListforYnCotnoler: DUELaterPageContirl,UITableViewDelegate,UITableVie
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        shongindata.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let aslopj = shongindata[indexPath.row]
-        
-        let cellllf = tableView.dequeueReusableCell(withIdentifier: "DUEDtaelimesgcell", for: indexPath) as! DUEDtaelimesgcell
-        cellllf.nameeLabel.text = aslopj.userdiocm["Due_Nopme"]
-        cellllf.sayneLabel.text = aslopj.lisat.first
-        return cellllf
-    }
+  
     
     private lazy var nameeLabel: UILabel = {
         let laj = UILabel.init()
@@ -71,7 +59,11 @@ class DUEIVListforYnCotnoler: DUELaterPageContirl,UITableViewDelegate,UITableVie
         }
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        shongindata.count
+    }
     
+   
     private lazy var tablDUE: UITableView = {
         let tablDUE = UITableView.init(frame: .zero, style: .plain)
         tablDUE.backgroundColor = .clear
@@ -83,6 +75,18 @@ class DUEIVListforYnCotnoler: DUELaterPageContirl,UITableViewDelegate,UITableVie
         
         return tablDUE
     }()
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let aslopj = shongindata[indexPath.row]
+        
+        let cellllf = tableView.dequeueReusableCell(withIdentifier: "DUEDtaelimesgcell", for: indexPath) as! DUEDtaelimesgcell
+        cellllf.nameeLabel.text = aslopj.userdiocm["Due_Nopme"]
+        cellllf.sayneLabel.text = aslopj.lisat.first
+        return cellllf
+    }
+    
     private func igniteDuelEnergy(){
         let duie = UIImageView(image: UIImage.init(named: "iopoiuchat"))
         duie.contentMode = .scaleToFill
@@ -135,11 +139,11 @@ class DUEDtaelimesgcell: UITableViewCell {
     }()
    
     let amingAvkoit = UIImageView()
-    
+    private  let bavkigo = UIView.init()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        let bavkigo = UIView.init()
+        
         bavkigo.backgroundColor = UIColor(red: 0.19, green: 0.09, blue: 0.17, alpha: 1)
         bavkigo.layer.cornerRadius = 15
         bavkigo.layer.masksToBounds = true
@@ -150,9 +154,7 @@ class DUEDtaelimesgcell: UITableViewCell {
             make.left.right.equalToSuperview()
         }
         
-        amingAvkoit.contentMode = .scaleAspectFill
-        amingAvkoit.layer.cornerRadius = 28
-        amingAvkoit.layer.masksToBounds = true
+       
         
         
         bavkigo.addSubview(amingAvkoit)
@@ -163,14 +165,30 @@ class DUEDtaelimesgcell: UITableViewCell {
             make.centerY.equalToSuperview()
         }
         
+        generateBattleRoutine()
+       
+        projectMotionHologram()
         
+        amplifyStagePresence()
+    }
+    
+    
+    func generateBattleRoutine(){
+        amingAvkoit.contentMode = .scaleAspectFill
+        amingAvkoit.layer.cornerRadius = 28
+        amingAvkoit.layer.masksToBounds = true
+        
+    }
+    
+    
+    func projectMotionHologram() {
         bavkigo.addSubview(nameeLabel)
         nameeLabel.snp.makeConstraints { make in
             make.leading.equalTo(amingAvkoit.snp.trailing).offset(12)
             make.top.equalToSuperview().offset(14)
         }
-        
-        
+    }
+    func amplifyStagePresence(){
         bavkigo.addSubview(sayneLabel)
         sayneLabel.snp.makeConstraints { make in
             make.leading.equalTo(amingAvkoit.snp.trailing).offset(12)
@@ -178,7 +196,6 @@ class DUEDtaelimesgcell: UITableViewCell {
             make.trailing.equalToSuperview().inset(20)
         }
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

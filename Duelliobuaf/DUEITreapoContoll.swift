@@ -11,6 +11,7 @@ import Loaf
 
 class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
+        
         textView.text = nil
     }
     
@@ -21,14 +22,14 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
         
         igniteDuelEnergy()
         
-        let texfview = UITextView()
+        let texfDuerview = UITextView()
         
-        texfview.backgroundColor = UIColor(red: 0.22, green: 0.18, blue: 0.21, alpha: 1)
-        texfview.textColor = .white
+        texfDuerview.backgroundColor = UIColor(red: 0.22, green: 0.18, blue: 0.21, alpha: 1)
+        texfDuerview.textColor = .white
         
-        texfview.delegate = self
-        self.view.addSubview(texfview)
-        texfview.snp.makeConstraints { make in
+        texfDuerview.delegate = self
+        self.view.addSubview(texfDuerview)
+        texfDuerview.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(15)
             make.top.equalTo(daceTagoB.snp.bottom).offset(8)
             make.height.equalTo(148)
@@ -38,17 +39,17 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
         let layud = UIButton.init()
         layud.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Sjuybkmjiet"), for: .normal)
         layud.setTitleColor(.white, for: .normal)
-        texfview.layer.cornerRadius = 20
-        texfview.layer.masksToBounds = true
+        texfDuerview.layer.cornerRadius = 20
+        texfDuerview.layer.masksToBounds = true
         
         
-        texfview.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 10, right: 15)
+        texfDuerview.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 10, right: 15)
         layud.setBackgroundImage(UIImage.init(named: "img_btn_bg"), for: .normal)
         
         layud.addTarget(self, action: #selector(savegetingj), for: .touchUpInside)
         view.addSubview(layud)
-        texfview.text = "Supplementary description"
-        texfview.font = UIFont(name: "HarmonyOS Sans Medium", size: 15)
+        texfDuerview.text = "Supplementary description"
+        texfDuerview.font = UIFont(name: "HarmonyOS Sans Medium", size: 15)
         layud.snp.makeConstraints { make in
             make.width.equalTo(287)
             make.height.equalTo(48)
@@ -113,7 +114,7 @@ class DUEITreapoContoll: DUELaterPageContirl, TagListViewDelegate, UITextViewDel
         weaveCulturalRhythms()
         daceTagoB.marginX = 12
         daceTagoB.marginY = 12
-        daceTagoB.addTags(["Love Story","Dream Chaser","Fantasy World","Nature's Beauty","Friendship Forever"])
+        daceTagoB.addTags([DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Hdairzaasaszmjeonwt"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mpaflpiycxikozugss xfrrcalutd"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pgorrmnlongnruabpehyy"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mfaqlwivcnicovuwsc viqnfsjumlptss"),DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Fmaolysveq uIanvfjoarvmmaytxisotn")])
         daceTagoB.alignment = .left
        
         self.view.addSubview(daceTagoB)

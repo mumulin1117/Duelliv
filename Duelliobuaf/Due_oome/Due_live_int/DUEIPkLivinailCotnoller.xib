@@ -46,7 +46,7 @@
                         <constraint firstAttribute="height" constant="34" id="VDA-I6-1D3"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" backgroundImage="MOijdhuf"/>
+                    <state key="normal" backgroundImage="DUEcomplain"/>
                     <connections>
                         <action selector="morequihIngh:" destination="-1" eventType="touchUpInside" id="ZYl-Kn-8jl"/>
                     </connections>
@@ -176,7 +176,7 @@
         </view>
     </objects>
     <resources>
-        <image name="MOijdhuf" width="28" height="28"/>
+        <image name="DUEcomplain" width="24" height="24"/>
         <image name="entererinfOf" width="34" height="34"/>
         <image name="lakongirlike_line" width="48" height="48"/>
         <image name="seeeRight" width="16" height="16"/>

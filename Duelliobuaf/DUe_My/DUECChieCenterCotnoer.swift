@@ -253,10 +253,14 @@ class DUECChieCenterCotnoer: DUELaterPageContirl {
             wallentCount?.text = "0"
         }
         
+        generateBattleRoutine()
+    }
+    
+    
+    func generateBattleRoutine(){
         fansCountlAbl?.text = dfoloower["fasount"]
         followingCount?.text = dfoloower["followseexount"]
     }
-    
     
     private func shamePostingBotto()  {
         

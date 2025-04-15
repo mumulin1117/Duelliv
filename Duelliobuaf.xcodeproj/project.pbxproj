@@ -225,7 +225,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos to upload user avatars, take photos to upload live room covers, take photos to post image updates, video chat, Duelliv requires your camera permission.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Sending voice messages, audio and video chats, Duelliv requires your microphone permission.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -265,7 +265,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos to upload user avatars, take photos to upload live room covers, take photos to post image updates, video chat, Duelliv requires your camera permission.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Sending voice messages, audio and video chats, Duelliv requires your microphone permission.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";

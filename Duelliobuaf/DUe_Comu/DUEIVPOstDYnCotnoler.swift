@@ -98,24 +98,7 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
         view.addSubview(duecled1)
         view.addSubview(duecled2)
         
-        duecled0.snp.makeConstraints { make in
-            make.width.height.equalTo(73)
-            
-            make.leading.equalToSuperview().inset(16 + 16)
-            make.bottom.equalToSuperview().offset(-33 - 48 - 78 - 15)
-        }
-        
-        duecled1.snp.makeConstraints { make in
-            make.width.height.equalTo(73)
-            make.bottom.equalToSuperview().offset(-33 - 48 - 78 - 15)
-            make.leading.equalToSuperview().offset(16 + 73 + 12 + 16)
-        }
-        
-        duecled2.snp.makeConstraints { make in
-            make.width.height.equalTo(73)
-            make.bottom.equalToSuperview().offset(-33 - 48 - 78 - 15)
-            make.leading.equalToSuperview().offset(16 + 73 + 12 + 73 + 12 + 16)
-        }
+        igniteDuelEnergy()
         duecled0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchingtingj)))
         duecled1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchingtingj)))
         duecled2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchingtingj)))
@@ -126,6 +109,10 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
             make.width.height.equalTo(100)
         }
     }
+    
+    
+    
+    
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = nil
@@ -177,7 +164,27 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
        self.present(picker, animated: true)
        
     }
-    
+    func  igniteDuelEnergy(){
+        duecled0.snp.makeConstraints { make in
+            make.width.height.equalTo(73)
+            
+            make.leading.equalToSuperview().inset(16 + 16)
+            make.bottom.equalToSuperview().offset(-33 - 48 - 78 - 15)
+        }
+        
+        duecled1.snp.makeConstraints { make in
+            make.width.height.equalTo(73)
+            make.bottom.equalToSuperview().offset(-33 - 48 - 78 - 15)
+            make.leading.equalToSuperview().offset(16 + 73 + 12 + 16)
+        }
+        
+        duecled2.snp.makeConstraints { make in
+            make.width.height.equalTo(73)
+            make.bottom.equalToSuperview().offset(-33 - 48 - 78 - 15)
+            make.leading.equalToSuperview().offset(16 + 73 + 12 + 73 + 12 + 16)
+        }
+        
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
        
         guard let image : UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
@@ -186,8 +193,16 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
             
         }
         
+        picker.dismiss(animated: true)
+        
+    
+        syncGlobalGroove(image: image)
+        
+    }
+    
+    private func syncGlobalGroove(image:UIImage)  {
         DispatchQueue.main.async {
-            picker.dismiss(animated: true)
+            
             self.allTaoppost += 1
             
             if self.allTaoppost == 1 {
@@ -208,10 +223,6 @@ class DUEIVPOstDYnCotnoler: DUELaterPageContirl, UIImagePickerControllerDelegate
                 self.duecled2.image = image
             }
         }
-        
-    
-        
-        
     }
     
 }

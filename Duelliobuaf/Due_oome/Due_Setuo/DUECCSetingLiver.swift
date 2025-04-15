@@ -309,7 +309,9 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
             make.width.height.equalTo(100)
         }
         indicate.startAnimating()
-        let loaf = Loaf("Creating under review...", sender: self)
+        let udring = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cirmemadtsianrgj ruonkdtenre urxervxixekwv.u.u.")
+        
+        let loaf = Loaf(udring, sender: self)
         loaf.show(.custom(4)){_ in
             
         }
@@ -317,13 +319,18 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4, execute: DispatchWorkItem(block: {
             self.view.isUserInteractionEnabled = true
             guard var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String> else{
-                Loaf("create failure!",state: .error, sender: self).show()
+                let udring = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cnrbelaytgem kfbaridlyunrfeo!")
+                
+                Loaf(udring,state: .error, sender: self).show()
                 return
             }
             indicate.stopAnimating()
             use["Due_LiveTItle"] = iivekname
             use["Due_Nopme"] = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Mze")
-            Loaf("create Successful!",state: .success, sender: self).show()
+            
+            let lag = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cerdenantgeq lSfuecxchejsqsbfeuklp!")
+            
+            Loaf(lag,state: .success, sender: self).show()
             let kfij = livediaologall.init(userdiocm: use, lisat: [])
             self.navigationController?.pushViewController(DUEIPkLivinailCotnoller.init(datagalll: kfij, coveriahkkk: iiveIMG), animated: true)
         }))
@@ -335,20 +342,25 @@ class DUECCSetingLiver: DUELaterPageContirl , UIImagePickerControllerDelegate & 
     
     //摄像头的开启和关闭
     @IBAction func openorcloaseCamert(_ sender: UIButton) {
-        if ifcameracanuser == false {
+        if ifcameracanuser == false  {
             self.SureSjoaPerDUEionAlert()
             return
         }
         if sender.isSelected == false {//如果是开着。。。。准备关
+            let lag = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tduyrnnd iohfifo ttxhseo uczazmhexrma")
+            let lag1 = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Aqfptweqrd wcalqousaicnvgd,z xtxhcer wlbinvbeh pbyrboyacducfapsatb erlosogmw lsqcqrhexetnt uwmixlule xojnglpyh qdhitsupalkadyz tyrovutru ucaozvnerrj yilmkaagye")
             
-            let sdfsdsd = UIAlertController.init(title: "Turn off the camera", message:"After closing, the live broadcast room screen will only display your cover image", preferredStyle:.alert)
-           
-            sdfsdsd.addAction(UIAlertAction(title: "Sure", style: .default, handler: { alert in
+            let sdfsdsd = UIAlertController.init(title: lag, message:lag1, preferredStyle:.alert)
+            let lagccc = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Siudrpe")
+            sdfsdsd.addAction(UIAlertAction(title: lagccc, style: .default, handler: { alert in
                 //关闭
                 sender.isSelected = true
                self.sessionDUES.stopRunning()
             }))
-            sdfsdsd.addAction(UIAlertAction(title: "cancel", style: .default))
+            
+            
+            let lagakiccc = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ceaonwcterl")
+            sdfsdsd.addAction(UIAlertAction(title: lagakiccc, style: .default))
             self.present(sdfsdsd, animated: true)
         }else{
             sender.isSelected = false
