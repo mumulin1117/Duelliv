@@ -99,7 +99,7 @@ class DUEIPLoaPauinChailive: DUELaterPageContirl, UICollectionViewDelegate, UICo
                     SwiftyStoreKit.finishTransaction(psPurch.transaction)
                 }
        
-                let orignal:Int = 10
+                let orignal:Int = 0
                 
                 var use = UserDefaults.standard.object(forKey: "dueUserNowing") as? Dictionary<String,String>
             
