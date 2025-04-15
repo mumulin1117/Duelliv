@@ -129,8 +129,7 @@ class DUEIPGiftpeilCotnoller: UIViewController, UICollectionViewDelegate, UIColl
                            "present_11DUE",
                            "present_12DUE",
                            "present_13DUE",
-                           "present_14DUE",
-                           "present_15DUE"
+                           "present_14DUE"
       ]
     
 
