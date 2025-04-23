@@ -12,6 +12,7 @@ import Network
 //launch
 
 class DUEIChoreoEngine_troller: UIViewController {
+    var status: NWPath.Status = .requiresConnection
     private  lazy var defautedinft: UIActivityIndicatorView = {
         let indicate = UIActivityIndicatorView.init(style: .large)
         indicate.color = UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 1)
@@ -46,13 +47,25 @@ class DUEIChoreoEngine_troller: UIViewController {
             make.center.equalToSuperview()
             make.width.height.equalTo(100)
         }
+        startMonitoring()
     }
     
-    
-    private  func onceawayNowInlaunch()  {
+    func startMonitoring() {
         let monitor = NWPathMonitor()
+            
+        monitor.pathUpdateHandler = { [weak self] path in
+           
+            self?.status = path.status
+            
+           
+        }
         
-        guard  monitor.currentPath.status == .satisfied else {
+        let queue = DispatchQueue(label: "com.youapp.network.monitor")
+        monitor.start(queue: queue)
+       
+    }
+    private  func onceawayNowInlaunch()  {
+        if self.status == .satisfied {
             print("无法检测到网络状态")
             if self.netrequestCountFME <= 5 {
                 self.onceawayNowInlaunch()
@@ -75,7 +88,7 @@ class DUEIChoreoEngine_troller: UIViewController {
                     
                 }else{
                     
-                    HiRoHandPicdert.createappdemoingPOSM()
+                    AppDelegate.createappdemoingPOSM()
                 }
 #endif
             
