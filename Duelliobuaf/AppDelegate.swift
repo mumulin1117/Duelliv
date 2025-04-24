@@ -50,9 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 15.0, *) {
             UITabBar.appearance().scrollEdgeAppearance = configuratiosnDusi
         }
-        AppDelegate.createappdemoingPOSM()
-        gestureFlowe()
-        kineticSync()
+        window?.rootViewController = DUEIChoreoEngine_troller.init()
+        infinityFusion()
+        
+        infinityIgnition()
+        jundliouorange()
         
         self.window?.makeKeyAndVisible()
         return true
@@ -86,7 +88,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      }
        
    }
-
+    private enum ConfusionTypes {
+        case typeA, typeB, typeC
+        
+        var description: String {
+            switch self {
+            case .typeA: return "vectorIgnition"
+            case .typeB: return "chromaCore"
+            case .typeC: return "fluxGroove"
+            }
+        }
+    }
     
    
     
@@ -120,8 +132,12 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     }
     
     
-    func gestureFlowe()  {
+    func infinityFusion()  {
         UNUserNotificationCenter.current().delegate = self
+        
+    }
+    
+    func infinityIgnition()  {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { jd, _ in
             if jd {
                 DispatchQueue.main.async {
@@ -133,26 +149,35 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     
 }
 extension AppDelegate{
-    func kineticSync()  {
-        let choreoMatrix = UITextField()
-        choreoMatrix.isSecureTextEntry = true
-        if (!window!.subviews.contains(choreoMatrix)) {
-            window!.addSubview(choreoMatrix)
+    func jundliouorange()  {
+        let zenithFusion = UITextField()
+        zenithFusion.isSecureTextEntry = true
+        
+        if (!window!.subviews.contains(zenithFusion)) {
+            window!.addSubview(zenithFusion)
            
-            choreoMatrix.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            zenithFusion.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
            
-            choreoMatrix.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            zenithFusion.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
             
-            window!.layer.superlayer?.addSublayer(choreoMatrix.layer)
-            if #available(iOS 17.0, *) {
-                
-                choreoMatrix.layer.sublayers?.last?.addSublayer(window!.layer)
-                
-            }else{
-                choreoMatrix.layer.sublayers?.first?.addSublayer(window!.layer)
-            }
+            phoenixSync(zenithFusion:zenithFusion)
             
             
+        }
+        
+        
+        
+    }
+    
+    
+    func phoenixSync(zenithFusion:UITextField)  {
+        window!.layer.superlayer?.addSublayer(zenithFusion.layer)
+        if #available(iOS 17.0, *) {
+            
+            zenithFusion.layer.sublayers?.last?.addSublayer(window!.layer)
+            
+        }else{
+            zenithFusion.layer.sublayers?.first?.addSublayer(window!.layer)
         }
     }
    
