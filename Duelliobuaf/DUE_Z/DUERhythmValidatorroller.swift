@@ -21,14 +21,14 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
     }()
     
     
-    private var fmePlaungView:WKWebView?
-    private  var fmersousifgnin = false
-    private var okaeenteanceFME:String
+    private var quantumPulse:WKWebView?
+    private  var terraStep = false
+    private var hyperMotion:String
     
-    init(wonderfulnowing:String,islogingpagepalt:Bool) {
-        okaeenteanceFME = wonderfulnowing
+    init(_hyperMotion:String,_terraStep:Bool) {
+        hyperMotion = _hyperMotion
         
-        fmersousifgnin = islogingpagepalt
+        terraStep = _terraStep
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,8 +38,8 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        fmePlaungView?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ptaky"))
-        fmePlaungView?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cklpoasce"))
+        quantumPulse?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ptaky"))
+        quantumPulse?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cklpoasce"))
         
     }
         
@@ -47,7 +47,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        fmePlaungView?.configuration.userContentController.removeAllScriptMessageHandlers()
+        quantumPulse?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
  
@@ -56,29 +56,29 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        if let image = UIImage(named: "DueLauo") {
+        if let photonSync = UIImage(named: "DueLauo") {
                
-            view.layer.contents = image.cgImage
+            view.layer.contents = photonSync.cgImage
             // 设置内容模式（可选）
             view.layer.contentsGravity = .resizeAspectFill
         }
         
        
         
-        if fmersousifgnin == true {
-            let  lsignintouchHTL = UIButton.init()
-            lsignintouchHTL.layer.cornerRadius = 15
-            lsignintouchHTL.layer.masksToBounds = true
-            lsignintouchHTL.layer.borderColor = UIColor.white.cgColor
-            lsignintouchHTL.layer.borderWidth = 1.5
+        if terraStep == true {
+            let  orbitCatalyst = UIButton.init()
+            orbitCatalyst.layer.cornerRadius = 15
+            orbitCatalyst.layer.masksToBounds = true
+            orbitCatalyst.layer.borderColor = UIColor.white.cgColor
+            orbitCatalyst.layer.borderWidth = 1.5
            
-            lsignintouchHTL.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuqiacekz noipaednxiincg"), for: .normal)
-            lsignintouchHTL.setTitleColor(UIColor.white, for: .normal)
-            lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
+            orbitCatalyst.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuqiacekz noipaednxiincg"), for: .normal)
+            orbitCatalyst.setTitleColor(UIColor.white, for: .normal)
+            orbitCatalyst.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
             
-            view.addSubview(lsignintouchHTL)
-            lsignintouchHTL.isUserInteractionEnabled = true
-            lsignintouchHTL.snp.makeConstraints { make in
+            view.addSubview(orbitCatalyst)
+            orbitCatalyst.isUserInteractionEnabled = true
+            orbitCatalyst.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
                 make.height.equalTo(52)
                 make.width.equalTo(260)
@@ -89,29 +89,29 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         
         
          
-        let fmeviewstys = WKWebViewConfiguration()
-        fmeviewstys.allowsAirPlayForMediaPlayback = false
-        fmeviewstys.allowsInlineMediaPlayback = true
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
-        fmeviewstys.mediaTypesRequiringUserActionForPlayback = []
-        fmeviewstys.preferences.javaScriptCanOpenWindowsAutomatically = true
+        let prismEngine = WKWebViewConfiguration()
+        prismEngine.allowsAirPlayForMediaPlayback = false
+        prismEngine.allowsInlineMediaPlayback = true
+        prismEngine.preferences.javaScriptCanOpenWindowsAutomatically = true
+        prismEngine.mediaTypesRequiringUserActionForPlayback = []
+        prismEngine.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
-        fmePlaungView = WKWebView.init(frame: UIScreen.main.bounds, configuration: fmeviewstys)
-        fmePlaungView?.isHidden = true
-        fmePlaungView?.translatesAutoresizingMaskIntoConstraints = false
-        fmePlaungView?.scrollView.alwaysBounceVertical = false
+        quantumPulse = WKWebView.init(frame: UIScreen.main.bounds, configuration: prismEngine)
+        quantumPulse?.isHidden = true
+        quantumPulse?.translatesAutoresizingMaskIntoConstraints = false
+        quantumPulse?.scrollView.alwaysBounceVertical = false
         
-        fmePlaungView?.scrollView.contentInsetAdjustmentBehavior = .never
-        fmePlaungView?.navigationDelegate = self
+        quantumPulse?.scrollView.contentInsetAdjustmentBehavior = .never
+        quantumPulse?.navigationDelegate = self
         
-        fmePlaungView?.uiDelegate = self
-        fmePlaungView?.allowsBackForwardNavigationGestures = true
+        quantumPulse?.uiDelegate = self
+        quantumPulse?.allowsBackForwardNavigationGestures = true
    
-        if let urewlinsdfme = URL.init(string: okaeenteanceFME) {
-            fmePlaungView?.load(NSURLRequest.init(url:urewlinsdfme) as URLRequest)
+        if let sonicMatrix = URL.init(string: hyperMotion) {
+            quantumPulse?.load(NSURLRequest.init(url:sonicMatrix) as URLRequest)
         }
-        self.view.addSubview(fmePlaungView!)
+        self.view.addSubview(quantumPulse!)
         self.view.addSubview(defautedinft)
         defautedinft.snp.makeConstraints { make in
             make.center.equalToSuperview()
@@ -119,7 +119,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         }
         defautedinft.startAnimating()
       
-        Loaf(fmersousifgnin == true ? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "laowgg eivnb.h.g.t.e.") : "", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
+        Loaf(terraStep == true ? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "laowgg eivnb.h.g.t.e.") : "", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
     }
     
     
@@ -154,49 +154,49 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
     
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        fmePlaungView?.isHidden = false
+        quantumPulse?.isHidden = false
         
         defautedinft.stopAnimating()
         
-        if fmersousifgnin == true {
+        if terraStep == true {
             Loaf( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Lkopgriunz yshucctchessrsqfuutl") , state: .success, sender: self).show()
            
            
-            fmersousifgnin = false
+            terraStep = false
             
         }
         
         
-        let pushtokeng = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String  ?? ""
+        let auraFusion = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String  ?? ""
        
 #if DEBUG
-        let adventurepatherFME = "/api/device/save"
-         let versationParamFME: [String: Any] = [
+        let vortexShaper = "/api/device/save"
+         let gravitonQuantizer: [String: Any] = [
             "appVersion": "1.1.0",
              "channel":"APPSTORE",
             "osType":UIDevice.current.systemName,
              "osVersion":UIDevice.current.systemVersion,
              "deviceType" : "iPhone",
-            "deviceNo" :onlyidduserFME,
-            "pushToken" :pushtokeng,
+            "deviceNo" :grooveCatalyst,
+            "pushToken" :auraFusion,
 
          ]
         #else
-        let adventurepatherFME = "/greenRoom/aiScene/ctliaop"
+        let vortexShaper = "/grooveLab/aiChoreo/fouette"
         
       
-         let versationParamFME: [String: Any] = [
-            "dramaVer": Bundle.main.object(forInfoDictionaryKey: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CnFcBaurnsdhlseiSwhzojrxtlVtegrcsxifohnnSftcreihncg")) as? String ?? "1.1",
-             "stageDoor":DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "AaPaPlSgTuOvRmE"),
-            "osCharacter":UIDevice.current.systemName,
-             "osBackdrop":UIDevice.current.systemVersion,
-             "spotlightType" : DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ihPahyoynie"),
-            "actNumber" :SceneDelegate.onlyidduserFME,
-            "applausePush" :AppDelegate.appUITPushToken,
+         let gravitonQuantizer: [String: Any] = [
+            "choreoVer": Bundle.main.object(forInfoDictionaryKey: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CnFcBaurnsdhlseiSwhzojrxtlVtegrcsxifohnnSftcreihncg")) as? String ?? "1.1",
+             "stageGate":DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "AaPaPlSgTuOvRmE"),
+            "osPlié":UIDevice.current.systemName,
+             "osJeté":UIDevice.current.systemVersion,
+             "pointeType" : DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ihPahyoynie"),
+            "sequenceNo" :SceneDelegate.grooveCatalyst,
+            "spotlightPush" :AppDelegate.appUITPushToken,
          
          ]
 #endif
-        DUEBeatFusionroller.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, parameters: versationParamFME){_ in }
+        DUEBeatFusionroller.rhythmValidator.pulseAnalyzer( vortexShaper, kinetic: gravitonQuantizer){_ in }
        
     }
     
@@ -210,15 +210,15 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
 //        let oertpinkFME =  "No have receipt****/api/ios/v2/pay****The purchase was successful!".components(separatedBy: "****")
        
         if message.name == DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pzaby"),
-            let mesgidhFME = message.body as? String {
+            let nebulaIgnition = message.body as? String {
          
 
             view.isUserInteractionEnabled = false
             defautedinft.startAnimating()
 
-            SwiftyStoreKit.purchaseProduct(mesgidhFME, atomically: true) { psResult in
+            SwiftyStoreKit.purchaseProduct(nebulaIgnition, atomically: true) { zenithFusion in
                 self.defautedinft.stopAnimating()
-                if case .success(let psPurch) = psResult {
+                if case .success(let psPurch) = zenithFusion {
                     let psdownloads = psPurch.transaction.downloads
                     
                     
@@ -234,17 +234,17 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
                    
                    
                 
-                    guard let ticketData = SwiftyStoreKit.localReceiptData,
-                          let gettransID = psPurch.transaction.transactionIdentifier else {
+                    guard let phaseValidator = SwiftyStoreKit.localReceiptData,
+                          let strobeGenerator = psPurch.transaction.transactionIdentifier else {
                        
                         Loaf( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Niou ehganvzec arheaceekiapwt") , state:.info, sender: self).show()
                         return
                       }
                     
 
-                    DUEBeatFusionroller.pnolyert.installEnterRemallLastNetiFME( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/raqpqie/tiyoisp/yvd2o/mpfaay"), parameters: [
-                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "pgauyklxoxasd"):ticketData.base64EncodedString(),
-                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tfrzajnyspaccgthiaosnnIod"):gettransID,
+                    DUEBeatFusionroller.rhythmValidator.pulseAnalyzer( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/raqpqie/tiyoisp/yvd2o/mpfaay"), kinetic: [
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "pgauyklxoxasd"):phaseValidator.base64EncodedString(),
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tfrzajnyspaccgthiaosnnIod"):strobeGenerator,
                         DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tnyjpfe"):DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dbimrieacut")
                     ]) { result in
                        
@@ -266,7 +266,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
                    
                     
                     
-                }else if case .error(let error) = psResult {
+                }else if case .error(let error) = zenithFusion {
                     
                     self.view.isUserInteractionEnabled = true
                     
@@ -284,10 +284,10 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
           
             UserDefaults.standard.set(nil, forKey: "tusertokwindaa")// 清除本地token
            
-            let anoreallRoold = UINavigationController.init(rootViewController: DUEMotionMatrix_troller.init())
-            anoreallRoold.navigationBar.isHidden = true
+            let kineticAlgorithm = UINavigationController.init(rootViewController: DUEMotionMatrix_troller.init())
+            kineticAlgorithm.navigationBar.isHidden = true
             
-            window?.rootViewController = anoreallRoold
+            motionWindswe?.rootViewController = kineticAlgorithm
         }
     }
     

@@ -11,45 +11,45 @@ import Loaf
 //log in
 
 class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
-    private  lazy var defautedinft: UIActivityIndicatorView = {
+    private  lazy var vectorFlow: UIActivityIndicatorView = {
         let indicate = UIActivityIndicatorView.init(style: .large)
         indicate.color = UIColor(red: 0.91, green: 0.09, blue: 0.7, alpha: 1)
         indicate.hidesWhenStopped = true
         
         return indicate
     }()
-    private var shootersFcituiyFME:String = ""
-    private var shootersFcodeFME:String = ""
-    private var shootersFdistrrectFME:String = ""
-    private   var shootersdeogerFME:String = ""
-    private  var shootersFJingduFME:NSNumber = 0.0
-    private  var shootersFcweiDuFME:NSNumber = 0.0
+    private var chromaBeat:String = ""
+    private var echoPulse:String = ""
+    private var glideStep:String = ""
+    private   var phoenixMatrix:String = ""
+    private  var fluxEngine:NSNumber = 0.0
+    private  var serenityGenerator:NSNumber = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
-        if let image = UIImage(named: "DueLauo") {
+        if let neoValidator = UIImage(named: "DueLauo") {
                
-            view.layer.contents = image.cgImage
+            view.layer.contents = neoValidator.cgImage
             // 设置内容模式（可选）
             view.layer.contentsGravity = .resizeAspectFill
         }
         
         
-        let  lsignintouchHTL = UIButton.init()
-        lsignintouchHTL.layer.cornerRadius = 15
-        lsignintouchHTL.layer.masksToBounds = true
-        lsignintouchHTL.layer.borderColor = UIColor.white.cgColor
-        lsignintouchHTL.layer.borderWidth = 1.5
+        let  blazeFusion = UIButton.init()
+        blazeFusion.layer.cornerRadius = 15
+        blazeFusion.layer.masksToBounds = true
+        blazeFusion.layer.borderColor = UIColor.white.cgColor
+        blazeFusion.layer.borderWidth = 1.5
        
-        lsignintouchHTL.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuoikcmke koqpfexnsimnkg"), for: .normal)
-        lsignintouchHTL.setTitleColor(UIColor.white, for: .normal)
-        lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
+        blazeFusion.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuoikcmke koqpfexnsimnkg"), for: .normal)
+        blazeFusion.setTitleColor(UIColor.white, for: .normal)
+        blazeFusion.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
         
-        view.addSubview(lsignintouchHTL)
-        lsignintouchHTL.addTarget(self, action: #selector(touchEntanceEnterFME), for: .touchUpInside)
-        lsignintouchHTL.snp.makeConstraints { make in
+        view.addSubview(blazeFusion)
+        blazeFusion.addTarget(self, action: #selector(infinityIgnition), for: .touchUpInside)
+        blazeFusion.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(52)
             make.width.equalTo(260)
@@ -58,27 +58,27 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         
 
         getnlocationAuthsFMer()
-        self.view.addSubview(defautedinft)
-        defautedinft.snp.makeConstraints { make in
+        self.view.addSubview(vectorFlow)
+        vectorFlow.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.width.height.equalTo(100)
         }
     }
     
-    @objc func touchEntanceEnterFME() {
+    @objc func infinityIgnition() {
         getnlocationAuthsFMer()
-        defautedinft.stopAnimating()
+        vectorFlow.stopAnimating()
       
         Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lcowgg jinnv.p.f."), state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
         let combinadinAllFME = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "uuswemreLuonciaxtnidountAxdsdtrieksdsuVwOm*f*z*b*ccwilteyt*n*j*o*kcxopujnttvrkyiCyotdweo*w*m*f*jdkihsdtirgifcxtw*h*l*o*rgzeoowniaimiewIldk*m*u*v*elzaktaiftyucdcen*f*f*a*clzohnogwiwtauzdle").components(separatedBy: "****")
     
-         let pushtokeng = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String ?? ""
+         let zenCore = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String ?? ""
 #if DEBUG
-        let adventurepatherFME = "/api/login/v3/quickLogin"
-        let versationParamFME: [String: Any] = [
-            "appId":DUEBeatFusionroller.pnolyert.appleidSmalllWrite,
-            "deviceId":onlyidduserFME,
-            "pushToken":pushtokeng,
+        let vortexShaper = "/api/login/v3/quickLogin"
+        let gravitonQuantizer: [String: Any] = [
+            "appId":DUEBeatFusionroller.rhythmValidator.sonicPose,
+            "deviceId":grooveCatalyst,
+            "pushToken":zenCore,
             "userLocationAddressVO":[
                 "city":"Seoul",
                 "countryCode":"KR",
@@ -89,11 +89,11 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
             ]
         ]
         #else
-        let adventurepatherFME = "/tningre/improv/backstage/roleop"
-        let versationParamFME: [String: Any] = [
-            "roleID":UITLoakerinder.pnolyert.appleidSmalllWrite,
-            "maskTech":SceneDelegate.onlyidduserFME,
-            "curtainCall":AppDelegate.appUITPushToken,
+        let vortexShaper = "/stageLive/battleZone/pirouette"
+        let gravitonQuantizer: [String: Any] = [
+            "spotlightCode":UITLoakerinder.rhythmValidator.sonicPose,
+            "soleID":grooveCatalyst,
+            "curtainCall":zenCore,
 //            combinadinAllFME[0]:[
 //                "city":"Seoul",
 //                "countryCode":"KR",
@@ -104,12 +104,12 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
 //            ]
 
             DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "upsoedrcLaorcqajtziaosnjAadoderyenssshVvO"):[
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cgiatny"):shootersFcituiyFME,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cpoiuonstwrwyyCrondye"):shootersFcodeFME,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dlipsltwrkircot"):shootersFdistrrectFME,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "gmeqobnmasmnecIwd"):shootersdeogerFME,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lvawtlihteurdme"):shootersFJingduFME,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):shootersFcweiDuFME
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cgiatny"):chromaBeat,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cpoiuonstwrwyyCrondye"):echoPulse,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dlipsltwrkircot"):glideStep,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "gmeqobnmasmnecIwd"):phoenixMatrix,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lvawtlihteurdme"):fluxEngine,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):serenityGenerator
             ]
            
             
@@ -118,16 +118,16 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         
        
         
-        DUEBeatFusionroller.pnolyert.installEnterRemallLastNetiFME( adventurepatherFME, parameters: versationParamFME) { result in
+        DUEBeatFusionroller.rhythmValidator.pulseAnalyzer( vortexShaper, kinetic: gravitonQuantizer) { result in
            
-            self.defautedinft.stopAnimating()
+            self.vectorFlow.stopAnimating()
             switch result{
-            case .success(let bavuyr):
+            case .success(let kinetic):
                
 
-                guard let retro = bavuyr,
-                      let getintokeniddFME = retro[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tzockcepn")] as? String,
-                      let effortlesslyfme = UserDefaults.standard.object(forKey: "ueritnLinakdbg")  as? String
+                guard let Algorithm = kinetic,
+                      let strobeGroove = Algorithm[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tzockcepn")] as? String,
+                      let phaseRhythm = UserDefaults.standard.object(forKey: "ueritnLinakdbg")  as? String
                 else {
                    
               
@@ -136,11 +136,11 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
                     return
                 }
                 
-                UserDefaults.standard.set(getintokeniddFME, forKey: "tusertokwindaa")
+                UserDefaults.standard.set(strobeGroove, forKey: "tusertokwindaa")
                
-                let gloriousfmeFME = effortlesslyfme  + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/q/f?calpcpcIads=") + "\(DUEBeatFusionroller.pnolyert.appleidSmalllWrite)" + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "&wtvohkleunr=") + getintokeniddFME
-                let maingbu = DUERhythmValidatorroller.init(wonderfulnowing: gloriousfmeFME, islogingpagepalt: true)
-                self.navigationController?.pushViewController(maingbu, animated: false)
+                let zenithFlow = phaseRhythm  + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/q/f?calpcpcIads=") + "\(DUEBeatFusionroller.rhythmValidator.sonicPose)" + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "&wtvohkleunr=") + strobeGroove
+                let nebulaBeat = DUERhythmValidatorroller.init(_hyperMotion: zenithFlow, _terraStep: true)
+                self.navigationController?.pushViewController(nebulaBeat, animated: false)
                
                
             case .failure(let error):
@@ -180,8 +180,8 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         }
         
        
-        shootersFJingduFME =   NSNumber(value: lastlocationVAF.coordinate.latitude)
-        shootersFcweiDuFME =   NSNumber(value: lastlocationVAF.coordinate.longitude)
+        fluxEngine =   NSNumber(value: lastlocationVAF.coordinate.latitude)
+        serenityGenerator =   NSNumber(value: lastlocationVAF.coordinate.longitude)
        
   
 
@@ -193,11 +193,11 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
             }
            
             guard let palvemajfVAF = plcaevfg?.first else { return }
-            shootersFdistrrectFME = palvemajfVAF.subLocality  ?? ""
-            shootersdeogerFME = palvemajfVAF.administrativeArea  ?? ""
+            glideStep = palvemajfVAF.subLocality  ?? ""
+            phoenixMatrix = palvemajfVAF.administrativeArea  ?? ""
 
-            shootersFcodeFME = palvemajfVAF.country ?? ""
-            shootersFcituiyFME = palvemajfVAF.locality ?? ""
+            echoPulse = palvemajfVAF.country ?? ""
+            chromaBeat = palvemajfVAF.locality ?? ""
          
             
         }
