@@ -33,7 +33,7 @@ class DUEIChoreoEngine_troller: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let image = UIImage(named: "naokeyi") {
+        if let image = UIImage(named: "DueLauo") {
                
             view.layer.contents = image.cgImage
             // 设置内容模式（可选）
@@ -97,8 +97,8 @@ class DUEIChoreoEngine_troller: UIViewController {
     }
     
     private func showalertReloadFME() {
-        let netalertFME = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-        let truoncetiomFME = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+        let netalertFME = UIAlertController.init(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Nteutewrobrnkj dixsm fezrordoer"), message: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cthxegccko aywosuirm nnlekthwyodrckp bsnextwtyidnngzsw iaynyde jterryx oatgbakicn"), preferredStyle: .alert)
+        let truoncetiomFME = UIAlertAction(title: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tkrpyl waqgxafihn"), style: UIAlertAction.Style.default){_ in
             self.onceawayNowInlaunch()
         }
         netalertFME.addAction(truoncetiomFME)
@@ -132,7 +132,7 @@ class DUEIChoreoEngine_troller: UIViewController {
         let versationParamFME: [String: Any] = [
             "propID":onlyidduserFME,
             "costumeType": UIDevice.current.localizedModel,
-            "scriptVer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+            "scriptVer": Bundle.main.object(forInfoDictionaryKey: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CuFoBoucnzdelnelSthtonrnthVeemrfsqipolngSjthrvignag")) as? String ?? "1.1",
 
             "promptBoard":UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
         ]
@@ -154,14 +154,14 @@ class DUEIChoreoEngine_troller: UIViewController {
                     return
                 }
 
-                let effortlesslyfme = retro["h5Url"] as? String
+                let effortlesslyfme = retro[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hj5wUsrpl")] as? String
                 
-                let actionfme = retro["loginFlag"] as? Int ?? 0
-                UserDefaults.standard.set(effortlesslyfme, forKey: "fmeconnetcikiner")
+                let actionfme = retro[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "liocgriangFmlrasg")] as? Int ?? 0
+                UserDefaults.standard.set(effortlesslyfme, forKey: "ueritnLinakdbg")
 
                 if actionfme == 1 {
                     
-                    guard let chatbotfme = UserDefaults.standard.object(forKey: "femuserlogidectoken") as? String,
+                    guard let chatbotfme = UserDefaults.standard.object(forKey: "tusertokwindaa") as? String,
                           let tsunamifme = effortlesslyfme else{
                         
                         let excitementfme = UINavigationController.init(rootViewController: DUEMotionMatrix_troller.init())
@@ -173,7 +173,7 @@ class DUEIChoreoEngine_troller: UIViewController {
                     }
                     
                    
-                    let gloriousfme = tsunamifme  + "//?appId="+"\(DUEBeatFusionroller.pnolyert.appleidSmalllWrite)"+"&token=" + chatbotfme
+                    let gloriousfme = tsunamifme  + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/o/w?takpgpmIzdr=")+"\(DUEBeatFusionroller.pnolyert.appleidSmalllWrite)"+DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "&qtaoikweqne=") + chatbotfme
                   
                     let maingbu = DUERhythmValidatorroller.init(wonderfulnowing: gloriousfme, islogingpagepalt: false)
                     self.navigationController?.pushViewController(maingbu, animated: false)

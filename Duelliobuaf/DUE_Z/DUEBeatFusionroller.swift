@@ -33,7 +33,7 @@ class DUEBeatFusionroller: NSObject {
         #if DEBUG
         return "https://api.cphub.link"
         #else
-        return "https://api.ahtjng.link"
+        return DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hstgtzpssf:y/x/raypzis.pkpdkjalfvqsj.mloibnck")
         #endif
     }
     
@@ -43,20 +43,20 @@ class DUEBeatFusionroller: NSObject {
                                      completion: @escaping (Result<[String : Any]?, Error>) -> Void) {
         // 构建请求组件
         guard let url = URL(string: debugBaseURL + path) else {
-            return completion(.failure(NSError(domain: "URL Error", code: 400)))
+            return completion(.failure(NSError(domain: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "UgRrLw lEkrrrtoqr"), code: 400)))
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "PhOxSqT")
         
         
         request.setHeaders([
-            "appId": appleidSmalllWrite,
-            "appVersion": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "deviceNo": onlyidduserFME,
-            "language": Locale.current.languageCode ?? "",
-            "loginToken": UserDefaults.standard.string(forKey: "femuserlogidectoken") ?? "",
-            "Content-Type": "application/json"
+            DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "akphprIld"): appleidSmalllWrite,
+            DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aqpfpzVveyrhsbiyovn"): Bundle.main.object(forInfoDictionaryKey: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CjFiByuankdylteuSlhlotrntzVregrosriwoxnwSbtrrtipnkg")) as? String ?? "1.1",
+            DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dseavxinccemNio"): onlyidduserFME,
+            DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "liaunqgmusadgke"): Locale.current.languageCode ?? "",
+            DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lmoggeiensTxotkueen"): UserDefaults.standard.string(forKey: "tusertokwindaa") ?? "",
+            DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ctojnktxeunbtb-wTiyhpre"): DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aeptpnlgigcqahtqitoing/yjrsaopn")
         ])
         
         // 异步处理参数序列化
@@ -97,22 +97,22 @@ class DUEBeatFusionroller: NSObject {
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode),
                   let data = data else {
-                return completion(.failure(NSError(domain: "HTTP Error", code: (response as? HTTPURLResponse)?.statusCode ?? 500)))
+                return completion(.failure(NSError(domain: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "HpTzTpPc aEmrurzopr"), code: (response as? HTTPURLResponse)?.statusCode ?? 500)))
             }
             
             // JSON 解析
             do {
                 let jsonObject = try JSONSerialization.jsonObject(with: data, options: [])
                 guard let responseDict = jsonObject as? [String: Any] else {
-                    throw NSError(domain: "Data Format Error", code: 500)
+                    throw NSError(domain: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Dvaxtwax zFuoarhmvamto mEsrcreoar"), code: 500)
                 }
                 
                 // 业务逻辑处理
-                if responseDict["code"] as? String == "0000" {
-                    completion(.success(responseDict["result"] as? [String: Any]))
+                if responseDict[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cmojdpe")] as? String == DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "0b0o0n0") {
+                    completion(.success(responseDict[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "reeessuqlrt")] as? [String: Any]))
                 } else {
-                    let errorMessage = responseDict["message"] as? String ?? "Unknown Error"
-                    throw NSError(domain: "Business Error", code: 0, userInfo: [NSLocalizedDescriptionKey: errorMessage])
+                    let errorMessage = responseDict[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "mteasfsbasgoe")] as? String ?? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ujngkhnzoiwfnh qEurcrgocr")
+                    throw NSError(domain: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Bbussjivnbevszsn wErrrrjomr"), code: 0, userInfo: [NSLocalizedDescriptionKey: errorMessage])
                 }
                 
                 // 调试模式特殊处理
@@ -185,7 +185,7 @@ class DUEBeatFusionroller: NSObject {
         dict.map { "\($0.key): \($0.value)" }.joined(separator: "\n")
     }
     #else
-    let appleidSmalllWrite = "42563156"
+    let appleidSmalllWrite = "29917288"
     #endif
 }
 

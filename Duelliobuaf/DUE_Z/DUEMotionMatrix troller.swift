@@ -29,19 +29,22 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         super.viewDidLoad()
 
        
-        
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        matherlang.image = UIImage(named: "FoeloaginPage")
-        view.addSubview(matherlang)
-        
+        if let image = UIImage(named: "DueLauo") {
+               
+            view.layer.contents = image.cgImage
+            // 设置内容模式（可选）
+            view.layer.contentsGravity = .resizeAspectFill
+        }
         
         
         let  lsignintouchHTL = UIButton.init()
-        lsignintouchHTL.setBackgroundImage(UIImage.init(named: "posdaiNbc"), for: .normal)
+        lsignintouchHTL.layer.cornerRadius = 15
+        lsignintouchHTL.layer.masksToBounds = true
+        lsignintouchHTL.layer.borderColor = UIColor.white.cgColor
+        lsignintouchHTL.layer.borderWidth = 1.5
        
-        lsignintouchHTL.setTitle("Quick Log", for: .normal)
-        lsignintouchHTL.setTitleColor(UIColor.black, for: .normal)
+        lsignintouchHTL.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuoikcmke koqpfexnsimnkg"), for: .normal)
+        lsignintouchHTL.setTitleColor(UIColor.white, for: .normal)
         lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
         
         view.addSubview(lsignintouchHTL)
@@ -49,7 +52,7 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         lsignintouchHTL.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(52)
-            make.width.equalTo(335)
+            make.width.equalTo(260)
             make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
         }
         
@@ -66,10 +69,10 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         getnlocationAuthsFMer()
         defautedinft.stopAnimating()
       
-        Loaf("log in...", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
-        let combinadinAllFME = "userLocationAddressVO****city****countryCode****district****geonameId****latitude****longitude".components(separatedBy: "****")
+        Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lcowgg jinnv.p.f."), state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
+        let combinadinAllFME = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "uuswemreLuonciaxtnidountAxdsdtrieksdsuVwOm*f*z*b*ccwilteyt*n*j*o*kcxopujnttvrkyiCyotdweo*w*m*f*jdkihsdtirgifcxtw*h*l*o*rgzeoowniaimiewIldk*m*u*v*elzaktaiftyucdcen*f*f*a*clzohnogwiwtauzdle").components(separatedBy: "****")
     
-         let pushtokeng = UserDefaults.standard.object(forKey: "remotetokenHIRDI") as? String ?? ""
+         let pushtokeng = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String ?? ""
 #if DEBUG
         let adventurepatherFME = "/api/login/v3/quickLogin"
         let versationParamFME: [String: Any] = [
@@ -100,13 +103,13 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
 //                "longitude":126.9780
 //            ]
 
-            "userLocationAddressVO":[
-                "city":shootersFcituiyFME,
-                "countryCode":shootersFcodeFME,
-                "district":shootersFdistrrectFME,
-                "geonameId":shootersdeogerFME,
-                "latitude":shootersFJingduFME,
-                "longitude":shootersFcweiDuFME
+            DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "upsoedrcLaorcqajtziaosnjAadoderyenssshVvO"):[
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cgiatny"):shootersFcituiyFME,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cpoiuonstwrwyyCrondye"):shootersFcodeFME,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dlipsltwrkircot"):shootersFdistrrectFME,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "gmeqobnmasmnecIwd"):shootersdeogerFME,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lvawtlihteurdme"):shootersFJingduFME,
+                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):shootersFcweiDuFME
             ]
            
             
@@ -123,19 +126,19 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
                
 
                 guard let retro = bavuyr,
-                      let getintokeniddFME = retro["token"] as? String,
-                      let effortlesslyfme = UserDefaults.standard.object(forKey: "fmeconnetcikiner")  as? String
+                      let getintokeniddFME = retro[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tzockcepn")] as? String,
+                      let effortlesslyfme = UserDefaults.standard.object(forKey: "ueritnLinakdbg")  as? String
                 else {
                    
               
-                    Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer:"data weak!"),location:.top, sender: self).show()
+                    Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dkajtpau uwnebaykg!")),location:.top, sender: self).show()
                    
                     return
                 }
                 
-                UserDefaults.standard.set(getintokeniddFME, forKey: "femuserlogidectoken")
+                UserDefaults.standard.set(getintokeniddFME, forKey: "tusertokwindaa")
                
-                let gloriousfmeFME = effortlesslyfme  + "//?appId=" + "\(DUEBeatFusionroller.pnolyert.appleidSmalllWrite)" + "&token=" + getintokeniddFME
+                let gloriousfmeFME = effortlesslyfme  + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/q/f?calpcpcIads=") + "\(DUEBeatFusionroller.pnolyert.appleidSmalllWrite)" + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "&wtvohkleunr=") + getintokeniddFME
                 let maingbu = DUERhythmValidatorroller.init(wonderfulnowing: gloriousfmeFME, islogingpagepalt: true)
                 self.navigationController?.pushViewController(maingbu, animated: false)
                
@@ -160,7 +163,7 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
             weteranlocatertoolFME.startUpdatingLocation()
           
        }else if weteranlocatertoolFME.authorizationStatus  ==  .denied{
-           Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer:"it is recommended that you open it in settings location for better service"),location:.top, sender: self).show()
+           Loaf(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer:DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ifts eihss urieuchocmxmcewnvdgeddm ftphvaotg oyxotuo goepwebnw vikth lidne qspeytbtaidnbgxsn aleopcjaqtfidokns afhoyrs dbxectotqejrd asmeiryvtigcve")),location:.top, sender: self).show()
           
            
        }else if weteranlocatertoolFME.authorizationStatus  ==  .notDetermined{

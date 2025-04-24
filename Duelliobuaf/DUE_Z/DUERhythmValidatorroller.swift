@@ -38,8 +38,8 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        fmePlaungView?.configuration.userContentController.add(self, name: "Pay")
-        fmePlaungView?.configuration.userContentController.add(self, name: "Close")
+        fmePlaungView?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ptaky"))
+        fmePlaungView?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cklpoasce"))
         
     }
         
@@ -56,34 +56,32 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
-        let matherlang = UIImageView.init(frame:UIScreen.main.bounds)
-        matherlang.contentMode = .scaleAspectFill
-        if fmersousifgnin {
-            matherlang.image = UIImage(named: "FoeloaginPage")
-        }else{
-            matherlang.image = UIImage(named: "poajfLainj")
+        if let image = UIImage(named: "DueLauo") {
+               
+            view.layer.contents = image.cgImage
+            // 设置内容模式（可选）
+            view.layer.contentsGravity = .resizeAspectFill
         }
-       
-        view.addSubview(matherlang)
         
        
         
         if fmersousifgnin == true {
             let  lsignintouchHTL = UIButton.init()
-            lsignintouchHTL.setBackgroundImage(UIImage.init(named: "posdaiNbc"), for: .normal)
+            lsignintouchHTL.layer.cornerRadius = 15
+            lsignintouchHTL.layer.masksToBounds = true
+            lsignintouchHTL.layer.borderColor = UIColor.white.cgColor
+            lsignintouchHTL.layer.borderWidth = 1.5
            
-            lsignintouchHTL.setTitle("Quick Log", for: .normal)
-            lsignintouchHTL.setTitleColor(UIColor.black, for: .normal)
+            lsignintouchHTL.setTitle(DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuqiacekz noipaednxiincg"), for: .normal)
+            lsignintouchHTL.setTitleColor(UIColor.white, for: .normal)
             lsignintouchHTL.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
-           
-            lsignintouchHTL.isUserInteractionEnabled = false
+            
             view.addSubview(lsignintouchHTL)
-           
+            lsignintouchHTL.isUserInteractionEnabled = true
             lsignintouchHTL.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
                 make.height.equalTo(52)
-                make.width.equalTo(335)
+                make.width.equalTo(260)
                 make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
             }
         }
@@ -121,7 +119,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         }
         defautedinft.startAnimating()
       
-        Loaf(fmersousifgnin == true ? "log in....." : "", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
+        Loaf(fmersousifgnin == true ? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "laowgg eivnb.h.g.t.e.") : "", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
     }
     
     
@@ -161,7 +159,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         defautedinft.stopAnimating()
         
         if fmersousifgnin == true {
-            Loaf( "Login successful" , state: .success, sender: self).show()
+            Loaf( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Lkopgriunz yshucctchessrsqfuutl") , state: .success, sender: self).show()
            
            
             fmersousifgnin = false
@@ -169,7 +167,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         }
         
         
-        let pushtokeng = UserDefaults.standard.object(forKey: "remotetokenHIRDI") as? String  ?? ""
+        let pushtokeng = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String  ?? ""
        
 #if DEBUG
         let adventurepatherFME = "/api/device/save"
@@ -188,11 +186,11 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         
       
          let versationParamFME: [String: Any] = [
-            "dramaVer": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-             "stageDoor":"APPSTORE",
+            "dramaVer": Bundle.main.object(forInfoDictionaryKey: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CnFcBaurnsdhlseiSwhzojrxtlVtegrcsxifohnnSftcreihncg")) as? String ?? "1.1",
+             "stageDoor":DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "AaPaPlSgTuOvRmE"),
             "osCharacter":UIDevice.current.systemName,
              "osBackdrop":UIDevice.current.systemVersion,
-             "spotlightType" : "iPhone",
+             "spotlightType" : DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ihPahyoynie"),
             "actNumber" :SceneDelegate.onlyidduserFME,
             "applausePush" :AppDelegate.appUITPushToken,
          
@@ -211,7 +209,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
 //        let angagingFME =  "payload****transactionId****type****direct****Pay****Close".components(separatedBy: "****")
 //        let oertpinkFME =  "No have receipt****/api/ios/v2/pay****The purchase was successful!".components(separatedBy: "****")
        
-        if message.name == "Pay",
+        if message.name == DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Pzaby"),
             let mesgidhFME = message.body as? String {
          
 
@@ -239,27 +237,27 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
                     guard let ticketData = SwiftyStoreKit.localReceiptData,
                           let gettransID = psPurch.transaction.transactionIdentifier else {
                        
-                        Loaf( "No have receipt" , state:.info, sender: self).show()
+                        Loaf( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Niou ehganvzec arheaceekiapwt") , state:.info, sender: self).show()
                         return
                       }
                     
 
-                    DUEBeatFusionroller.pnolyert.installEnterRemallLastNetiFME( "/api/ios/v2/pay", parameters: [
-                        "payload":ticketData.base64EncodedString(),
-                        "transactionId":gettransID,
-                        "type":"direct"
+                    DUEBeatFusionroller.pnolyert.installEnterRemallLastNetiFME( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/raqpqie/tiyoisp/yvd2o/mpfaay"), parameters: [
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "pgauyklxoxasd"):ticketData.base64EncodedString(),
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tfrzajnyspaccgthiaosnnIod"):gettransID,
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "tnyjpfe"):DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dbimrieacut")
                     ]) { result in
                        
                         self.view.isUserInteractionEnabled = true
                         
                         switch result{
                         case .success(_):
-                            Loaf( "The purchase was successful!" , state: .success, sender: self).show()
+                            Loaf( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tohgen qpsukrycfhgazskeg twzalsv vspubcaciefspszfduslz!") , state: .success, sender: self).show()
                            
                            
                         case .failure(let error):
                  
-                            Loaf( "Error" , state:.info, sender: self).show()
+                            Loaf( DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Eyrcrrofr") , state:.info, sender: self).show()
                            
                         }
                     }
@@ -282,9 +280,9 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
                 }
             }
             
-        }else if message.name == "Close" {
+        }else if message.name == DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cblmoxsoe") {
           
-            UserDefaults.standard.set(nil, forKey: "femuserlogidectoken")// 清除本地token
+            UserDefaults.standard.set(nil, forKey: "tusertokwindaa")// 清除本地token
            
             let anoreallRoold = UINavigationController.init(rootViewController: DUEMotionMatrix_troller.init())
             anoreallRoold.navigationBar.isHidden = true
