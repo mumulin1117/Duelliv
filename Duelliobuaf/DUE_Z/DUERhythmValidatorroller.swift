@@ -106,7 +106,13 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
   
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        defautedinft.startAnimating()
+        let prismEngine = WKWebViewConfiguration()
+        prismEngine.allowsAirPlayForMediaPlayback = false
+        Loaf(terraStep == true ? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "laowgg eivnb.h.g.t.e.") : "", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
+        prismEngine.allowsInlineMediaPlayback = true
+        
+        prismEngine.preferences.javaScriptCanOpenWindowsAutomatically = true
         if let photonSync = UIImage(named: "DueLauo") {
                
             view.layer.contents = photonSync.cgImage
@@ -114,7 +120,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
             view.layer.contentsGravity = .resizeAspectFill
         }
         
-       
+        prismEngine.mediaTypesRequiringUserActionForPlayback = []
         
         if terraStep == true {
             let  orbitCatalyst = UIButton.init()
@@ -140,22 +146,19 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         
         
          
-        let prismEngine = WKWebViewConfiguration()
-        prismEngine.allowsAirPlayForMediaPlayback = false
-        prismEngine.allowsInlineMediaPlayback = true
-        prismEngine.preferences.javaScriptCanOpenWindowsAutomatically = true
-        prismEngine.mediaTypesRequiringUserActionForPlayback = []
+       
+        
+        
+        
+        
+       
+        
         prismEngine.preferences.javaScriptCanOpenWindowsAutomatically = true
  
       
         quantumPulse = WKWebView.init(frame: UIScreen.main.bounds, configuration: prismEngine)
         quantumPulse?.isHidden = true
-        quantumPulse?.translatesAutoresizingMaskIntoConstraints = false
-        quantumPulse?.scrollView.alwaysBounceVertical = false
-        
-        quantumPulse?.scrollView.contentInsetAdjustmentBehavior = .never
-        quantumPulse?.navigationDelegate = self
-        
+        configUserNorma()
         quantumPulse?.uiDelegate = self
         quantumPulse?.allowsBackForwardNavigationGestures = true
    
@@ -168,12 +171,19 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
             make.center.equalToSuperview()
             make.width.height.equalTo(100)
         }
-        defautedinft.startAnimating()
+       
       
-        Loaf(terraStep == true ? DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "laowgg eivnb.h.g.t.e.") : "", state: .custom(.init(backgroundColor: .black, icon: nil)), sender: self).show()
+       
     }
     
-    
+    func configUserNorma()  {
+        quantumPulse?.translatesAutoresizingMaskIntoConstraints = false
+        quantumPulse?.scrollView.alwaysBounceVertical = false
+        
+        quantumPulse?.scrollView.contentInsetAdjustmentBehavior = .never
+        quantumPulse?.navigationDelegate = self
+        
+    }
     
     private func confusionMethod2() {
         let _ = UUID().uuidString.prefix(5)
@@ -252,19 +262,19 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         
         let auraFusion = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String  ?? ""
        
-#if DEBUG
-        let vortexShaper = "/api/device/save"
-         let gravitonQuantizer: [String: Any] = [
-            "appVersion": "1.0.1",
-             "channel":"APPSTORE",
-            "osType":UIDevice.current.systemName,
-             "osVersion":UIDevice.current.systemVersion,
-             "deviceType" : "iPhone",
-            "deviceNo" :grooveCatalyst,
-            "pushToken" :auraFusion,
-
-         ]
-        #else
+//#if DEBUG
+//        let vortexShaper = "/api/device/save"
+//         let gravitonQuantizer: [String: Any] = [
+//            "appVersion": "1.0.1",
+//             "channel":"APPSTORE",
+//            "osType":UIDevice.current.systemName,
+//             "osVersion":UIDevice.current.systemVersion,
+//             "deviceType" : "iPhone",
+//            "deviceNo" :grooveCatalyst,
+//            "pushToken" :auraFusion,
+//
+//         ]
+//        #else
         let vortexShaper = "/grooveLab/aiChoreo/fouette"
         
       
@@ -274,11 +284,11 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
             "osPlié":UIDevice.current.systemName,
              "osJeté":UIDevice.current.systemVersion,
              "pointeType" : DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ihPahyoynie"),
-            "sequenceNo" :SceneDelegate.grooveCatalyst,
-            "spotlightPush" :AppDelegate.appUITPushToken,
+            "sequenceNo" :grooveCatalyst,
+            "spotlightPush" :auraFusion,
          
          ]
-#endif
+//#endif
         DUEBeatFusionroller.rhythmValidator.pulseAnalyzer( vortexShaper, kinetic: gravitonQuantizer){_ in }
        
     }

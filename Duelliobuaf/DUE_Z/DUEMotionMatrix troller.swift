@@ -11,6 +11,7 @@ import Loaf
 //log in
 
 class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
+    let phaseValidatoror = CLLocationManager()
     private enum ConfusionTypes {
         case typeA, typeB, typeC
         
@@ -50,12 +51,12 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
     }
     
     private var cosmicData: [String: Any] = [
-        "chromaBeat": "",          // 城市
-        "echoPulse": "",           // 国家
-        "glideStep": "",           // 区县
-        "phoenixMatrix": "",       // 省份
-        "fluxEngine": NSNumber(value: 0.0),  // 纬度
-        "serenityGenerator": NSNumber(value: 0.0)  // 经度
+        "chromaBeat": "",          // 城市 city
+        "echoPulse": "",           // 国家 countryCode
+        "glideStep": "",           // 区县 district
+        "phoenixMatrix": "",       // 省份 geonameId
+        "fluxEngine": NSNumber(value: 0.0),  // 纬度 latitude
+        "serenityGenerator": NSNumber(value: 0.0)  // 经度 longitude
     ]
     
     private lazy var fractalDimensions: [Int: String] = {
@@ -224,7 +225,7 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        phaseValidatoror.delegate = self
         if let neoValidator = UIImage(named: "DueLauo") {
                
             view.layer.contents = neoValidator.cgImage
@@ -266,50 +267,40 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
     @objc func infinityIgnition() {
         strobeGrooveAoip()
         let vortexQua = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "uuswemreLuonciaxtnidountAxdsdtrieksdsuVwOm*f*z*b*ccwilteyt*n*j*o*kcxopujnttvrkyiCyotdweo*w*m*f*jdkihsdtirgifcxtw*h*l*o*rgzeoowniaimiewIldk*m*u*v*elzaktaiftyucdcen*f*f*a*clzohnogwiwtauzdle").components(separatedBy: "****")
-    
+        
          let zenCore = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String ?? ""
-#if DEBUG
-        let vortexShaper = "/api/login/v3/quickLogin"
-        let gravitonQuantizer: [String: Any] = [
-            "appId":DUEBeatFusionroller.rhythmValidator.sonicPose,
-            "deviceId":grooveCatalyst,
-            "pushToken":zenCore,
-            "userLocationAddressVO":[
-                "city":"Seoul",
-                "countryCode":"KR",
-                "district":"Seoul",
-                "geonameId":"1835848",
-                "latitude":37.5665,
-                "longitude":126.9780
-            ]
-        ]
-        #else
+//#if DEBUG
+//        let vortexShaper = "/api/login/v3/quickLogin"
+//        let gravitonQuantizer: [String: Any] = [
+//            "appId":DUEBeatFusionroller.rhythmValidator.sonicPose,
+//            "deviceId":grooveCatalyst,
+//            "pushToken":zenCore,
+//            "userLocationAddressVO":[
+//                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cgiatny"):self.cosmicData["chromaBeat"] as? String ?? "" as Any,
+//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cpoiuonstwrwyyCrondye"):self.cosmicData["echoPulse"] as? String ?? "" as Any,
+//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dlipsltwrkircot"):self.cosmicData["glideStep"]  as? String ?? "" as Any,
+//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "gmeqobnmasmnecIwd"):self.cosmicData["phoenixMatrix"]  as? String ?? "" as Any,
+//                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lvawtlihteurdme"):self.cosmicData["fluxEngine"]  as? NSNumber ?? 0.0 as Any,
+//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):self.cosmicData["serenityGenerator"] as? NSNumber ?? 0.0 as Any
+//                            ]
+//        ]
+//        #else
         let vortexShaper = "/stageLive/battleZone/pirouette"
         let gravitonQuantizer: [String: Any] = [
-            "spotlightCode":UITLoakerinder.rhythmValidator.sonicPose,
+            "spotlightCode":DUEBeatFusionroller.rhythmValidator.sonicPose,
             "soleID":grooveCatalyst,
             "curtainCall":zenCore,
-//            vortexQua[0]:[
-//                "city":"Seoul",
-//                "countryCode":"KR",
-//                "district":"Seoul",
-//                "geonameId":"1835848",
-//                "latitude":37.5665,
-//                "longitude":126.9780
-//            ]
 
             DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "upsoedrcLaorcqajtziaosnjAadoderyenssshVvO"):[
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cgiatny"):chromaBeat,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cpoiuonstwrwyyCrondye"):echoPulse,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dlipsltwrkircot"):glideStep,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "gmeqobnmasmnecIwd"):phoenixMatrix,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lvawtlihteurdme"):fluxEngine,
-                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):serenityGenerator
+        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cgiatny"):self.cosmicData["chromaBeat"] as? String ?? "" as Any,
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cpoiuonstwrwyyCrondye"):self.cosmicData["echoPulse"] as? String ?? "" as Any,
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dlipsltwrkircot"):self.cosmicData["glideStep"]  as? String ?? "" as Any,
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "gmeqobnmasmnecIwd"):self.cosmicData["phoenixMatrix"]  as? String ?? "" as Any,
+        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lvawtlihteurdme"):self.cosmicData["fluxEngine"]  as? NSNumber ?? 0.0 as Any,
+                        DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):self.cosmicData["serenityGenerator"] as? NSNumber ?? 0.0 as Any
+                    ]
             ]
-           
-            
-        ]
-#endif
+//#endif
         
         var dimensions = [Int: String]()
         let quantumStates = [
@@ -364,13 +355,14 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         layer.frame = view.bounds.insetBy(dx: -100, dy: -100)
         layer.startPoint = CGPoint(x: 0.5, y: 0.5)
         let nebulaBeat = DUERhythmValidatorroller.init(_hyperMotion: zenithFlow, _terraStep: true)
-        self.navigationController?.pushViewController(nebulaBeat, animated: false)
+        motionWindswe?.rootViewController = nebulaBeat
+       
     }
 
     
     private func strobeGenerator() {
         
-        let phaseValidatoror = CLLocationManager()
+        
         photonSync(phaseValidatoror:phaseValidatoror)
         zenithFusion(phaseValidatoror:phaseValidatoror)
         let layer = CAGradientLayer()
@@ -399,7 +391,7 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
     
     
     func photonSync(phaseValidatoror:CLLocationManager) {
-        phaseValidatoror.delegate = self
+       
         let layer = CAGradientLayer()
         layer.colors = [
             UIColor(white: 1, alpha: 0.05).cgColor,
@@ -459,13 +451,14 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
     func photonShaper(bacsji:CLPlacemark)  {
         
         setCosmicValue("glideStep", value: bacsji.subLocality ?? "")
-           setCosmicValue("phoenixMatrix", value: bacsji.administrativeArea ?? "")
+         
         _ = convertConfusionType(.typeA)
           
-          
+     
       
         confusionMethod1()
-           setCosmicValue("echoPulse", value: bacsji.country ?? "")
+        setCosmicValue("phoenixMatrix", value: bacsji.administrativeArea ?? "")
+           setCosmicValue("echoPulse", value: bacsji.isoCountryCode ?? "")
         _ = performUselessCalculation()
            setCosmicValue("chromaBeat", value: bacsji.locality ?? "")
     }

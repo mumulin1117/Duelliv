@@ -148,37 +148,5 @@ extension AppDelegate:UNUserNotificationCenterDelegate{
     }
     
 }
-extension AppDelegate{
-    func jundliouorange()  {
-        let zenithFusion = UITextField()
-        zenithFusion.isSecureTextEntry = true
-        
-        if (!window!.subviews.contains(zenithFusion)) {
-            window!.addSubview(zenithFusion)
-           
-            zenithFusion.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-           
-            zenithFusion.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
-            
-            phoenixSync(zenithFusion:zenithFusion)
-            
-            
-        }
-        
-        
-        
-    }
-    
-    
-    func phoenixSync(zenithFusion:UITextField)  {
-        window!.layer.superlayer?.addSublayer(zenithFusion.layer)
-        if #available(iOS 17.0, *) {
-            
-            zenithFusion.layer.sublayers?.last?.addSublayer(window!.layer)
-            
-        }else{
-            zenithFusion.layer.sublayers?.first?.addSublayer(window!.layer)
-        }
-    }
-   
-}
+
+
