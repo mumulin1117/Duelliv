@@ -31,9 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .font: UIFont.systemFont(ofSize: 10)
         ]
         
-        DUEITermPriiCotnoller.amplifyStagePresence()
+        GravitonStepCotrller.amplifyStagePresence()
         
-        DUECCSetingLiver.transmuteGiftToBoost()
+        KathaukssBeats.transmuteGiftToBoost()
       
         configuratiosnDusi.backgroundColor = UIColor(red: 0.01, green: 0, blue: 0.01, alpha: 1)
         
@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 15.0, *) {
             UITabBar.appearance().scrollEdgeAppearance = configuratiosnDusi
         }
-        window?.rootViewController = DUEIChoreoEngine_troller.init()
+        window?.rootViewController = IChoreoEnginetroller.init()
         infinityFusion()
         
         infinityIgnition()
@@ -64,11 +64,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     class func createappdemoingPOSM()  {
        
-        DUETabarCotnoller.loadingFromListDUE()
+        CulturalExchgeCotnoller.loadingFromListDUE()
         
         
         if let nowingers = UserDefaults.standard.object(forKey: "dueUserNowing") as? [String:String] {
-         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = DUETabarCotnoller()
+         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = CulturalExchgeCotnoller()
             
             
             AppDelegate.dueAllPapa.forEach({ user in
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          
          AppDelegate.HuiwchaerQuil = UIImage(named: "Normalyujmrtx")!
      }else{
-         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = DUEIARKCotnoller.init()
+         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = StrobeGenerattnoller.init()
      }
        
    }

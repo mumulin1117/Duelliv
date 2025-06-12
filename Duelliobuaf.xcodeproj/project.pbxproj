@@ -223,9 +223,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Duelliobuaf/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Duelliv;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos to upload user avatars, take photos to upload live room covers, take photos to post image updates, video chat, Duelliv requires your camera permission.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos to upload user avatars, take photos to upload room covers, take photos to post image updates, Duelliv requires your camera permission.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Duelliv need access your location permissions to make use of the iCloud camera's location functionalities";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Sending voice messages, audio and video chats, Duelliv requires your microphone permission.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Sending voice messages, audio and  Duelliv requires your microphone permission.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Duelliv needs access to your album to upload updates, record gesture dance images, and upload user avatars";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -266,9 +266,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Duelliobuaf/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Duelliv;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos to upload user avatars, take photos to upload live room covers, take photos to post image updates, video chat, Duelliv requires your camera permission.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos to upload user avatars, take photos to upload room covers, take photos to post image updates, Duelliv requires your camera permission.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Duelliv need access your location permissions to make use of the iCloud camera's location functionalities";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Sending voice messages, audio and video chats, Duelliv requires your microphone permission.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Sending voice messages, audio and  Duelliv requires your microphone permission.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Duelliv needs access to your album to upload updates, record gesture dance images, and upload user avatars";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
