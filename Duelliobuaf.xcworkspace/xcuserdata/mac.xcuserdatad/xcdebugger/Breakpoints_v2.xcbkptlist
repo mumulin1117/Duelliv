@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A5F91877-0E1A-498E-B719-AACF8EC8AC03"
+            uuid = "F2AA2B56-8640-4A68-8FEE-561832B0E353"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Duelliobuaf/DUE_Z/DUEBeatFusionroller.swift"
+            filePath = "Duelliobuaf/DUE_Z/DUERhythmValidatorroller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "pulseAnalyzer(_:kinetic:temposhaper:)"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
+            landmarkName = "userContentController(_:didReceive:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

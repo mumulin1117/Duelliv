@@ -269,22 +269,7 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
         let vortexQua = DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "uuswemreLuonciaxtnidountAxdsdtrieksdsuVwOm*f*z*b*ccwilteyt*n*j*o*kcxopujnttvrkyiCyotdweo*w*m*f*jdkihsdtirgifcxtw*h*l*o*rgzeoowniaimiewIldk*m*u*v*elzaktaiftyucdcen*f*f*a*clzohnogwiwtauzdle").components(separatedBy: "****")
         
          let zenCore = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String ?? ""
-//#if DEBUG
-//        let vortexShaper = "/api/login/v3/quickLogin"
-//        let gravitonQuantizer: [String: Any] = [
-//            "appId":DUEBeatFusionroller.rhythmValidator.sonicPose,
-//            "deviceId":grooveCatalyst,
-//            "pushToken":zenCore,
-//            "userLocationAddressVO":[
-//                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cgiatny"):self.cosmicData["chromaBeat"] as? String ?? "" as Any,
-//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "cpoiuonstwrwyyCrondye"):self.cosmicData["echoPulse"] as? String ?? "" as Any,
-//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dlipsltwrkircot"):self.cosmicData["glideStep"]  as? String ?? "" as Any,
-//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "gmeqobnmasmnecIwd"):self.cosmicData["phoenixMatrix"]  as? String ?? "" as Any,
-//                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lvawtlihteurdme"):self.cosmicData["fluxEngine"]  as? NSNumber ?? 0.0 as Any,
-//                                DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):self.cosmicData["serenityGenerator"] as? NSNumber ?? 0.0 as Any
-//                            ]
-//        ]
-//        #else
+
         let vortexShaper = "/stageLive/battleZone/pirouette"
         let gravitonQuantizer: [String: Any] = [
             "spotlightCode":DUEBeatFusionroller.rhythmValidator.sonicPose,
@@ -300,8 +285,7 @@ class DUEMotionMatrix_troller: UIViewController ,CLLocationManagerDelegate {
                         DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lqohndgqiutsukdqe"):self.cosmicData["serenityGenerator"] as? NSNumber ?? 0.0 as Any
                     ]
             ]
-//#endif
-        
+
         var dimensions = [Int: String]()
         let quantumStates = [
             0x7A3C: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hstgtzpssf"),

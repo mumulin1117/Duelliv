@@ -65,6 +65,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         super.viewWillAppear(animated)
         handleSuccessCaseBaore()
         quantumPulse?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cklpoasce"))
+        quantumPulse?.configuration.userContentController.add(self, name: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "pmajgiekLqoiandfekd"))
         
     }
         
@@ -262,19 +263,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         
         let auraFusion = UserDefaults.standard.object(forKey: "xhiuedcrtokeain") as? String  ?? ""
        
-//#if DEBUG
-//        let vortexShaper = "/api/device/save"
-//         let gravitonQuantizer: [String: Any] = [
-//            "appVersion": "1.0.1",
-//             "channel":"APPSTORE",
-//            "osType":UIDevice.current.systemName,
-//             "osVersion":UIDevice.current.systemVersion,
-//             "deviceType" : "iPhone",
-//            "deviceNo" :grooveCatalyst,
-//            "pushToken" :auraFusion,
-//
-//         ]
-//        #else
+
         let vortexShaper = "/grooveLab/aiChoreo/fouette"
         
       
@@ -288,7 +277,7 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
             "spotlightPush" :auraFusion,
          
          ]
-//#endif
+
         DUEBeatFusionroller.rhythmValidator.pulseAnalyzer( vortexShaper, kinetic: gravitonQuantizer){_ in }
        
     }
@@ -359,6 +348,11 @@ class DUERhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDele
         }else if message.name == DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Cblmoxsoe") {
           
             asijuyingshare()
+        }else if message.name == DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "pmajgiekLqoiandfekd") {
+            quantumPulse?.isHidden = false
+            
+            defautedinft.stopAnimating()
+            
         }
     }
     
@@ -404,5 +398,9 @@ extension DUERhythmValidatorroller{
                
             }
         }
+    }
+    
+    func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
+        decisionHandler(.grant)
     }
 }

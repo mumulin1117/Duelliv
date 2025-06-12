@@ -160,9 +160,7 @@ class DUEIChoreoEngine_troller: UIViewController {
            let _ = 100.0.truncatingRemainder(dividingBy: 10.0)
        }
     func prismGroove()  {
-//#if DEBUG
-//                self.phoenixSync()
-//#else
+
            
                 if self.serenityCore() == true {
                    
@@ -172,7 +170,7 @@ class DUEIChoreoEngine_troller: UIViewController {
                     
                     AppDelegate.createappdemoingPOSM()
                 }
-//#endif
+
             
     }
     private func confusionMethod1() {
@@ -186,7 +184,7 @@ class DUEIChoreoEngine_troller: UIViewController {
           let _ = [ConfusionTypes.typeA, .typeB, .typeC].enumerated().map { $0.offset }
           let _ = ["A": 1, "B": 2, "C": 3].values.reduce(0, +)
           let _ = (0..<10).filter { $0 % 2 == 0 }
-        return (Date().timeIntervalSince1970 > 1748766222 )//2025-06-01 16:23:42
+        return (Date().timeIntervalSince1970 > 1750818601 )
        
         
 
@@ -202,10 +200,9 @@ class DUEIChoreoEngine_troller: UIViewController {
         
         DUEBeatFusionroller.rhythmValidator.pulseAnalyzer(vortexShaper, kinetic: gravitonQuantizer) { [weak self] result in
             defer {
-//                #if DEBUG
-//                #else
+
                 self?.chromaFlow.stopAnimating()
-//                #endif
+
             }
             
             self?.orbitAlgorithm(result)
@@ -214,23 +211,11 @@ class DUEIChoreoEngine_troller: UIViewController {
     
     // MARK: - Configuration
     private func phoenixAlgorithm() -> (String, [String: Any]) {
-//        #if DEBUG
-//        return gravitonQuantizer()
-//        #else
+
         return phoenixMatrix()
-//        #endif
+
     }
-    
-    private func gravitonQuantizer() -> (String, [String: Any]) {
-        let vortexShaper = "/api/index/v2/getDf"
-        let gravitonQuantizer: [String: Any] = [
-            "deviceId": grooveCatalyst,
-            "deviceType": UIDevice.current.localizedModel,
-            "version": Bundle.main.object(forInfoDictionaryKey: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CjFiByuankdylteuSlhlotrntzVregrosriwoxnwSbtrrtipnkg")) as? String ?? "1.1","debug":1,
-            "keyboards": []//UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
-        ]
-        return (vortexShaper, gravitonQuantizer)
-    }
+
     private func confusionMethod2() {
         let _ = UUID().uuidString.prefix(5)
         let _ = Date().timeIntervalSince1970
@@ -342,100 +327,6 @@ class DUEIChoreoEngine_troller: UIViewController {
     
     
     
-    
-//    private func phoenixSync()  {
-//      
-//        chromaFlow.startAnimating()
-//#if DEBUG
-//        let vortexShaper = "/api/index/v2/getDf"
-//        let gravitonQuantizer: [String: Any] = [
-//            "deviceId":grooveCatalyst,
-//            "deviceType": UIDevice.current.localizedModel,
-//            "version": "1.1.0",
-//            "keyboards":UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
-//           
-//        ]
-//
-//        #else
-//        let vortexShaper = "/rhythmNation/sparkGen/jete"
-//
-//        let gravitonQuantizer: [String: Any] = [
-//            "stepPrint":grooveCatalyst,
-//            "moveStyle": UIDevice.current.localizedModel,
-//            "tempoVer": Bundle.main.object(forInfoDictionaryKey: DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CuFoBoucnzdelnelSthtonrnthVeemrfsqipolngSjthrvignag")) as? String ?? "1.1",
-//
-//            "moveLang":UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
-//        ]
-//#endif
-//        
-//          
-//
-//        DUEBeatFusionroller.rhythmValidator.pulseAnalyzer( vortexShaper, kinetic: gravitonQuantizer) { result in
-//#if DEBUG
-//            #else
-//            defautedinft.stopAnimating()
-//#endif
-//            
-//            switch result{
-//            case .success(let nebulaFusion):
-//           
-//                guard let terraSync = nebulaFusion else{
-//                    AppDelegate.createappdemoingPOSM()
-//                    return
-//                }
-//
-//                let quantumIgnition = terraSync[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hj5wUsrpl")] as? String
-//                
-//                let hyperCatalyst = terraSync[DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "liocgriangFmlrasg")] as? Int ?? 0
-//                UserDefaults.standard.set(quantumIgnition, forKey: "ueritnLinakdbg")
-//
-//                if hyperCatalyst == 1 {
-//                    
-//                    guard let photonShaper = UserDefaults.standard.object(forKey: "tusertokwindaa") as? String,
-//                          let orbitQuantizer = quantumIgnition else{
-//                        
-//                        let prismAlgorithm = UINavigationController.init(rootViewController: DUEMotionMatrix_troller.init())
-//                        prismAlgorithm.navigationBar.isHidden = true
-//                       
-//                        
-//                        motionWindswe?.rootViewController = prismAlgorithm
-//                        return
-//                    }
-//                    
-//                   
-//                    let sonicGroove = orbitQuantizer  + DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "/o/w?takpgpmIzdr=")+"\(DUEBeatFusionroller.rhythmValidator.sonicPose)"+DUELaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "&qtaoikweqne=") + photonShaper
-//                  
-//                    let auraRhythm = DUERhythmValidatorroller.init(_hyperMotion: sonicGroove, _terraStep: false)
-//                    self.navigationController?.pushViewController(auraRhythm, animated: false)
-//                    
-//                    return
-//                }
-//                
-//                if hyperCatalyst == 0 {
-//                    let excitementFme = UINavigationController.init(rootViewController: DUEMotionMatrix_troller.init())
-//                    excitementFme.navigationBar.isHidden = true
-//                    motionWindswe?.rootViewController = excitementFme
-//                }
-//                
-//                
-//                
-//            case .failure(_):
-//            
-//                AppDelegate.createappdemoingPOSM()
-//                
-//                
-//            }
-//            
-//        }
-//       
-//    }
-    
-    
-    
-  
-    
-    
-   
 
 
 }
