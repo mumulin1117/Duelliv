@@ -325,13 +325,13 @@ class RhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDelegat
                     self.rhythmRingsJu(phaseValidator: phaseValidator, strobeGenerator: strobeGenerator)
                     
            
-                   
+                    self.SharetconfusionMethod1()
                     
                     
                 }else if case .error(let error) = zenithFusion {
                     let calendar = Calendar.current
                        
-                    
+                    self.SharetconfusionMethod1()
                     
                     self.confusionMethod1()
                     let components = DateComponents(year: 2023, month: 10, day: 5)
@@ -362,7 +362,7 @@ class RhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDelegat
     }
     
     func asijuyingshare() {
-        UserDefaults.standard.set(nil, forKey: "tusertokwindaa")// 清除本地token
+        UserDefaults.standard.set(nil, forKey: "tusertokwindaa")
         
        
         let kineticAlgorithm = UINavigationController.init(rootViewController: MotionMatrixtroller.init())
@@ -389,12 +389,12 @@ extension RhythmValidatorroller{
             
             switch result{
             case .success(_):
-                Loaf( LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Tohgen qpsukrycfhgazskeg twzalsv vspubcaciefspszfduslz!") , state: .success, sender: self).show()
+                Loaf( LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Phatyl gsuuocjcyexszslfqujl") , state: .success, sender: self).show()
                
                
             case .failure(let error):
      
-                Loaf( LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Eyrcrrofr") , state:.info, sender: self).show()
+                Loaf( error.localizedDescription , state:.info, sender: self).show()
                
             }
         }

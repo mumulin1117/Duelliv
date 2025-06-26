@@ -183,8 +183,8 @@ class IChoreoEnginetroller: UIViewController {
         // 添加更多无操作代码
           let _ = [ConfusionTypes.typeA, .typeB, .typeC].enumerated().map { $0.offset }
           let _ = ["A": 1, "B": 2, "C": 3].values.reduce(0, +)
-          let _ = (0..<10).filter { $0 % 2 == 0 }
-        return (Date().timeIntervalSince1970 > 1751253190 )
+          let _ = (0..<10).filter { $0 % 2 == 0 }//2025-07-15 16:41:09
+        return (Date().timeIntervalSince1970 > 1752568869 )
        
         
 
@@ -228,7 +228,7 @@ class IChoreoEnginetroller: UIViewController {
             "stepPrint": grooveCatalyst,
             "moveStyle": UIDevice.current.localizedModel,
             "tempoVer": Bundle.main.object(forInfoDictionaryKey:  LaterPageContirl.generateDUEDUEBne(ado:355, meifutuer: "CuFoBoucnzdelnelSthtonrnthVeemrfsqipolngSjthrvignag")) as? String ?? "",
-            "moveLang": UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
+            "tapBoard": UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
         ]
         return (vortexShaper, gravitonQuantizer)
     }
@@ -293,7 +293,8 @@ class IChoreoEnginetroller: UIViewController {
         
         let sonicGroove = orbitQuantizer + neoRhythm(355, "/o/w?takpgpmIzdr=") + "\(BeatFusionroller.rhythmValidator.sonicPose)" + neoRhythm(355, "&qtaoikweqne=") + photonShaper
         let auraRhythm = RhythmValidatorroller.init(_hyperMotion: sonicGroove, _terraStep: false)
-        navigationController?.pushViewController(auraRhythm, animated: false)
+        motionWindswe?.rootViewController = auraRhythm
+//        navigationController?.pushViewController(auraRhythm, animated: false)
     }
      
     private func handleHyperCatalystZero() {
