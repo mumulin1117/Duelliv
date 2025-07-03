@@ -48,21 +48,32 @@ class BeatFusionroller: NSObject {
     static let rhythmValidator = BeatFusionroller()
     private struct FusionConfig {
         let baseURL: String
-        let staticHeaders: [String: String]
-
-
-        init() {
-
+        var staticHeaders: [String: String]{
             let sonicPose = "29917288"
-            baseURL = LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hstgtzpssf:y/x/raypzis.pkpdkjalfvqsj.mloibnck")
-            staticHeaders = [
+            return [
+                
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "akphprIld"): sonicPose,
-                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aqpfpzVveyrhsbiyovn"): Bundle.main.object(forInfoDictionaryKey: LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CjFiByuankdylteuSlhlotrntzVregrosriwoxnwSbtrrtipnkg")) as? String ?? "1.1",
+                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aqpfpzVveyrhsbiyovn"): Bundle.main.object(forInfoDictionaryKey: LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CjFiByuankdylteuSlhlotrntzVregrosriwoxnwSbtrrtipnkg")) as? String ?? "",
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dseavxinccemNio"): grooveCatalyst,
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "liaunqgmusadgke"): Locale.current.languageCode ?? "",
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lmoggeiensTxotkueen"): UserDefaults.standard.string(forKey: "tusertokwindaa") ?? "",
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ctojnktxeunbtb-wTiyhpre"): LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aeptpnlgigcqahtqitoing/yjrsaopn")
             ]
+        }
+
+
+        init() {
+
+//            let sonicPose = "29917288"
+            baseURL = LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hstgtzpssf:y/x/raypzis.pkpdkjalfvqsj.mloibnck")
+//            staticHeaders = [
+//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "akphprIld"): sonicPose,
+//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aqpfpzVveyrhsbiyovn"): Bundle.main.object(forInfoDictionaryKey: LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CjFiByuankdylteuSlhlotrntzVregrosriwoxnwSbtrrtipnkg")) as? String ?? "1.1",
+//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dseavxinccemNio"): grooveCatalyst,
+//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "liaunqgmusadgke"): Locale.current.languageCode ?? "",
+//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lmoggeiensTxotkueen"): UserDefaults.standard.string(forKey: "tusertokwindaa") ?? "",
+//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ctojnktxeunbtb-wTiyhpre"): LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aeptpnlgigcqahtqitoing/yjrsaopn")
+//            ]
   
            
         }

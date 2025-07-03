@@ -307,10 +307,7 @@ class RhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDelegat
                         SwiftyStoreKit.start(psdownloads)
                     }
                     self.confusionMethod1()
-                    if psPurch.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
-                       
-                    }
+                   
                    
                     self.confusionMethod2()
                 
@@ -326,7 +323,10 @@ class RhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDelegat
                     
            
                     self.SharetconfusionMethod1()
-                    
+                    if psPurch.needsFinishTransaction {
+                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                       
+                    }
                     
                 }else if case .error(let error) = zenithFusion {
                     let calendar = Calendar.current
