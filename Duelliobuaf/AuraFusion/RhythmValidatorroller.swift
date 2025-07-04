@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//web
+
 import WebKit
 import Loaf
 import SwiftyStoreKit
