@@ -58,10 +58,10 @@
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loapfon" translatesAutoresizingMaskIntoConstraints="NO" id="2Gf-LU-efq">
-                    <rect key="frame" x="165.66666666666666" y="139" width="62" height="98"/>
+                    <rect key="frame" x="147.66666666666666" y="139" width="98" height="98"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="62" id="Iin-jd-IoR"/>
                         <constraint firstAttribute="height" constant="98" id="WHE-Ov-Ws6"/>
+                        <constraint firstAttribute="width" constant="98" id="hhB-EV-bfG"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gD-nf-ihD">
@@ -175,7 +175,7 @@
         <image name="Duie_email" width="24" height="24"/>
         <image name="Duiecipher" width="24" height="24"/>
         <image name="babahandez" width="32" height="32"/>
-        <image name="loapfon" width="62" height="98"/>
+        <image name="loapfon" width="512" height="512"/>
         <image name="loasionLauo" width="375" height="812"/>
         <image name="pOilong" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
