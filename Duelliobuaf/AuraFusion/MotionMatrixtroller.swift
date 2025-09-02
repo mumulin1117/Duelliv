@@ -273,7 +273,7 @@ class MotionMatrixtroller: UIViewController ,CLLocationManagerDelegate {
         let vortexShaper = "/stageLive/battleZone/pirouette"
         let gravitonQuantizer: [String: Any] = [
             "spotlightCode":BeatFusionroller.rhythmValidator.sonicPose,
-            "soleID":grooveCatalyst,
+            "soleID":BeatLaoBand.MotionFeastCoordinator(),
             "curtainCall":zenCore,
 
             LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "upsoedrcLaorcqajtziaosnjAadoderyenssshVvO"):[

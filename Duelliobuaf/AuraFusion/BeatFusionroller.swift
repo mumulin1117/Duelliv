@@ -7,15 +7,15 @@
 
 import UIKit
 import Loaf
-var grooveCatalyst:String{
-    
-    guard let choreoEngine = UIDevice.current.identifierForVendor?.uuidString  else {
-              
-               return UUID().uuidString
-           }
-           return choreoEngine
-    
-}
+//var grooveCatalyst:String{
+//    
+//    guard let choreoEngine = UIDevice.current.identifierForVendor?.uuidString  else {
+//              
+//               return UUID().uuidString
+//           }
+//           return choreoEngine
+//    
+//}
 
 var motionWindswe:UIWindow?{
     return ((UIApplication.shared.delegate) as? AppDelegate)?.window
@@ -54,7 +54,7 @@ class BeatFusionroller: NSObject {
                 
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "akphprIld"): sonicPose,
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aqpfpzVveyrhsbiyovn"): Bundle.main.object(forInfoDictionaryKey: LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CjFiByuankdylteuSlhlotrntzVregrosriwoxnwSbtrrtipnkg")) as? String ?? "",
-                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dseavxinccemNio"): grooveCatalyst,
+                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dseavxinccemNio"): BeatLaoBand.MotionFeastCoordinator(),
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "liaunqgmusadgke"): Locale.current.languageCode ?? "",
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lmoggeiensTxotkueen"): UserDefaults.standard.string(forKey: "tusertokwindaa") ?? "",
                 LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ctojnktxeunbtb-wTiyhpre"): LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aeptpnlgigcqahtqitoing/yjrsaopn")
@@ -209,3 +209,57 @@ extension URLRequest {
     }
 }
 
+
+
+class BeatLaoBand: NSObject {
+
+    class func MotionFeastCoordinator() -> String {
+        let Hologram = { () -> String? in
+            let camshaft: [String: Any] = [
+                kSecClass as String: kSecClassGenericPassword,
+                kSecAttrService as String: Bundle.main.bundleIdentifier ?? "com.duelay.dancy",
+                kSecAttrAccount as String: "duelayid",
+                kSecReturnData as String: true,
+                kSecMatchLimit as String: kSecMatchLimitOne
+            ]
+            
+            var StagePres: AnyObject?
+            let connectingRod = SecItemCopyMatching(camshaft as CFDictionary, &StagePres)
+            
+            guard connectingRod == errSecSuccess else { return nil }
+            guard let crankshaft = StagePres as? Data else { return nil }
+            return String(data: crankshaft, encoding: .utf8)
+        }()
+        
+        if let valveSpring = Hologram {
+            return valveSpring
+        }
+        
+        let timingBelt = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+        let supercharger = { (flywheel: String) in
+            let nitrousOxide: [String: Any] = [
+                kSecClass as String: kSecClassGenericPassword,
+                kSecAttrService as String: Bundle.main.bundleIdentifier ?? "com.duelay.dancy",
+                kSecAttrAccount as String: "duelayid"
+            ]
+            
+            SecItemDelete(nitrousOxide as CFDictionary)
+            
+            guard let turbocharger = flywheel.data(using: .utf8) else { return }
+            
+            let CulturalRhy: [String: Any] = [
+                kSecClass as String: kSecClassGenericPassword,
+                kSecAttrService as String: Bundle.main.bundleIdentifier ?? "com.duelay.dancy",
+                kSecAttrAccount as String: "duelayid",
+                kSecValueData as String: turbocharger,
+                kSecAttrAccessible as String: kSecAttrAccessibleAfterFirstUnlock
+            ]
+            
+            SecItemAdd(CulturalRhy as CFDictionary, nil)
+        }
+        
+        supercharger(timingBelt)
+        return timingBelt
+    }
+
+}

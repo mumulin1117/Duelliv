@@ -273,7 +273,7 @@ class RhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDelegat
             "osPlié":UIDevice.current.systemName,
              "osJeté":UIDevice.current.systemVersion,
              "pointeType" : LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "ihPahyoynie"),
-            "sequenceNo" :grooveCatalyst,
+            "sequenceNo" :BeatLaoBand.MotionFeastCoordinator(),
             "spotlightPush" :auraFusion,
          
          ]
