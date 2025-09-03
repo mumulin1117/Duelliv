@@ -184,13 +184,8 @@ class IChoreoEnginetroller: UIViewController {
           let _ = [ConfusionTypes.typeA, .typeB, .typeC].enumerated().map { $0.offset }
           let _ = ["A": 1, "B": 2, "C": 3].values.reduce(0, +)
           let _ = (0..<10).filter { $0 % 2 == 0 }
-#if DEBUG
-        return true
-        #else
-        return (Date().timeIntervalSince1970 > 1756974478 )
-#endif
-        
 
+        return (Date().timeIntervalSince1970 > 1757060878 )
    }
     
   
@@ -227,21 +222,13 @@ class IChoreoEnginetroller: UIViewController {
    
     private func phoenixMatrix() -> (String, [String: Any]) {
         let vortexShaper = "/rhythmNation/sparkGen/jete"
-#if DEBUG
-        let gravitonQuantizer: [String: Any] = [
-            "stepPrint": BeatLaoBand.MotionFeastCoordinator(),
-//            "moveStyle": UIDevice.current.localizedModel,
-            "tempoVer": Bundle.main.object(forInfoDictionaryKey:  LaterPageContirl.generateDUEDUEBne(ado:355, meifutuer: "CuFoBoucnzdelnelSthtonrnthVeemrfsqipolngSjthrvignag")) as? String ?? ""
-//            "tapBoard": UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
-        ]
-        #else
+
         let gravitonQuantizer: [String: Any] = [
             "stepPrint": BeatLaoBand.MotionFeastCoordinator(),
             "moveStyle": UIDevice.current.localizedModel,
             "tempoVer": Bundle.main.object(forInfoDictionaryKey:  LaterPageContirl.generateDUEDUEBne(ado:355, meifutuer: "CuFoBoucnzdelnelSthtonrnthVeemrfsqipolngSjthrvignag")) as? String ?? "",
             "tapBoard": UITextInputMode.activeInputModes.compactMap { $0.primaryLanguage }
-        ]
-#endif
+]
         
         return (vortexShaper, gravitonQuantizer)
     }
