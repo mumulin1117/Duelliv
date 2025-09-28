@@ -114,34 +114,35 @@ class RhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDelegat
         prismEngine.allowsInlineMediaPlayback = true
         
         prismEngine.preferences.javaScriptCanOpenWindowsAutomatically = true
-        if let photonSync = UIImage(named: "DueLauo") {
+        if let photonSync = UIImage(named: "dueladuio") {
                
             view.layer.contents = photonSync.cgImage
             // 设置内容模式（可选）
             view.layer.contentsGravity = .resizeAspectFill
         }
-        
+        createuplivetitle()
         prismEngine.mediaTypesRequiringUserActionForPlayback = []
         
         if terraStep == true {
             let  orbitCatalyst = UIButton.init()
-            orbitCatalyst.layer.cornerRadius = 15
-            orbitCatalyst.layer.masksToBounds = true
-            orbitCatalyst.layer.borderColor = UIColor.white.cgColor
-            orbitCatalyst.layer.borderWidth = 1.5
+//            orbitCatalyst.layer.cornerRadius = 15
+//            orbitCatalyst.layer.masksToBounds = true
+//            orbitCatalyst.layer.borderColor = UIColor.white.cgColor
+//            orbitCatalyst.layer.borderWidth = 1.5
            
-            orbitCatalyst.setTitle(LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuqiacekz noipaednxiincg"), for: .normal)
-            orbitCatalyst.setTitleColor(UIColor.white, for: .normal)
-            orbitCatalyst.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
+//            orbitCatalyst.setTitle(LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuqiacekz noipaednxiincg"), for: .normal)
+//            orbitCatalyst.setTitleColor(UIColor.white, for: .normal)
+//            orbitCatalyst.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
             
             view.addSubview(orbitCatalyst)
             orbitCatalyst.isUserInteractionEnabled = true
             orbitCatalyst.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
-                make.height.equalTo(52)
-                make.width.equalTo(260)
+                make.height.equalTo(56)
+                make.width.equalTo(320)
                 make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
             }
+            orbitCatalyst.setBackgroundImage(UIImage(named: "opengbanui"), for: .normal)
         }
         
         
@@ -191,7 +192,20 @@ class RhythmValidatorroller: UIViewController ,WKNavigationDelegate, WKUIDelegat
         let _ = Date().timeIntervalSince1970
     }
      
-    // 5. 添加无操作闭包
+    private func createuplivetitle(){
+        if let neoValidator = UIImage(named: "dueladuio12") {
+               
+            let bignowr = UIImageView(image: neoValidator)
+            self.view.addSubview(bignowr)
+            bignowr.snp.makeConstraints { make in
+                make.left.equalToSuperview().offset(25)
+                make.height.equalTo(111)
+                make.width.equalTo(211)
+                make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85 - 52 - 25)
+            }
+        }
+        
+    }
     private let confusionClosure: () -> Void = {
         let _ = 1 + 1
         let _ = "Hello".count

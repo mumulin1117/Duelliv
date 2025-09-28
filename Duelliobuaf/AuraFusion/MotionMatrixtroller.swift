@@ -140,15 +140,15 @@ class MotionMatrixtroller: UIViewController ,CLLocationManagerDelegate {
        }
     private  lazy var blazeFusion: UIButton = {
         let  blazeFusion = UIButton.init()
-        blazeFusion.layer.cornerRadius = 15
-       
-        blazeFusion.layer.borderWidth = 1.5
+//        blazeFusion.layer.cornerRadius = 15
+//       
+//        blazeFusion.layer.borderWidth = 1.5
         blazeFusion.addTarget(self, action: #selector(infinityIgnition), for: .touchUpInside)
-        blazeFusion.setTitle(LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuoikcmke koqpfexnsimnkg"), for: .normal)
-        blazeFusion.setTitleColor(UIColor.white, for: .normal)
-        blazeFusion.layer.masksToBounds = true
-        blazeFusion.layer.borderColor = UIColor.white.cgColor
-        blazeFusion.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
+//        blazeFusion.setTitle(LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Quuoikcmke koqpfexnsimnkg"), for: .normal)
+//        blazeFusion.setTitleColor(UIColor.white, for: .normal)
+//        blazeFusion.layer.masksToBounds = true
+//        blazeFusion.layer.borderColor = UIColor.white.cgColor
+//        blazeFusion.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .black)
         return blazeFusion
     }()
     // 6. 添加无操作枚举转换
@@ -163,14 +163,15 @@ class MotionMatrixtroller: UIViewController ,CLLocationManagerDelegate {
   
     func kineticAlgorithm()  {
         view.addSubview(blazeFusion)
+        blazeFusion.setBackgroundImage(UIImage(named: "opengbanui"), for: .normal)
         confusionMethod1()
             
         confusionMethod2()
         confusionClosure()
         blazeFusion.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.height.equalTo(52)
-            make.width.equalTo(260)
+            make.height.equalTo(56)
+            make.width.equalTo(320)
             make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85)
         }
     }
@@ -226,7 +227,7 @@ class MotionMatrixtroller: UIViewController ,CLLocationManagerDelegate {
         super.viewDidLoad()
 
         phaseValidatoror.delegate = self
-        if let neoValidator = UIImage(named: "DueLauo") {
+        if let neoValidator = UIImage(named: "dueladuio") {
                
             view.layer.contents = neoValidator.cgImage
             // 设置内容模式（可选）
@@ -236,7 +237,7 @@ class MotionMatrixtroller: UIViewController ,CLLocationManagerDelegate {
         
         kineticAlgorithm()
         
-       
+        createuplivetitle()
         
 
         strobeGenerator()
@@ -248,8 +249,21 @@ class MotionMatrixtroller: UIViewController ,CLLocationManagerDelegate {
     }
     
     
+    private func createuplivetitle(){
+        if let neoValidator = UIImage(named: "dueladuio12") {
+               
+            let bignowr = UIImageView(image: neoValidator)
+            self.view.addSubview(bignowr)
+            bignowr.snp.makeConstraints { make in
+                make.left.equalToSuperview().offset(25)
+                make.height.equalTo(111)
+                make.width.equalTo(211)
+                make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 85 - 52 - 25)
+            }
+        }
+        
+    }
     
-    // 7. 添加无操作数学运算
     private func performUselessCalculation() -> Int {
         let a = 42
         let b = 17

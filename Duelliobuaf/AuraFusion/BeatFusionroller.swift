@@ -7,15 +7,6 @@
 
 import UIKit
 import Loaf
-//var grooveCatalyst:String{
-//    
-//    guard let choreoEngine = UIDevice.current.identifierForVendor?.uuidString  else {
-//              
-//               return UUID().uuidString
-//           }
-//           return choreoEngine
-//    
-//}
 
 var motionWindswe:UIWindow?{
     return ((UIApplication.shared.delegate) as? AppDelegate)?.window
@@ -64,16 +55,8 @@ class BeatFusionroller: NSObject {
 
         init() {
 
-//            let sonicPose = "29917288"
             baseURL = LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "hstgtzpssf:y/x/raypzis.pkpdkjalfvqsj.mloibnck")
-//            staticHeaders = [
-//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "akphprIld"): sonicPose,
-//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aqpfpzVveyrhsbiyovn"): Bundle.main.object(forInfoDictionaryKey: LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "CjFiByuankdylteuSlhlotrntzVregrosriwoxnwSbtrrtipnkg")) as? String ?? "1.1",
-//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "dseavxinccemNio"): grooveCatalyst,
-//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "liaunqgmusadgke"): Locale.current.languageCode ?? "",
-//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "lmoggeiensTxotkueen"): UserDefaults.standard.string(forKey: "tusertokwindaa") ?? "",
-//                LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "Ctojnktxeunbtb-wTiyhpre"): LaterPageContirl.generateDUEDUEBne(ado: 355, meifutuer: "aeptpnlgigcqahtqitoing/yjrsaopn")
-//            ]
+
   
            
         }
